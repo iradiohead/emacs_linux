@@ -221,11 +221,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;kjin;;;;;;;;;;;;;;;;;;;;;;;
 (set-language-environment 'Chinese-GB)                                                                                             
 (set-keyboard-coding-system 'euc-cn)                                                                                               
-(set-clipboard-coding-system 'euc-cn)                                                                                               
+;;(set-clipboard-coding-system 'euc-cn)      
+(set-clipboard-coding-system 'euc-cn)                                                                                           
 (set-terminal-coding-system 'euc-cn)                                                                                               
-(set-buffer-file-coding-system 'euc-cn)                                                                                             
-(set-selection-coding-system 'euc-cn)                                                                                               
+(set-buffer-file-coding-system 'euc-cn) 
+;;kjin   这行从euc-cn改为 utf-8，解决了linux上从网页拷贝中文到emacs显示乱码问题                                                                                          
+(set-selection-coding-system 'utf-8)
+                                                                                               
 (modify-coding-system-alist 'process "*" 'euc-cn)                                                                                   
 (setq default-process-coding-system                                                                                                 
             '(euc-cn . euc-cn))                                                                                                     
 (setq-default pathname-coding-system 'euc-cn)
+
+;;solve dired show chinese issue
+(prefer-coding-system 'gb18030)
+(prefer-coding-system 'utf-8)
