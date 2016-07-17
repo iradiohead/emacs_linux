@@ -1,0 +1,107 @@
+* dropbox
+~/.dropbox-dist/dropboxd 
+
+　　1.下载程序
+
+　　 进入网页 https://www.dropbox.com/install?os=lnx ，可以看到“Install Dropbox via command line"下有32位和64位的安装命令，比如  "cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -",复制双引号里的地址即可下载程序。
+
+　　2.安装
+
+　　将下载的压缩包解压到 ～/ 中，文件夹是隐藏的，在终端中运行  ~/.dropbox-dist/dropboxd （～为你的主目录)，这样，程序就运行了。设置和在windows下的一样。
+
+　　3.设置开机启动.
+
+　　在终端运行  gnome-session-properties ，点击add，在command中输入 /home/~/.dropbox-dist/dropboxd,一切就和在windows中的一样了～
+
+
+* pidgin  jabber 
+1:
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 decisco]$ vim ./credentials
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 decisco]$ ./decisco.py -c ./credentials 
+2:
+run Pidgin
+
+
+* nosi wifi
+openssl req -new -newkey rsa:2048 \
+   -keyout k1jin.ipa.nsn-net.net.key \
+   -out k1jin.ipa.nsn-net.net.csr
+
+
+* yum rpm
+   sudo 会使用root的环境变量，YUM下载会连不上网，所以要把/etc/envirment里的内容注释掉
+
+** look up rpm package install contents
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 yum.repos.d]$ rpm -qa| grep emacs
+emacs-common-24.3-18.el7.x86_64
+emacs-24.3-18.el7.x86_64
+emacs-filesystem-24.3-18.el7.noarch
+
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 yum.repos.d]$ rpm -ql emacs-24.3-18.el7.x86_64
+/usr/bin/emacs
+/usr/bin/emacs-24.3
+/usr/share/applications/emacs.desktop
+/usr/share/applications/emacsclient.desktop
+/usr/share/icons/hicolor/128x128/apps/emacs.png
+/usr/share/icons/hicolor/16x16/apps/emacs.png
+/usr/share/icons/hicolor/24x24/apps/emacs.png
+/usr/share/icons/hicolor/32x32/apps/emacs.png
+/usr/share/icons/hicolor/48x48/apps/emacs.png
+/usr/share/icons/hicolor/scalable/apps/emacs.svg
+
+** list all installed packages
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 yum.repos.d]$ yum list installed | grep emacs
+emacs.x86_64                       1:24.3-18.el7           @base/7Client        
+emacs-common.x86_64                1:24.3-18.el7           @base/7Client        
+emacs-filesystem.noarch            1:24.3-18.el7           @anaconda/7.2        
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 yum.repos.d]$ rpm -qa | grep emacs
+emacs-common-24.3-18.el7.x86_64
+emacs-24.3-18.el7.x86_64
+emacs-filesystem-24.3-18.el7.noarch
+
+** yum cmd
+1.使用YUM查找软件包
+ 命令：yum search~
+ 2.列出所有可安装的软件包
+ 命令：yum list
+ 3.列出所有可更新的软件包
+ 命令：yum list updates
+ 4.列出所有已安装的软件包
+ 命令：yum list installed
+ 5.列出所有已安装但不在Yum Repository 內的软件包
+ 命令：yum list extras
+ 6.列出所指定软件包
+ 命令：yum list ～
+ 7.使用YUM获取软件包信息
+ 命令：yum info ～
+ 8.列出所有软件包的信息
+ 命令：yum info
+ 9.列出所有可更新的软件包信息
+ 命令：yum info updates
+ 10.列出所有已安裝的软件包信息
+ 命令：yum info installed
+ 11.列出所有已安裝但不在Yum Repository 內的软件包信息
+ 命令：yum info extras
+ 12.列出软件包提供哪些文件
+ 命令：yum provides~
+
+* redhat 7.2
+
+
+* VPN
+ 用Linux接上PPTP VPN（点对点传送协议VPN）要连上VPN，你需要安装网络管理器小程序。许多Linux系统都已经预安装好了这个程序，但你要安装特定VPN的插件来连接VPN。VPN管理者会告诉你你的VPN的形式的
+
+    下载网络管理器程序，以及相应插件。你可以用以下命令将两者同时安装。注意这个代码是适合PPTP VPN形式的，这种形式最适合家庭用户和小型企业用户：“sudo apt-get install network-manager-gnome network-manager-pptp ”
+        如果已经有了这个程序，只需要安装插件，把上述代码中的network-manager-gnome删去。
+        安装好了以后，用以下代码重启小程序： sudo NetworkManager restart
+    点击网络管理器图标，选择VPN标签，点击添加按钮来添加VPN连接。
+    输入VPN信息。在“网关”里输入VPN的IP地址和域名。输入登录信息登录。
+    点击高级选项框，要做以下调整：
+        在确认栏里取消勾选PAP和EAP
+        勾选CHAP、MSCHAP、MSCAPv2
+        勾选“使用点对点加密”
+        在安全菜单里选择128字节加密
+        勾选“允许状态加密”“发送PPP回应包”然后把其他都取消勾选
+    连接VPN。调整以后就可以邮件点击网络管理器，选择VPN。可能要重启电脑才能出现VPN选项。
+
+

@@ -1,0 +1,30 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("tutorial_mine"
+ (filename . "~/Dropbox/emacs_docs/tutorial_mine/")
+ (front-context-string . "Chinese-GB.tut\n ")
+ (rear-context-string . "74 Jul 16 12:59 ")
+ (position . 327))
+("emacs_docs"
+ (filename . "~/Dropbox/emacs_docs/")
+ (front-context-string . "2016_sprint_todo")
+ (rear-context-string . "16 Jul 11 19:27 ")
+ (position . 230))
+("Documents"
+ (filename . "~/Documents/")
+ (front-context-string)
+ (rear-context-string . "Jul 15 09:37 ..\n")
+ (position . 172))
+("Desktop"
+ (filename . "~/Desktop/")
+ (front-context-string . ".emacs.d\n  drwx-")
+ (rear-context-string . "96 Feb  5  2015 ")
+ (position . 286))
+("~"
+ (filename . "~/")
+ (front-context-string . "..\n  -rw-------.")
+ (rear-context-string . "34 Jul 13 15:07 ")
+ (position . 160))
+)

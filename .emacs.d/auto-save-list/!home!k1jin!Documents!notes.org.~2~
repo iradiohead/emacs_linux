@@ -1,0 +1,83 @@
+* dropbox
+~/.dropbox-dist/dropboxd 
+
+　　1.下载程序
+
+　　 进入网页 https://www.dropbox.com/install?os=lnx ，可以看到“Install Dropbox via command line"下有32位和64位的安装命令，比如  "cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -",复制双引号里的地址即可下载程序。
+
+　　2.安装
+
+　　将下载的压缩包解压到 ～/ 中，文件夹是隐藏的，在终端中运行  ~/.dropbox-dist/dropboxd （～为你的主目录)，这样，程序就运行了。设置和在windows下的一样。
+
+　　3.设置开机启动.
+
+　　在终端运行  gnome-session-properties ，点击add，在command中输入 /home/~/.dropbox-dist/dropboxd,一切就和在windows中的一样了～
+
+
+* pidgin  jabber 
+1:
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 decisco]$ vim ./credentials
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 decisco]$ ./decisco.py -c ./credentials 
+2:
+run Pidgin
+
+
+* nosi wifi
+openssl req -new -newkey rsa:2048 \
+   -keyout k1jin.ipa.nsn-net.net.key \
+   -out k1jin.ipa.nsn-net.net.csr
+
+*  yum rpm 
+** look up rpm package install contents
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 yum.repos.d]$ rpm -qa| grep emacs
+emacs-common-24.3-18.el7.x86_64
+emacs-24.3-18.el7.x86_64
+emacs-filesystem-24.3-18.el7.noarch
+
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 yum.repos.d]$ rpm -ql emacs-24.3-18.el7.x86_64
+/usr/bin/emacs
+/usr/bin/emacs-24.3
+/usr/share/applications/emacs.desktop
+/usr/share/applications/emacsclient.desktop
+/usr/share/icons/hicolor/128x128/apps/emacs.png
+/usr/share/icons/hicolor/16x16/apps/emacs.png
+/usr/share/icons/hicolor/24x24/apps/emacs.png
+/usr/share/icons/hicolor/32x32/apps/emacs.png
+/usr/share/icons/hicolor/48x48/apps/emacs.png
+/usr/share/icons/hicolor/scalable/apps/emacs.svg
+
+** list all installed packages
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 yum.repos.d]$ yum list installed | grep emacs
+emacs.x86_64                       1:24.3-18.el7           @base/7Client        
+emacs-common.x86_64                1:24.3-18.el7           @base/7Client        
+emacs-filesystem.noarch            1:24.3-18.el7           @anaconda/7.2        
+[k1jin@nsn-china-hangzhou-binjiang-vlan20021158 yum.repos.d]$ rpm -qa | grep emacs
+emacs-common-24.3-18.el7.x86_64
+emacs-24.3-18.el7.x86_64
+emacs-filesystem-24.3-18.el7.noarch
+
+** yum cmd
+1.使用YUM查找软件包
+ 命令：yum search~
+ 2.列出所有可安装的软件包
+ 命令：yum list
+ 3.列出所有可更新的软件包
+ 命令：yum list updates
+ 4.列出所有已安装的软件包
+ 命令：yum list installed
+ 5.列出所有已安装但不在Yum Repository 內的软件包
+ 命令：yum list extras
+ 6.列出所指定软件包
+ 命令：yum list ～
+ 7.使用YUM获取软件包信息
+ 命令：yum info ～
+ 8.列出所有软件包的信息
+ 命令：yum info
+ 9.列出所有可更新的软件包信息
+ 命令：yum info updates
+ 10.列出所有已安裝的软件包信息
+ 命令：yum info installed
+ 11.列出所有已安裝但不在Yum Repository 內的软件包信息
+ 命令：yum info extras
+ 12.列出软件包提供哪些文件
+ 命令：yum provides~
