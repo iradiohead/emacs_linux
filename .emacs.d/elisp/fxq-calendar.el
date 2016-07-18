@@ -1,5 +1,14 @@
+;;kjin comment it as .emacs already add this agenda conf
 ;; Set org-agenda-files for Org-Mode
-(setq org-agenda-files (list "~/diary/TimeQuadrant.org"))
+;;(setq org-agenda-files (list "~/Dropbox/emacs_docs/tutorial_mine/"
+;;                             "~/Dropbox/emacs_docs/"))
+
+;;kjin add for shutcut
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
 ;;日历基本配置
 ;;设置我所在地方的经纬度，calendar里有个功能是日月食的预测，和你的经纬度相联系的。
 (setq calendar-latitude +30.0)
