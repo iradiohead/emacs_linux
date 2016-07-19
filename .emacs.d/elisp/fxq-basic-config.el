@@ -387,3 +387,6 @@
 ;; (setq ahk-syntax-directory "D:/Program Files/AutoHotkey/Extras/Editors/Syntax")
 ;; (add-to-list 'auto-mode-alist '("\\.ahk$" . ahk-mode))
 ;; (autoload 'ahk-mode "ahk-mode")
+
+;;kjin
+(global-linum-mode t)
