@@ -1,6 +1,6 @@
 ;;设置你的全名和邮件，在发邮件时可以用到
-(setq user-full-name "Ferry")
-(setq user-mail-address "xiaoqiang.fu@gmail.com")
+(setq user-full-name "Radiohead")
+(setq user-mail-address "kjin1983@gmail.com")
 ;;设置你的书签文件，默认是~/.emacs.bmk，我喜欢把有关emacs的文件尽量放在一个文件夹，所以就修改了。
 (setq bookmark-default-file "~/.emacs.d/.emacs.bmk")
 ;;load-path就同bash中的$PATH相似，emacs所需要的Elisp包都得在load-path里的文件夹中，~/.emacs.d/elisp是我自己添加的Elisp包
@@ -10,12 +10,12 @@
 ;;设置gnus启动的文件。默认是为~/.gnus.el
 (setq gnus-init-file "~/.emacs.d/elisp/fxq-gnus.el")
 ;;由于我的配置文件很长，所以按照分类分别放在不同的文件里，方便管理
-(load "fxq-basic-config")
+(load "jk-basic-config")
 ;;(load "fxq-language")
-(load "fxq-calendar")
+(load "jk-calendar")
 (load "fxq-folding")
 ;;(load "fxq-ido")
-;;(load "fxq-dictionary")
+;;(load "jk-dictionary")
 (load "fxq-function")
 ;;(load "fxq-mew")
 (load "fxq-w3m")

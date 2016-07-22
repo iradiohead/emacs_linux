@@ -2,7 +2,37 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("tutorial_mine"
+(("elisp"
+ (filename . "~/.emacs.d/elisp/")
+ (front-context-string . "New Folder\n  drw")
+ (rear-context-string . "96 Jul 15 09:32 ")
+ (position . 230))
+("fxq-basic-config.el"
+ (filename . "~/.emacs.d/elisp/fxq-basic-config.el")
+ (front-context-string . "(add-hook 'tnsdl")
+ (rear-context-string . "ire 'xcscope)))\n")
+ (position . 7936))
+(".emacs"
+ (filename . "~/.emacs")
+ (front-context-string . ";;设置你的全名和邮件，在发邮件")
+ (rear-context-string)
+ (position . 1))
+("my_todo_list.org"
+ (filename . "~/Dropbox/emacs_docs/my_todo_list.org")
+ (front-context-string . "#+TITLE: MY-TODO")
+ (rear-context-string)
+ (position . 1))
+("quick_notes.txt"
+ (filename . "~/Dropbox/emacs_docs/quick_notes.txt")
+ (front-context-string . "export https_pro")
+ (rear-context-string)
+ (position . 1))
+("redhat7_note.org"
+ (filename . "~/Dropbox/emacs_docs/redhat7_note.org")
+ (front-context-string . "* dropbox\n~/.dro")
+ (rear-context-string)
+ (position . 1))
+("tutorial_mine"
  (filename . "~/Dropbox/emacs_docs/tutorial_mine/")
  (front-context-string . "Chinese-GB.tut\n ")
  (rear-context-string . "74 Jul 16 12:59 ")
