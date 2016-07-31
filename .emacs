@@ -10,8 +10,9 @@
 ;;设置gnus启动的文件。默认是为~/.gnus.el
 (setq gnus-init-file "~/.emacs.d/elisp/fxq-gnus.el")
 ;;由于我的配置文件很长，所以按照分类分别放在不同的文件里，方便管理
+
 (load "jk-basic-config")
-;;(load "fxq-language")
+(load "jk-language")
 (load "jk-calendar")
 (load "fxq-folding")
 ;;(load "fxq-ido")
@@ -21,7 +22,7 @@
 (load "fxq-w3m")
 ;;(load "fxq-erc")
 (load "fxq-dired")
-(load "fxq-mode")
+(load "jk-mode")
 (load "fxq-key-bindings")
 (load "fxq-tnsdl")
 ;; (load "fxq-robot-mode")
@@ -31,29 +32,8 @@
 (load "fxq-plm");;PL/M highlight
 (load "color-theme")
 ;;(load "simple-call-tree")
-(load "highlight-symbol")
-(require 'highlight-symbol)
-(add-hook 'text-mode-hook 'highlight-symbol-mode)
-(add-hook 'c-mode-hook 'highlight-symbol-mode)
-(add-hook 'c++-mode-hook 'highlight-symbol-mode)
-(add-hook 'tnsdl-mode-hook 'highlight-symbol-mode)
-(add-hook 'java-mode-hook 'highlight-symbol-mode)
-(add-hook 'perl-mode-hook 'highlight-symbol-mode)
-(add-hook 'php-mode-hook 'highlight-symbol-mode)
-(add-hook 'emacs-lisp-mode-hook 'highlight-symbol-mode)
-(load "highlight-parentheses")
-(require 'highlight-parentheses)
-(add-hook 'c-mode-hook 'highlight-parentheses-mode)
-(add-hook 'c++-mode-hook 'highlight-parentheses-mode)
-(add-hook 'tnsdl-mode-hook 'highlight-parentheses-mode)
-(add-hook 'java-mode-hook 'highlight-parentheses-mode)
-(add-hook 'perl-mode-hook 'highlight-parentheses-mode)
-(add-hook 'php-mode-hook 'highlight-parentheses-mode)
-(add-hook 'emacs-lisp-mode-hook 'highlight-parentheses-mode)
-
 ;;(load "webkit")
 ;;(require 'webkit)
-
 ;; ;;Setting for gnuserv
 ;; (require 'gnuserv)
 ;; (gnuserv-start)
@@ -62,47 +42,19 @@
 ;; ;; 打开后让emacs跳到前面来
 ;; (setenv "GNUSERV_SHOW_EMACS" "1")
 
-;;强大的自动补齐功能
-;; ensure abbrev mode is always on
-(setq-default abbrev-mode t)
-;; do not bug me about saving my abbreviations
-(setq save-abbrevs nil)
-
-;; load up modes I use
-(require 'cc-mode)
-(require 'perl-mode)
-(require 'cperl-mode)
-(require 'sh-script)
-(require 'shell)
-;;(require 'tex-site) ;; I use AUCTeX
-;;(require 'latex)    ;; needed to define LaTeX-mode-hook under AUCTeX
-;;(require 'tex)      ;; needed to define TeX-mode-hook under AUCTeX
-;;(require 'python)   ;; I use python.el from Emacs CVS, uncomment if you do also
-(setq auto-mode-alist
-	  (cons '("\\.py$" . python-mode) auto-mode-alist))
-(setq interpreter-mode-alist
-	  (cons '("python" . python-mode)
-			interpreter-mode-alist))
-(autoload 'python-mode "python-mode" "Python editing mode." t)
-;;; add these lines if you like color-based syntax highlighting
-(global-font-lock-mode t)
-(setq font-lock-maximum-decoration t)
-
-;;(setq ipython-command "D:\Program Files\Python25\Lib\site-packages\IPython")
-;;(require 'ipython)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; redo.el
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'redo)
 (tool-bar-add-item "stock_redo"
                    'redo
                    'redo
                    :help "Redo(control f3)")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; find-recursive.el
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'find-recursive)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; psvn.el
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; combined the SVN(SubVersion) in emacs
+(require 'psvn)
 
 ;;(load "maxima")
 ;;(setq auto-mode-alist (cons '("\\.max" . maxima-mode) auto-mode-alist))
@@ -111,32 +63,7 @@
 ;;(autoload 'maxima-mode "maxima" "Maxima editing mode" t)
 
 ;;add line number for display
-(require 'wb-line-number)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; psvn.el
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; combined the SVN(SubVersion) in emacs
-(require 'psvn)
-
-;;代码折叠
-(load-library "hideshow")
-(add-hook 'c-mode-hook 'hs-minor-mode)
-(add-hook 'c++-mode-hook 'hs-minor-mode)
-(add-hook 'tnsdl-mode-hook 'hs-minor-mode)
-(add-hook 'java-mode-hook 'hs-minor-mode)
-(add-hook 'perl-mode-hook 'hs-minor-mode)
-(add-hook 'php-mode-hook 'hs-minor-mode)
-(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
-;;
-;;   hs-hide-block                      C-c @ C-h
-;;   hs-show-block                      C-c @ C-s
-;;   hs-hide-all                        C-c @ C-M-h
-;;   hs-show-all                        C-c @ C-M-s
-;;   hs-hide-level                      C-c @ C-l
-;;   hs-toggle-hiding                   C-c @ C-c
-;;   hs-mouse-toggle-hiding             [(shift mouse-2)]
-;;   hs-hide-initial-comment-block
+;;(require 'wb-line-number) --kjin do not need this, as in jk-basic-config.el already set (global-linum-mode)
 
 ;;Add tramp plink method by Ferry on 20120412
 ;; (require 'tramp)
@@ -175,7 +102,6 @@
 ;;(add-to-list 'ac-dictionary-directories "~/site-lisp/auto-complete/ac-dict")
 ;;(ac-config-default)
 
-
 ;; added by Ferry on 07082012 for Aspell function
 ;; (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
 ;; (setq ispell-program-name "aspell")
@@ -187,14 +113,9 @@
 ;; (ignoramus-setup)
 
 ;; added by Ferry on 15112013 to use whitespace
-(require 'whitespace)
+(require 'whitespace)  ;; enable by M-x whitespace-mode
 
 ;;(setq ecb-auto-activate t)
-
-;;(find-file "D:/Current_Task/Source/RCY/Makefile")
-;;(find-file "D:/emacs/diary/TimeQuadrant.org")
-;;(find-file "D:/Current_Task/Source/Preprocessor_Source/PPLIST_SPM/pplist.var")
-;;(find-file "~/Dropbox/emacs_docs/temp.txt")
 
 ;;(color-theme-select)
 
@@ -204,35 +125,49 @@
 ;; (desktop-save-mode) 
 ;; (desktop-read)
 
+;;kjin add by emacs automaitcally by click menu items
 (put 'erase-buffer 'disabled nil)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/emacs_docs/tutorial_mine/" "~/Dropbox/emacs_docs/"))))
+ '(org-agenda-files (quote ("~/Dropbox/emacs_docs/tutorial_mine/" "~/Dropbox/emacs_docs/")))
+ '(truncate-partial-width-windows nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+                                                                                             
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;kjin;;;;;;;;;;;;;;;;;;;;;;;
-(set-language-environment 'Chinese-GB)                                                                                             
-(set-keyboard-coding-system 'euc-cn)                                                                                               
-;;(set-clipboard-coding-system 'euc-cn)      
-(set-clipboard-coding-system 'euc-cn)                                                                                           
-(set-terminal-coding-system 'euc-cn)                                                                                               
-(set-buffer-file-coding-system 'euc-cn) 
-;;kjin   这行从euc-cn改为 utf-8，解决了linux上从网页拷贝中文到emacs显示乱码问题                                                                                          
-(set-selection-coding-system 'utf-8)
-                                                                                               
-(modify-coding-system-alist 'process "*" 'euc-cn)                                                                                   
-(setq default-process-coding-system                                                                                                 
-            '(euc-cn . euc-cn))                                                                                                     
-(setq-default pathname-coding-system 'euc-cn)
+(load "highlight-symbol")
+(require 'highlight-symbol)
+(add-hook 'text-mode-hook 'highlight-symbol-mode)
+(add-hook 'c-mode-hook 'highlight-symbol-mode)
+(add-hook 'c++-mode-hook 'highlight-symbol-mode)
+(add-hook 'tnsdl-mode-hook 'highlight-symbol-mode)
+(add-hook 'java-mode-hook 'highlight-symbol-mode)
+(add-hook 'perl-mode-hook 'highlight-symbol-mode)
+(add-hook 'php-mode-hook 'highlight-symbol-mode)
+(add-hook 'emacs-lisp-mode-hook 'highlight-symbol-mode)
+(load "highlight-parentheses")
+(require 'highlight-parentheses)
+(add-hook 'c-mode-hook 'highlight-parentheses-mode)
+(add-hook 'c++-mode-hook 'highlight-parentheses-mode)
+(add-hook 'tnsdl-mode-hook 'highlight-parentheses-mode)
+(add-hook 'java-mode-hook 'highlight-parentheses-mode)
+(add-hook 'perl-mode-hook 'highlight-parentheses-mode)
+(add-hook 'php-mode-hook 'highlight-parentheses-mode)
+(add-hook 'emacs-lisp-mode-hook 'highlight-parentheses-mode)
 
-;;solve dired show chinese issue
-(prefer-coding-system 'gb18030)
-(prefer-coding-system 'utf-8)
+
+;;Setting for ibuffer
+(require 'ibuffer)
+
+
+;;Setting for wb-line-number
+;;(require 'wb-line-number)
+;;(setq truncate-partial-width-windows nil) ; use continuous line
+;;(set-scroll-bar-mode nil)                 ; no scroll bar, even in x-window system

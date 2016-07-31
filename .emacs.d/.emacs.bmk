@@ -2,16 +2,61 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("elisp"
+(("pointeronc_1"
+ (filename . "~/Dropbox/SHARE_FOR_VM/C_Project/pointeronc_1/")
+ (front-context-string . "..\n  -rw-r--r--.")
+ (rear-context-string . "53 Jul 31 09:45 ")
+ (position . 202))
+("jk-basic-config.el"
+ (filename . "~/.emacs.d/elisp/jk-basic-config.el")
+ (front-context-string . ";; 设置背景颜色和字体颜色\n(")
+ (rear-context-string)
+ (position . 1))
+("temp.txt"
+ (filename . "~/Dropbox/emacs_docs/temp.txt")
+ (front-context-string . "5 a b\n6 b\n7 a  c")
+ (rear-context-string . " \n2 b\n3 bc \n4 b\n")
+ (position . 49))
+("my_cscope.org"
+ (filename . "~/Dropbox/emacs_docs/tutorial_mine/my_cscope.org")
+ (front-context-string)
+ (rear-context-string)
+ (position . 4))
+("sourcecode"
+ (filename . "~/Dropbox/personal/sourcecode/")
+ (front-context-string . ".svn\n  -rw-r--r-")
+ (rear-context-string . "96 Jul 15 14:27 ")
+ (position . 253))
+("linux_kernel.org"
+ (filename . "~/Dropbox/emacs_docs/linux_kernel.org")
+ (front-context-string)
+ (rear-context-string . "\n/usr/bin/strip\n")
+ (position . 1390))
+("git.org"
+ (filename . "~/Dropbox/emacs_docs/git.org")
+ (front-context-string . "#+TITLE: GIT GUI")
+ (rear-context-string)
+ (position . 1))
+("LINUX-UNIX"
+ (filename . "~/Dropbox/personal/PROGRAMMING BOOKS/LINUX-UNIX/")
+ (front-context-string . "Advanced Program")
+ (rear-context-string . "39 May 20  2014 ")
+ (position . 275))
+("MyNotes.org"
+ (filename . "~/Dropbox/emacs_docs/tutorial_mine/MyNotes.org")
+ (front-context-string . "\n* help\nc-h k c-")
+ (rear-context-string . "STARTUP: indent\n")
+ (position . 19))
+("linux_shell_cmd.org"
+ (filename . "~/Dropbox/emacs_docs/linux_shell_cmd.org")
+ (front-context-string . "#+TITLE: linux_s")
+ (rear-context-string)
+ (position . 1))
+("elisp"
  (filename . "~/.emacs.d/elisp/")
  (front-context-string . "New Folder\n  drw")
  (rear-context-string . "96 Jul 15 09:32 ")
  (position . 230))
-("fxq-basic-config.el"
- (filename . "~/.emacs.d/elisp/fxq-basic-config.el")
- (front-context-string . "(add-hook 'tnsdl")
- (rear-context-string . "ire 'xcscope)))\n")
- (position . 7936))
 (".emacs"
  (filename . "~/.emacs")
  (front-context-string . ";;设置你的全名和邮件，在发邮件")
