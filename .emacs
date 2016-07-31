@@ -97,10 +97,6 @@
 (tabbar-mode 1)  	
 (define-prefix-command 'lwindow-map)
 
-;; added by Ferry on 09072012 for adding auto-complete function
-;;(require 'auto-complete-config)
-;;(add-to-list 'ac-dictionary-directories "~/site-lisp/auto-complete/ac-dict")
-;;(ac-config-default)
 
 ;; added by Ferry on 07082012 for Aspell function
 ;; (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
@@ -171,3 +167,19 @@
 ;;(require 'wb-line-number)
 ;;(setq truncate-partial-width-windows nil) ; use continuous line
 ;;(set-scroll-bar-mode nil)                 ; no scroll bar, even in x-window system
+
+
+;;kjin
+(require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets" ;; personal snippets
+        ))
+(yas-global-mode 1)
+
+;;kjin
+;;(require 'popup)
+(add-to-list 'load-path "~/.emacs.d/elisp/autocomplete")
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/autocomplete/ac-dict")
+(require 'auto-complete-config)
+(ac-config-default)
+
