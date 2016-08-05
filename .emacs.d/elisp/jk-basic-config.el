@@ -1,31 +1,31 @@
-;; 设置背景颜色和字体颜色
-(setq default-frame-alist
-      (append (list 
-            '(foreground-color . "white")
-		    '(background-color . "black")
-		    '(background-color . "gray")
-		    '(border-color . "grey")
-		    '(mouse-color . "mediumpurple")
-		    '(cursor-color . "white")
-;;		    '(ime-font . (w32-logfont "ＭＳ ゴシック"
-;;					      0 16 400 0 nil nil nil
-;;					      128 1 3 49)) ; TrueType のみ
-;;		    '(font . "bdf-fontset")    ; BDF
-;;		    '(font . "private-fontset"); TrueType
-		    '(width . 80)
-		    '(height . 35)
-		    '(top . 50)
-		    '(left .100))
-	      default-frame-alist))
+;; ;; 设置背景颜色和字体颜色
+;; (setq default-frame-alist
+;;       (append (list 
+;;             '(foreground-color . "white")
+;; 		    '(background-color . "black")
+;; 		    '(background-color . "gray")
+;; 		    '(border-color . "grey")
+;; 		    '(mouse-color . "mediumpurple")
+;; 		    '(cursor-color . "white")
+;; ;;		    '(ime-font . (w32-logfont "ＭＳ ゴシック"
+;; ;;					      0 16 400 0 nil nil nil
+;; ;;					      128 1 3 49)) ; TrueType のみ
+;; ;;		    '(font . "bdf-fontset")    ; BDF
+;; ;;		    '(font . "private-fontset"); TrueType
+;; 		    '(width . 80)
+;; 		    '(height . 35)
+;; 		    '(top . 50)
+;; 		    '(left .100))
+;; 	      default-frame-alist))
 
-;;不要让光标闪烁(blink-cursor-mode -1) 
-;; 设置另外一些颜色：语法高亮显示的背景和主题，区域选择的背景和主题，二次选择的背景和选择
-;; (set-face-foreground 'highlight "white")
-(set-face-background 'highlight "black")
-(set-face-foreground 'region "cyan")
-(set-face-background 'region "black")
-(set-face-foreground 'secondary-selection "skyblue")
-(set-face-background 'secondary-selection "darkblue")
+;; ;;不要让光标闪烁(blink-cursor-mode -1) 
+;; ;; 设置另外一些颜色：语法高亮显示的背景和主题，区域选择的背景和主题，二次选择的背景和选择
+;; ;; (set-face-foreground 'highlight "white")
+;; (set-face-background 'highlight "black")
+;; (set-face-foreground 'region "cyan")
+;; (set-face-background 'region "black")
+;; (set-face-foreground 'secondary-selection "skyblue")
+;; (set-face-background 'secondary-selection "darkblue")
 
 ;;(require 'color-theme)
 ;;(color-theme-dark-laptop)

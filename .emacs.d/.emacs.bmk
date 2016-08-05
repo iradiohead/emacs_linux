@@ -2,16 +2,26 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("MyPlugin.org"
- (filename . "~/Dropbox/emacs_docs/tutorial_mine/MyPlugin.org")
- (front-context-string . "* 窗口快速跳转 C-x o /")
+(("fxq-key-bindings.el"
+ (filename . "~/.emacs.d/elisp/fxq-key-bindings.el")
+ (front-context-string . ";;统一设置键帮定，并尽量放在配")
  (rear-context-string)
  (position . 1))
+("SHARE_FOR_VM"
+ (filename . "~/Dropbox/SHARE_FOR_VM/")
+ (front-context-string . "C_C++_projects\n ")
+ (rear-context-string . "68 Jul 31 18:12 ")
+ (position . 231))
+("test_cpp"
+ (filename . "~/Dropbox/SHARE_FOR_VM/C_C++_projects/test_cpp/")
+ (front-context-string)
+ (rear-context-string . "Jul 31 18:12 ..\n")
+ (position . 201))
 ("pointeronc_1"
- (filename . "~/Dropbox/SHARE_FOR_VM/C_Project/pointeronc_1/")
- (front-context-string . "..\n  -rw-r--r--.")
- (rear-context-string . "53 Jul 31 09:45 ")
- (position . 202))
+ (filename . "~/Dropbox/SHARE_FOR_VM/C_C++_projects/pointeronc_1/")
+ (front-context-string)
+ (rear-context-string . "40 Jul 31 16:28 ")
+ (position . 256))
 ("jk-basic-config.el"
  (filename . "~/.emacs.d/elisp/jk-basic-config.el")
  (front-context-string . ";; 设置背景颜色和字体颜色\n(")
@@ -22,11 +32,6 @@
  (front-context-string . "5 a b\n6 b\n7 a  c")
  (rear-context-string . " \n2 b\n3 bc \n4 b\n")
  (position . 49))
-("my_cscope.org"
- (filename . "~/Dropbox/emacs_docs/tutorial_mine/my_cscope.org")
- (front-context-string)
- (rear-context-string)
- (position . 4))
 ("sourcecode"
  (filename . "~/Dropbox/personal/sourcecode/")
  (front-context-string . ".svn\n  -rw-r--r-")
