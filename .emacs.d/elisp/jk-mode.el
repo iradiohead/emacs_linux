@@ -64,7 +64,6 @@
 
 
 (add-hook 'c-mode-hook 'linux-c-mode)
-
 (add-hook 'c++-mode-hook 'linux-cpp-mode)
 
 ;; 设置imenu的排序方式为按名称排序
@@ -73,6 +72,7 @@
 (defun linux-c-mode()
 ;; 将回车代替C-j的功能，换行的同时对齐
   (define-key c-mode-map [return] 'newline-and-indent)
+  (define-key c-mode-base-map [(f7)] 'compile) ;;kjin add
   (interactive)
 ;; 自动模式，在此种模式下当你键入{时，会自动根据你设置的对齐风格对齐
   (c-toggle-auto-state)
@@ -92,6 +92,7 @@
 (defun linux-cpp-mode()
   (define-key c++-mode-map [return] 'newline-and-indent)
   (define-key c++-mode-map [(control c) (c)] 'compile)
+ (define-key c-mode-base-map [(f7)] 'compile) ;;kjin
   (interactive)
   (c-set-style "bsd")
 ;;(c-set-style "K&R")

@@ -2,12 +2,7 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("fxq-key-bindings.el"
- (filename . "~/.emacs.d/elisp/fxq-key-bindings.el")
- (front-context-string . ";;统一设置键帮定，并尽量放在配")
- (rear-context-string)
- (position . 1))
-("SHARE_FOR_VM"
+(("SHARE_FOR_VM"
  (filename . "~/Dropbox/SHARE_FOR_VM/")
  (front-context-string . "C_C++_projects\n ")
  (rear-context-string . "68 Jul 31 18:12 ")

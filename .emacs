@@ -11,19 +11,40 @@
 (setq gnus-init-file "~/.emacs.d/elisp/fxq-gnus.el")
 ;;由于我的配置文件很长，所以按照分类分别放在不同的文件里，方便管理
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;kjin add by emacs automaitcally by click menu items
+(put 'erase-buffer 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
+ '(custom-enabled-themes (quote (misterioso)))
+ '(global-ede-mode t)
+ '(org-agenda-files (quote ("~/Dropbox/emacs_docs/tutorial_mine/" "~/Dropbox/emacs_docs/")))
+ '(truncate-partial-width-windows nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load "jk-basic-config")
 (load "jk-language")
 (load "jk-calendar")
 (load "fxq-folding")
-;;(load "fxq-ido")
+;;(load "jk-ido")
 ;;(load "jk-dictionary")
 (load "fxq-function")
 ;;(load "fxq-mew")
 (load "fxq-w3m")
 ;;(load "fxq-erc")
-(load "fxq-dired")
+(load "jk-dired")
 (load "jk-mode")
-(load "fxq-key-bindings")
+(load "jk-key-bindings")
 (load "fxq-tnsdl")
 ;; (load "fxq-robot-mode")
 (load "fxq-python-mode")
@@ -121,22 +142,6 @@
 ;; (desktop-save-mode) 
 ;; (desktop-read)
 
-;;kjin add by emacs automaitcally by click menu items
-(put 'erase-buffer 'disabled nil)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (tango-dark)))
- '(org-agenda-files (quote ("~/Dropbox/emacs_docs/tutorial_mine/" "~/Dropbox/emacs_docs/")))
- '(truncate-partial-width-windows nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
                                                                                              
 
 (load "highlight-symbol")
@@ -162,27 +167,173 @@
 
 ;;Setting for ibuffer
 (require 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer)  
 
 
 ;;Setting for wb-line-number
 ;;(require 'wb-line-number)
 ;;(setq truncate-partial-width-windows nil) ; use continuous line
 ;;(set-scroll-bar-mode nil)                 ; no scroll bar, even in x-window system
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;Setting for code-reading
+(require 'xcscope) ;;加载xcscope
+;; (add-hook 'plm-mode-common-hook '(lambda() (require 'xcscope)))
+;; (add-hook 'tnsdl-mode-common-hook '(lambda() (require 'xcscope)))
+
+;;---------------------------------------------------
+;;cedet 安装
+;Added by Ferry on 08/07/2012 for omitting the warning in Emacs 24.1.1
+;; (setq byte-compile-warnings nil)
+;; (add-hook 'texinfo-mode-hook (lambda () (require 'sb-texinfo)))
+;; (load-file "~/site-lisp/cedet/common/cedet.el")
+;; (load-file "~/site-lisp/cedet/contrib/cedet-contrib.el")
+;; (load-file "~/site-lisp/cedet/ede/ede.el")
+;; (load-file "~/site-lisp/cedet/cogre/cogre.el")
+;; (load-file "~/site-lisp/cedet/speedbar/speedbar.el")
+;; (load-file "~/site-lisp/cedet/eieio/eieio.el")
+;; (semantic-load-enable-code-helpers)
+;; (autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
+;; (autoload 'speedbar-get-focus "speedbar" "Jump to speedbar frame" t)
+;; (define-key-after (lookup-key global-map [menu-bar tools])
+;;   [speedbar]
+;;   '("Speedbar" .
+;; 	speedbar-frame-mode)
+;;   [calendar]) 
+;----------------------------------------------------------
+;;ecb
+;Added by Ferry on 08/07/2012 for omitting the warning in Emacs 24.1.1
+;; (setq stack-trace-on-error nil)
+;; (add-to-list 'load-path "~/site-lisp/ecb")
+;; (load-file "~/site-lisp/ecb/ecb.el")
+;; (require 'ecb)
+;; (setq ;;ecb-auto-activate t
+;;           ecb-tip-of-the-day nil
+;;           ecb-tree-indent 4
+;;           ecb-windows-height 0.5
+;;           ecb-windows-width 0.2
+;;           ecb-auto-compatibility-check nil
+;;           ecb-version-check nil
+;;           inhibit-startup-message t)
+;; ;--------------------------------------------
+;; (custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+;; '(column-number-mode t)
+;; '(display-time-mode t)
+;; '(ecb-gzip-setup (quote cons))
+;; '(ecb-options-version "2.40")
+;; '(ecb-source-path (quote ("d:/Current_Task/Source")))
+;; '(ecb-tar-setup (quote cons))
+;; '(ecb-wget-setup (quote cons))
+;; '(show-paren-mode t)
+;; '(tabbar-buffer-groups-function (quote tabbar-buffer-ignore-groups))
+;; '(tabbar-buffer-list-function (quote tabbar-buffer-list))
+;; '(tabbar-cycling-scope nil)
+;; '(tabbar-mode t)
+;; '(transient-mark-mode t))
+;; (custom-set-faces
+;;   ;; custom-set-faces was added by Custom.
+;;   ;; If you edit it by hand, you could mess it up, so be careful.
+;;   ;; Your init file should contain only one such instance.
+;;   ;; If there is more than one, they won't work right.
+;; )
+;----------------------------------------------
+(setq semanticdb-project-roots 
+          (list
+        (expand-file-name "/")))
+(setq semanticdb-default-save-directory "~/.emacs.d/auto-save-list")
+;;设置semantic.cache路径
 
 
-;;kjin
+
+;;auto complete;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;自动补全功能，这事从王垠的网站直接Copy过来的，引用一些他对此的说明
+;;你可以设置以下 hippie-expand 的补全方式。它是一个优先列表， hippie-expand 会优先使用表最前面的函数来补全
+;;这是说，首先使用当前的buffer补全，如果找不到，就到别的可见的窗口里寻找，如果还找不到，那么到所有打开的buffer去找，如果还……那么到kill-ring里，到文件名，到简称列表里，到list，…… 当前使用的匹配方式会在 echo 区域显示。
+;;特别有意思的是 try-expand-line，它可以帮你补全整整一行文字。我很多时后有两行文字大致相同，只有几个字不一样，但是我懒得去拷贝粘贴以下。那么我就输入这行文字的前面几个字。然后多按几下 M-/ 就能得到那一行。
+(global-set-key [(meta ?/)] 'hippie-expand)
+(setq hippie-expand-try-functions-list
+	  '(try-expand-line
+		try-expand-line-all-buffers
+		try-expand-list
+		try-expand-list-all-buffers
+		try-expand-dabbrev
+		try-expand-dabbrev-visible
+		try-expand-dabbrev-all-buffers
+		try-expand-dabbrev-from-kill
+		try-complete-file-name
+		try-complete-file-name-partially
+		try-complete-lisp-symbol
+		try-complete-lisp-symbol-partially
+		try-expand-whole-kill))
+
+;;kjin  auto-complete
+;;(require 'popup)
+(add-to-list 'load-path "~/.emacs.d/elisp/autocomplete")
+;;(require 'auto-complete) 
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/autocomplete/ac-dict")
+(ac-config-default)
+
+;;kjin  yasnippet
 (require 'yasnippet)
 (setq yas-snippet-dirs
       '("~/.emacs.d/snippets" ;; personal snippets
         ))
 (yas-global-mode 1)
 
-;;kjin
-;;(require 'popup)
-(add-to-list 'load-path "~/.emacs.d/elisp/autocomplete")
-;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/autocomplete/ac-dict")
-(require 'auto-complete-config)
-(ac-config-default)
+;;kjin auto-complete-clang for c++ , need install clang first
+(require 'auto-complete-clang)  
+;;(setq ac-clang-auto-save t)  
+(setq ac-auto-start nil)
+(setq ac-quick-helpelp-delay 0.5)
+;; (ac-set-trigger-key "TAB")  
+;;(define-key ac-mode-map  (kbd "M-/") 'auto-complete)  
+(define-key ac-mode-map  [(control tab)] 'auto-complete)  
+(defun my-ac-config ()  
+  (setq ac-clang-flags  
+        (mapcar(lambda (item)(concat "-I" item))  
+               (split-string "  
+ /usr/include/c++/4.8.5
+ /usr/include/c++/4.8.5/x86_64-redhat-linux
+ /usr/include/c++/4.8.5/backward
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include
+ /usr/local/include
+ /usr/include
+")))  
+  (setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))  
+  (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)  
+  (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)  
+  (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)  
+  (add-hook 'css-mode-hook 'ac-css-mode-setup)  
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)  
+  (global-auto-complete-mode t))  
+(defun my-ac-cc-mode-setup ()   
+  (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))  
+;;(add-hook 'c++-mode-common-hook 'my-ac-cc-mode-setup)  
+(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)  
+;; ac-source-gtags  
+(my-ac-config)  
 
+;;
+(defun my-indent-or-complete ()
+   (interactive)
+   (if (looking-at "\\>")
+          (hippie-expand nil)
+          (indent-for-tab-command))
+)
+(global-set-key [(control tab)] 'my-indent-or-complete)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;kjin  bm  https://github.com/joodland/bm
 (require 'bm)
+
+

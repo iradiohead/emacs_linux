@@ -1,13 +1,13 @@
 ;;统一设置键帮定，并尽量放在配置文件的最后，以免被绑定的键不小心被后面的配置文件覆盖 
 ;;常用习惯，F1打开帮助，常用帮助有info和woman（就是在emacs中看man） 
-(global-set-key [(f1)] 'info)
+;;kjin (global-set-key [(f1)] 'info)
 
 
 ;;kjin comment it  
 ;; ;;恢复，常用键 
-;; (global-set-key [(f2)] 'undo) 
-;; ;;反恢复，不是很常用，但是绑定了还是方便些 
-;; (global-set-key [(ctrl f2)] 'redo)
+(global-set-key [(f1)] 'undo) 
+;;反恢复，不是很常用，但是绑定了还是方便些 
+(global-set-key [(ctrl f1)] 'redo)
 
 ;;kjin add for bm
 (global-set-key (kbd "<C-f2>") 'bm-toggle)
@@ -30,8 +30,11 @@
 ;;文件管理器，常用 
 (global-set-key [(f6)] 'dired-jump)
 (global-set-key [(ctrl f6)] 'dired-jump-other-window)
+
 ;;同clear相识，具体功能在fxq-functions.el讲过 
 ;;(global-set-key [(f7)] 'fxq-line-to-top-of-window) 
+;;kjin(global-set-key [(f7)] ‘hs-toggle-hiding)
+
 ;;本人正在学scheme，常用 
 ;;(global-set-key [f8] 'run-scheme) 
 ;;打开我得日历 
@@ -286,16 +289,18 @@
                      (get-buffer his-speedbar-buffer-name)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;kjin cmt it 
+;; ;; ;;Setting for cscope
+;; (global-set-key (kbd "C-c s d") 'cscope-find-this-symbol)
+;; (global-set-key (kbd "C-c s g") 'cscope-find-global-definition)
+;; (global-set-key (kbd "C-c s G") 'cscope-find-global-definition-no-prompting)
+;; (global-set-key (kbd "C-c s c") 'cscope-find-functions-calling-this-function)
+;; (global-set-key (kbd "C-c s C") 'cscope-find-called-functions)
+;; (global-set-key (kbd "C-c s t") 'cscope-find-this-text-string)
+;; (global-set-key (kbd "C-c s e") 'cscope-find-egrep-pattern)
+;; (global-set-key (kbd "C-c s f") 'cscope-find-this-file)
 
-;; ;;Setting for cscope
-(global-set-key (kbd "C-c s d") 'cscope-find-this-symbol)
-(global-set-key (kbd "C-c s g") 'cscope-find-global-definition)
-(global-set-key (kbd "C-c s G") 'cscope-find-global-definition-no-prompting)
-(global-set-key (kbd "C-c s c") 'cscope-find-functions-calling-this-function)
-(global-set-key (kbd "C-c s C") 'cscope-find-called-functions)
-(global-set-key (kbd "C-c s t") 'cscope-find-this-text-string)
-(global-set-key (kbd "C-c s e") 'cscope-find-egrep-pattern)
-(global-set-key (kbd "C-c s f") 'cscope-find-this-file)
+
 ;; (define-key global-map [(control f3)]  'cscope-set-initial-directory)
 ;; (define-key global-map [(control f4)]  'cscope-unset-initial-directory)
 ;; (define-key global-map [(control f5)]  'cscope-find-this-symbol)

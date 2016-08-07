@@ -1,22 +1,22 @@
 ;; ;; 设置背景颜色和字体颜色
-;; (setq default-frame-alist
-;;       (append (list 
-;;             '(foreground-color . "white")
-;; 		    '(background-color . "black")
-;; 		    '(background-color . "gray")
-;; 		    '(border-color . "grey")
-;; 		    '(mouse-color . "mediumpurple")
-;; 		    '(cursor-color . "white")
-;; ;;		    '(ime-font . (w32-logfont "ＭＳ ゴシック"
-;; ;;					      0 16 400 0 nil nil nil
-;; ;;					      128 1 3 49)) ; TrueType のみ
-;; ;;		    '(font . "bdf-fontset")    ; BDF
-;; ;;		    '(font . "private-fontset"); TrueType
-;; 		    '(width . 80)
-;; 		    '(height . 35)
-;; 		    '(top . 50)
-;; 		    '(left .100))
-;; 	      default-frame-alist))
+(setq default-frame-alist
+      (append (list 
+           ;; '(foreground-color . "white")
+		   ;; '(background-color . "black")
+		   ;; '(background-color . "gray")
+		   ;; '(border-color . "grey")
+		    '(mouse-color . "mediumpurple")
+		    '(cursor-color . "green")
+;;		    '(ime-font . (w32-logfont "ＭＳ ゴシック"
+;;					      0 16 400 0 nil nil nil
+;;					      128 1 3 49)) ; TrueType のみ
+;;		    '(font . "bdf-fontset")    ; BDF
+;;		    '(font . "private-fontset"); TrueType
+		    '(width . 120)
+		    '(height . 35)
+		    '(top . 0)
+		    '(left .0))
+	      default-frame-alist))
 
 ;; ;;不要让光标闪烁(blink-cursor-mode -1) 
 ;; ;; 设置另外一些颜色：语法高亮显示的背景和主题，区域选择的背景和主题，二次选择的背景和选择
@@ -40,7 +40,7 @@
 ;;Forced set tab width
 (setq default-tab-width 4)
 ;; 2012/06/30 Forced replace tab width with some whitespace
-(setq-default indent-tabs-mode nil)
+;;kjin (setq-default indent-tabs-mode nil)
 ;; 2012/07/02 Set default TAGS file
 ;;(setq tags-file-name "D:/Current_Task/Source/RCY/ALL/TAGS_ALL")
 
@@ -102,13 +102,13 @@
 ;;备份设置
 ;;emacs还有一个自动保存功能，默认在~/.emacs.d/auto-save-list里，这个非常有用，我这里没有改动，具体可以参见Sams teach yourself emacs in 24hours(我简称为sams24)
 ;;启用版本控制，即可以备份多次
-(setq version-control t)
+;;kjin (setq version-control t)
 ;;备份最原始的版本两次，记第一次编辑前的文档，和第二次编辑前的文档
-(setq kept-old-versions 2)
+;;kjin (setq kept-old-versions 2)
 ;;备份最新的版本五次，理解同上
-(setq kept-new-versions 5)
+;;kjin (setq kept-new-versions 5)
 ;;删掉不属于以上7中版本的版本
-(setq delete-old-versions t)
+;;kjin (setq delete-old-versions t)
 ;;设置备份文件的路径
 (setq backup-directory-alist '(("." . "~/.emacs.d/auto-save-list")))
 ;;备份设置方法，直接拷贝
@@ -117,26 +117,6 @@
 (setq make-backup-files nil)
 
 (setq fast-lock-cache-directories '("~/.emacs-flc" "."))  
-
-;;自动补全功能，这事从王垠的网站直接Copy过来的，引用一些他对此的说明
-;;你可以设置以下 hippie-expand 的补全方式。它是一个优先列表， hippie-expand 会优先使用表最前面的函数来补全
-;;这是说，首先使用当前的buffer补全，如果找不到，就到别的可见的窗口里寻找，如果还找不到，那么到所有打开的buffer去找，如果还……那么到kill-ring里，到文件名，到简称列表里，到list，…… 当前使用的匹配方式会在 echo 区域显示。
-;;特别有意思的是 try-expand-line，它可以帮你补全整整一行文字。我很多时后有两行文字大致相同，只有几个字不一样，但是我懒得去拷贝粘贴以下。那么我就输入这行文字的前面几个字。然后多按几下 M-/ 就能得到那一行。
-(global-set-key [(meta ?/)] 'hippie-expand)
-(setq hippie-expand-try-functions-list
-	  '(try-expand-line
-		try-expand-line-all-buffers
-		try-expand-list
-		try-expand-list-all-buffers
-		try-expand-dabbrev
-		try-expand-dabbrev-visible
-		try-expand-dabbrev-all-buffers
-		try-expand-dabbrev-from-kill
-		try-complete-file-name
-		try-complete-file-name-partially
-		try-complete-lisp-symbol
-		try-complete-lisp-symbol-partially
-		try-expand-whole-kill))
 
 ;;时间戳设置(time-stamp)，设定文档上次保存的信息
 ;;只要里在你得文档里有Time-stamp:的设置，就会自动保存时间戳
@@ -221,7 +201,7 @@
 ;;启动Emacs自动设置为两个窗口(上下各一个)
 ;; (split-window-vertically)
 ;;改变emacs标题栏的标题
-(setq frame-title-format "%b@Ferry")
+(setq frame-title-format "%b@RADIOHEAD")
 ;;允许emacs和外部其他程序的粘贴
 (setq x-select-enable-clipboard t)
 
@@ -253,105 +233,24 @@
 ;;(setq lrc-lyric-dir "C:\Program Files\TTPlayer\Lyrics")
 ;;(require 'mpg123)
 
-;;Setting for code-reading
-;;(require 'xcscope) ;;加载xcscope
-;; (add-hook 'plm-mode-common-hook '(lambda() (require 'xcscope)))
-;; (add-hook 'tnsdl-mode-common-hook '(lambda() (require 'xcscope)))
-
-;;---------------------------------------------------
-;;cedet 安装
-;Added by Ferry on 08/07/2012 for omitting the warning in Emacs 24.1.1
-;; (setq byte-compile-warnings nil)
-;; (add-hook 'texinfo-mode-hook (lambda () (require 'sb-texinfo)))
-;; (load-file "~/site-lisp/cedet/common/cedet.el")
-;; (load-file "~/site-lisp/cedet/contrib/cedet-contrib.el")
-;; (load-file "~/site-lisp/cedet/ede/ede.el")
-;; (load-file "~/site-lisp/cedet/cogre/cogre.el")
-;; (load-file "~/site-lisp/cedet/speedbar/speedbar.el")
-;; (load-file "~/site-lisp/cedet/eieio/eieio.el")
-;; (semantic-load-enable-code-helpers)
-;; (autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
-;; (autoload 'speedbar-get-focus "speedbar" "Jump to speedbar frame" t)
-;; (define-key-after (lookup-key global-map [menu-bar tools])
-;;   [speedbar]
-;;   '("Speedbar" .
-;; 	speedbar-frame-mode)
-;;   [calendar]) 
-;----------------------------------------------------------
-;;ecb
-;Added by Ferry on 08/07/2012 for omitting the warning in Emacs 24.1.1
-;; (setq stack-trace-on-error nil)
-;; (add-to-list 'load-path "~/site-lisp/ecb")
-;; (load-file "~/site-lisp/ecb/ecb.el")
-;; (require 'ecb)
-;; (setq ;;ecb-auto-activate t
-;;           ecb-tip-of-the-day nil
-;;           ecb-tree-indent 4
-;;           ecb-windows-height 0.5
-;;           ecb-windows-width 0.2
-;;           ecb-auto-compatibility-check nil
-;;           ecb-version-check nil
-;;           inhibit-startup-message t)
-;; ;--------------------------------------------
-;; (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-;; '(column-number-mode t)
-;; '(display-time-mode t)
-;; '(ecb-gzip-setup (quote cons))
-;; '(ecb-options-version "2.40")
-;; '(ecb-source-path (quote ("d:/Current_Task/Source")))
-;; '(ecb-tar-setup (quote cons))
-;; '(ecb-wget-setup (quote cons))
-;; '(show-paren-mode t)
-;; '(tabbar-buffer-groups-function (quote tabbar-buffer-ignore-groups))
-;; '(tabbar-buffer-list-function (quote tabbar-buffer-list))
-;; '(tabbar-cycling-scope nil)
-;; '(tabbar-mode t)
-;; '(transient-mark-mode t))
-;; (custom-set-faces
-;;   ;; custom-set-faces was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
+;; kjin cmt it as i do not know why need it here as above alreay have 
+;; (autoload 'senator-try-expand-semantic "senator")
+;; (setq hippie-expand-try-functions-list
+;;           '(
+;;                 senator-try-expand-semantic
+;;                 try-expand-dabbrev
+;;                 try-expand-dabbrev-visible
+;;                 try-expand-dabbrev-all-buffers
+;;                 try-expand-dabbrev-from-kill
+;;                 try-expand-list
+;;                 try-expand-list-all-buffers
+;;                 try-expand-line
+;;         try-expand-line-all-buffers
+;;         try-complete-file-name-partially
+;;         try-complete-file-name
+;;         try-expand-whole-kill
+;;         )
 ;; )
-;----------------------------------------------
-(setq semanticdb-project-roots 
-          (list
-        (expand-file-name "/")))
-(setq semanticdb-default-save-directory "~/.emacs.d/auto-save-list")
-;;设置semantic.cache路径
-
-(defun my-indent-or-complete ()
-   (interactive)
-   (if (looking-at "\\>")
-          (hippie-expand nil)
-          (indent-for-tab-command))
-)
-
-(global-set-key [(control tab)] 'my-indent-or-complete)
-
-
-(autoload 'senator-try-expand-semantic "senator")
-
-(setq hippie-expand-try-functions-list
-          '(
-                senator-try-expand-semantic
-                try-expand-dabbrev
-                try-expand-dabbrev-visible
-                try-expand-dabbrev-all-buffers
-                try-expand-dabbrev-from-kill
-                try-expand-list
-                try-expand-list-all-buffers
-                try-expand-line
-        try-expand-line-all-buffers
-        try-complete-file-name-partially
-        try-complete-file-name
-        try-expand-whole-kill
-        )
-)
 
 ;;(require 'doxymacs) ;; 启动doxymacs
 ;;(add-hook 'c-mode-common-hook 'doxymacs-mode) ;; 启动doxymacs-mode
