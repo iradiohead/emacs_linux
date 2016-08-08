@@ -21,8 +21,14 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(custom-enabled-themes (quote (misterioso)))
+ '(ecb-layout-window-sizes nil)
+ '(ecb-options-version "2.40")
+ '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
  '(global-ede-mode t)
  '(org-agenda-files (quote ("~/Dropbox/emacs_docs/tutorial_mine/" "~/Dropbox/emacs_docs/")))
+ '(semantic-default-submodes (quote (global-semantic-decoration-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
+ '(semantic-idle-scheduler-idle-time 3)
+ '(tabbar-separator (quote (1.5)))
  '(truncate-partial-width-windows nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -113,10 +119,33 @@
 ;;         (setq my-tramp-methods (cons my-tramp-ssh-method my-tramp-methods))  
 ;;       (setq my-tramp-methods (cons elt my-tramp-methods))))))  
 
-;; add tab mode by Ferry on 20120413
+;; add tab mode by kjin-F on 20120413
 (require 'tabbar)  
 (tabbar-mode 1)  	
 (define-prefix-command 'lwindow-map)
+;;kjin add for tabbar color, this needed if customize-theme choosed!
+(setq tabbar-buffer-list-function
+    (lambda ()
+        (remove-if
+          (lambda(buffer)
+             (find (aref (buffer-name buffer) 0) " *"))
+          (buffer-list))))
+(setq tabbar-buffer-groups-function
+      (lambda()(list "All")))
+(set-face-attribute 'tabbar-button nil)
+
+;;set tabbar's backgroud color
+(set-face-attribute 'tabbar-default nil
+                    :background "gray"
+                    :foreground "gray30")
+(set-face-attribute 'tabbar-selected nil
+                    :inherit 'tabbar-default
+                    :background "green"
+                    :box '(:line-width 3 :color "DarkGoldenrod") )
+(set-face-attribute 'tabbar-unselected nil
+                    :inherit 'tabbar-default
+                    :box '(:line-width 3 :color "gray"))
+;; USEFUL: set tabbar's separator gap
 
 
 ;; added by Ferry on 07082012 for Aspell function
@@ -132,7 +161,6 @@
 ;; added by Ferry on 15112013 to use whitespace
 (require 'whitespace)  ;; enable by M-x whitespace-mode
 
-;;(setq ecb-auto-activate t)
 
 ;;(color-theme-select)
 
@@ -182,7 +210,76 @@
 ;; (add-hook 'tnsdl-mode-common-hook '(lambda() (require 'xcscope)))
 
 ;;---------------------------------------------------
-;;cedet 安装
+;;cedet 安装 http://blog.163.com/vic_kk/blog/static/494705242010726297405/
+(require 'cedet)
+;; (global-ede-mode t) ;; project 
+;;;;  Helper tools.
+(semantic-mode)
+;; smart complitions
+(require 'semantic/ia)
+(setq-mode-local c-mode semanticdb-find-default-throttle
+                 '(project unloaded system recursive))
+(setq-mode-local c++-mode semanticdb-find-default-throttle
+                 '(project unloaded system recursive))
+;;;; TAGS Menu
+(defun my-semantic-hook ()
+  (imenu-add-to-menubar "TAGS"))
+(add-hook 'semantic-init-hooks 'my-semantic-hook)
+
+;;;; Semantic DataBase存储位置
+(setq semanticdb-default-save-directory
+      (expand-file-name "~/.emacs.d/semanticdb"))
+
+;; 使用 gnu global 的TAGS。
+(require 'semantic/db-global)
+(semanticdb-enable-gnu-global-databases 'c-mode)
+(semanticdb-enable-gnu-global-databases 'c++-mode)
+
+
+;;;; Include settings
+(require 'semantic/bovine/gcc)
+(require 'semantic/bovine/c)
+
+(defconst cedet-user-include-dirs
+  (list ".." "../include" "../inc" "../common" "../public" "."
+        "../.." "../../include" "../../inc" "../../common" "../../public"))
+(setq cedet-sys-include-dirs (list
+                              "/usr/include"
+                              "/usr/include/bits"
+                              "/usr/include/glib-2.0"
+                              "/usr/include/gnu"
+                              "/usr/include/gtk-2.0"
+                              "/usr/include/gtk-2.0/gdk-pixbuf"
+                              "/usr/include/gtk-2.0/gtk"
+                              "/usr/local/include"
+                              "/usr/local/include"))
+
+(let ((include-dirs cedet-user-include-dirs))
+  (setq include-dirs (append include-dirs cedet-sys-include-dirs))
+  (mapc (lambda (dir)
+          (semantic-add-system-include dir 'c++-mode)
+          (semantic-add-system-include dir 'c-mode))
+        include-dirs))
+(setq semantic-c-dependency-system-include-path "/usr/include/")
+
+
+(ede-cpp-root-project "Kernel"
+                :name "Kernel Project"
+                :file "~/linux-stable/Makefile"
+                :include-path '("/"
+                                "/include"
+                               )
+                :system-include-path '("/usr/include")    )
+
+
+(ede-cpp-root-project "Kernel"
+                :name "Kernel Project"
+                :file "~/Dropbox/personal/sourcecode/cscope.files"
+                :include-path '("/"
+                                "/include"
+                               )
+                :system-include-path '("/usr/include")    )
+
 ;Added by Ferry on 08/07/2012 for omitting the warning in Emacs 24.1.1
 ;; (setq byte-compile-warnings nil)
 ;; (add-hook 'texinfo-mode-hook (lambda () (require 'sb-texinfo)))
@@ -190,7 +287,7 @@
 ;; (load-file "~/site-lisp/cedet/contrib/cedet-contrib.el")
 ;; (load-file "~/site-lisp/cedet/ede/ede.el")
 ;; (load-file "~/site-lisp/cedet/cogre/cogre.el")
-;; (load-file "~/site-lisp/cedet/speedbar/speedbar.el")
+;; (load "speedbar")
 ;; (load-file "~/site-lisp/cedet/eieio/eieio.el")
 ;; (semantic-load-enable-code-helpers)
 ;; (autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
@@ -204,9 +301,28 @@
 ;;ecb
 ;Added by Ferry on 08/07/2012 for omitting the warning in Emacs 24.1.1
 ;; (setq stack-trace-on-error nil)
-;; (add-to-list 'load-path "~/site-lisp/ecb")
+
+(add-to-list 'load-path "~/.emacs.d/elisp/ecb/")
 ;; (load-file "~/site-lisp/ecb/ecb.el")
-;; (require 'ecb)
+(require 'ecb)
+;;(require 'ecb-autoloads)
+(setq ecb-auto-activate nil
+      ecb-tip-of-the-day nil)
+
+(global-set-key [M-left] 'windmove-left)
+(global-set-key [M-right] 'windmove-right)
+(global-set-key [M-up] 'windmove-up)
+(global-set-key [M-down] 'windmove-down)
+
+(defun my-ecb-active-or-deactive ()
+    (interactive)
+    (if ecb-minor-mode
+      (ecb-deactivate)
+      (ecb-activate)))
+
+(global-set-key (kbd "<C-f7>") 'my-ecb-active-or-deactive)
+
+;;(require 'ecb-autoloads)
 ;; (setq ;;ecb-auto-activate t
 ;;           ecb-tip-of-the-day nil
 ;;           ecb-tree-indent 4
@@ -241,12 +357,11 @@
 ;;   ;; If there is more than one, they won't work right.
 ;; )
 ;----------------------------------------------
-(setq semanticdb-project-roots 
-          (list
-        (expand-file-name "/")))
-(setq semanticdb-default-save-directory "~/.emacs.d/auto-save-list")
+;; (setq semanticdb-project-roots 
+;;           (list
+;;         (expand-file-name "/")))
+;; (setq semanticdb-default-save-directory "~/.emacs.d/auto-save-list")
 ;;设置semantic.cache路径
-
 
 
 ;;auto complete;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

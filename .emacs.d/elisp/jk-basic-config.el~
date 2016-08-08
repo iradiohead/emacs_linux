@@ -36,8 +36,8 @@
 ;; (set-face-foreground 'menu "white")
 
 ;; kjin Setting English Font
-;;(set-face-attribute
-;; 'default nil :font "DejaVu Sans Mono 12")
+(set-face-attribute
+ 'default nil :font "DejaVu Sans Mono 12")
 
 ;;;Tab is 4
 ;; 强制输入Tab时：C-q C-i
