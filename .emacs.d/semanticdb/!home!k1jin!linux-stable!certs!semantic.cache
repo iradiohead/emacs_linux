@@ -1,0 +1,89 @@
+;; Object certs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "certs/"
+  :tables (list 
+   (semanticdb-table "system_keyring.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("linux/export.h" include (:system-flag t) nil [421 446])
+            ("linux/kernel.h" include (:system-flag t) nil [447 472])
+            ("linux/sched.h" include (:system-flag t) nil [473 497])
+            ("linux/cred.h" include (:system-flag t) nil [498 521])
+            ("linux/err.h" include (:system-flag t) nil [522 544])
+            ("keys/asymmetric-type.h" include (:system-flag t) nil [545 578])
+            ("keys/system_keyring.h" include (:system-flag t) nil [579 611])
+            ("crypto/pkcs7.h" include (:system-flag t) nil [612 637])
+            ("builtin_trusted_keys" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("key" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [639 679])
+            ("system_certificate_list" variable
+               (:dereference 1
+                :constant-flag t
+                :type ("u8" type (:type "class") nil nil))
+                nil [790 825])
+            ("system_certificate_list_size" variable
+               (:constant-flag t
+                :type "unsigned long")
+                nil [845 894])
+            ("restrict_link_by_builtin_trusted" function
+               (:arguments 
+                  ( ("keyring" variable
+                       (:pointer 1
+                        :type ("key" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1162 1182])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("key_type" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1192 1220])
+                    ("payload" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("key_payload" type (:type "union") nil nil))
+                        (reparse-symbol arg-sub-list) [1230 1263]))                  
+                :type "int")
+                nil [1125 1340])
+            ("system_trusted_keyring_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2340 2345]))                  
+                :type "int")
+                nil [2308 3384])
+            ("device_initcall" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("system_trusted_keyring_init" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3482 3510]))                  
+                :type "int")
+                nil [3466 3511])
+            ("load_system_certificate_list" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3619 3624]))                  
+                :type "int")
+                nil [3586 4769])
+            ("late_initcall" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("load_system_certificate_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4784 4813]))                  
+                :type "int")
+                nil [4770 4814]))          
+    :file "system_keyring.c"
+    :pointmax 6976
+    :fsize 6975
+    :lastmodtime '(22436 15369 148006 537000)
+    :unmatched-syntax '((symbol 3579 . 3585) (STATIC 3572 . 3578) (symbol 2301 . 2307) (STATIC 2294 . 2300) (symbol 833 . 844) (EXTERN 826 . 832) (symbol 778 . 789) (EXTERN 771 . 777))
+    )
+   )
+  :file "!home!k1jin!linux-stable!certs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,147 @@
+;; Object crypto/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "crypto/"
+  :tables (list 
+   (semanticdb-table "pkcs7.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_CRYPTO_PKCS7_H" variable (:constant-flag t) nil [432 447])
+            ("linux/verification.h" include (:system-flag t) nil [449 480])
+            ("crypto/public_key.h" include (:system-flag t) nil [481 511])
+            ("key" type
+               (:prototype t
+                :type "struct")
+                nil [513 524])
+            ("pkcs7_message" type
+               (:prototype t
+                :type "struct")
+                nil [525 546])
+            ("pkcs7_parse_message" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [622 639])
+                    ("datalen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [647 662]))                  
+                :type ("pkcs7_message" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [573 663])
+            ("pkcs7_free_message" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("pkcs7" variable
+                       (:pointer 1
+                        :type ("pkcs7_message" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [695 723]))                  
+                :type "void")
+                nil [664 724])
+            ("pkcs7_get_content_data" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("pkcs7" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pkcs7_message" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [760 794])
+                    ("_data" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [801 820])
+                    ("_datalen" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [821 838])
+                    ("_headerlen" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [845 864]))                  
+                :type "int")
+                nil [726 865])
+            ("pkcs7_validate_trust" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("pkcs7" variable
+                       (:pointer 1
+                        :type ("pkcs7_message" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [923 951])
+                    ("trust_keyring" variable
+                       (:pointer 1
+                        :type ("key" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [956 982]))                  
+                :type "int")
+                nil [891 983])
+            ("pkcs7_verify" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("pkcs7" variable
+                       (:pointer 1
+                        :type ("pkcs7_message" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1034 1062])
+                    ("usage" variable (:type ("key_being_used_for" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [1066 1096]))                  
+                :type "int")
+                nil [1010 1097])
+            ("pkcs7_supply_detached_data" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("pkcs7" variable
+                       (:pointer 1
+                        :type ("pkcs7_message" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1137 1165])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1176 1193])
+                    ("datalen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1194 1209]))                  
+                :type "int")
+                nil [1099 1210]))          
+    :file "pkcs7.h"
+    :pointmax 1241
+    :fsize 1240
+    :lastmodtime '(22436 15430 159054 228000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_CRYPTO_PKCS7_H")
+          )
+
+    )
+   (semanticdb-table "public_key.h"
+    :file "public_key.h"
+    :fsize 1728
+    :lastmodtime '(22436 15430 160054 228000)
+    )
+   )
+  :file "!home!k1jin!linux-stable!include!crypto!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

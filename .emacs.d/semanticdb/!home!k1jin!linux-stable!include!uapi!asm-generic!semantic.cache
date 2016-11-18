@@ -1,0 +1,36 @@
+;; Object asm-generic/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "asm-generic/"
+  :tables (list 
+   (semanticdb-table "param.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_UAPI__ASM_GENERIC_PARAM_H" variable (:constant-flag t) nil [44 70])
+            ("HZ" variable (:constant-flag t) nil [91 93])
+            ("EXEC_PAGESIZE" variable (:constant-flag t) nil [136 149])
+            ("NOGROUP" variable (:constant-flag t) nil [187 194])
+            ("MAXHOSTNAMELEN" variable (:constant-flag t) nil [217 231]))          
+    :file "param.h"
+    :pointmax 306
+    :fsize 305
+    :lastmodtime '(22436 15436 65058 844000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_UAPI__ASM_GENERIC_PARAM_H")
+          ("HZ" . ((number "100" 94 . 97)))
+          ("EXEC_PAGESIZE" . ((number "4096" 150 . 154)))
+          ("NOGROUP" . ((semantic-list "(-1)" 196 . 200)))
+          ("MAXHOSTNAMELEN" . ((number "64" 232 . 234)))
+          )
+
+    )
+   (semanticdb-table "int-ll64.h"
+    :file "int-ll64.h"
+    :fsize 816
+    :lastmodtime '(22436 15436 58058 839000)
+    )
+   )
+  :file "!home!k1jin!linux-stable!include!uapi!asm-generic!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

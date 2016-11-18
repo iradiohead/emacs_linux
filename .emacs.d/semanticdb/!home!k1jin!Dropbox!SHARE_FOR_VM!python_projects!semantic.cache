@@ -1,0 +1,18 @@
+;; Object python_projects/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python_projects/"
+  :tables (list 
+   (semanticdb-table "hello.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "hello.py"
+    :pointmax 152
+    :fsize 152
+    :lastmodtime '(22504 47889 481552 963000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!k1jin!Dropbox!SHARE_FOR_VM!python_projects!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

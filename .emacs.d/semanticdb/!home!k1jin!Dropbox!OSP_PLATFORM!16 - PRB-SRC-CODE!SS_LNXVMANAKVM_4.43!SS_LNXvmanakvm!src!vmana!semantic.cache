@@ -1,0 +1,2777 @@
+;; Object vmana/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "vmana/"
+  :tables (list 
+   (semanticdb-table "irq.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "irq.c"
+    :pointmax 8815
+    :fsize 8814
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("STR_BUF_SIZE" . ((number "1000" 393 . 397)))
+          ("IRQ_HASH_UNDEFINED" . ((number "0xffffffffffffffff" 452 . 470)))
+          ("IRQ_HASH_SIZE" . ((number "2000" 420 . 424)))
+          ("IRQ_POLL_MAX" . ((number "12" 341 . 343)))
+          )
+
+    )
+   (semanticdb-table ".#vmana.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file ".#vmana.h"
+    :pointmax 41
+    :fsize 40
+    :lastmodtime '(22445 2745 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cpu.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_GNU_SOURCE" variable (:constant-flag t) nil [127 138])
+            ("stdio.h" include (:system-flag t) nil [140 158])
+            ("stdlib.h" include (:system-flag t) nil [159 178])
+            ("string.h" include (:system-flag t) nil [179 198])
+            ("errno.h" include (:system-flag t) nil [199 217])
+            ("dirent.h" include (:system-flag t) nil [218 237])
+            ("vmana.h" include nil nil [239 257])
+            ("utilities.h" include nil nil [258 280])
+            ("cpu.h" include nil nil [281 297])
+            ("sysinfo" variable
+               (:typemodifiers ("extern")
+                :type ("sysinfo" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [299 329])
+            ("select_cores_in_affinity_map" function
+               (:arguments 
+                  ( ("map" variable (:type "long") (reparse-symbol arg-sub-list) [429 438]))                  
+                :type "long")
+                nil [395 613])
+            ("affinity_sanity_checks" function
+               (:arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [774 793])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [794 818]))                  
+                :type "void")
+                nil [746 3306])
+            ("cpumap_invert" function
+               (:arguments 
+                  ( ("map" variable (:type "long") (reparse-symbol arg-sub-list) [3327 3336]))                  
+                :type "long")
+                nil [3308 3394])
+            ("affinity_unused_cores_map" function
+               (:arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3427 3451]))                  
+                :type "long")
+                nil [3396 3757])
+            ("affinity_non_vcpu_map" function
+               (:arguments 
+                  ( ("allow_ht" variable (:type "int") (reparse-symbol arg-sub-list) [3928 3941])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3942 3966]))                  
+                :type "long")
+                nil [3901 4662])
+            ("collect_free_cpu_list" function
+               (:arguments 
+                  ( ("list_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4799 4814])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4815 4839]))                  
+                :type "int")
+                nil [4773 5830])
+            ("cpu_get_attr" function
+               (:arguments 
+                  ( ("cpu" variable (:type "int") (reparse-symbol arg-sub-list) [5917 5925])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5926 5937])
+                    ("base" variable (:type "int") (reparse-symbol arg-sub-list) [5938 5947]))                  
+                :type "long")
+                nil [5899 6211])
+            ("cpu_parse_cpu" function
+               (:arguments 
+                  ( ("cpu" variable (:type "int") (reparse-symbol arg-sub-list) [6304 6312]))                  
+                :type "void")
+                nil [6285 8032])
+            ("cpu_dump" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8048 8053]))                  
+                :type "void")
+                nil [8034 8589])
+            ("cpu_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8682 8687]))                  
+                :type "void")
+                nil [8668 9506]))          
+    :file "cpu.c"
+    :pointmax 9507
+    :fsize 9506
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GNU_SOURCE")
+          )
+
+    )
+   (semanticdb-table "vmana.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("VMANA_H_" variable (:constant-flag t) nil [147 155])
+            ("UNUSED" variable (:constant-flag t) nil [165 171])
+            ("IFF_LOWER_UP" variable (:constant-flag t) nil [304 316])
+            ("glib.h" include (:system-flag t) nil [372 389])
+            ("sack.h" include nil nil [465 482])
+            ("econversions.h" include nil nil [483 508])
+            ("lnx-dmxmsg.h" include nil nil [509 532])
+            ("lnx-pubvar.h" include nil nil [533 556])
+            ("lnx-launcher.h" include nil nil [557 582])
+            ("lnx-log.h" include nil nil [583 603])
+            ("lnx-fu.h" include nil nil [604 623])
+            ("lnx-hwapi.h" include nil nil [624 646])
+            ("lnx-util.h" include nil nil [647 668])
+            ("ipmi_msg" type
+               (:members 
+                  ( ("netfn" variable (:type "unsigned char") (reparse-symbol classsubparts) [764 784])
+                    ("cmd" variable (:type "unsigned char") (reparse-symbol classsubparts) [789 807])
+                    ("data_len" variable (:type "unsigned short") (reparse-symbol classsubparts) [812 836])
+                    ("data" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [841 861]))                  
+                :type "struct")
+                nil [742 864])
+            ("hwapi_ipmi_init_r" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [889 894]))                  
+                :type "int")
+                nil [867 895])
+            ("hwapi_ipmi_deinit_r" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [921 926]))                  
+                :type "void")
+                nil [896 927])
+            ("hwapi_ipmi_send_cmd_r" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("target_addr" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [954 980])
+                    ("msg" variable
+                       (:pointer 1
+                        :type ("ipmi_msg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [981 1002])
+                    ("ack" variable
+                       (:pointer 1
+                        :type ("ipmi_msg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1007 1028]))                  
+                :type "int")
+                nil [928 1029])
+            ("DEBUG" variable (:constant-flag t) nil [1264 1269])
+            ("DEBUG_QEMU" variable (:constant-flag t) nil [1355 1365])
+            ("QEMU_LOG_FILE__C" variable (:constant-flag t) nil [1374 1390])
+            ("AFFINITY_LOG_FILE__C" variable (:constant-flag t) nil [1425 1445])
+            ("VMANA_LOG_NAME__C" variable (:constant-flag t) nil [1480 1497])
+            ("VM_SER_SOCKET_NAME__C" variable (:constant-flag t) nil [1523 1544])
+            ("VM_MON_SOCKET_NAME__C" variable (:constant-flag t) nil [1586 1607])
+            ("VM_MON_VMANA_NAME__C" variable (:constant-flag t) nil [1650 1670])
+            ("SRIOV_VFS_OF_ACPI4" variable (:constant-flag t) nil [1760 1778])
+            ("SRIOV_VFS_OF_ACPI5" variable (:constant-flag t) nil [1789 1807])
+            ("MAX_NET_INTERFACES__C" variable (:constant-flag t) nil [1818 1839])
+            ("NOT_CRITICAL" variable (:constant-flag t) nil [1852 1864])
+            ("IS_CRITICAL" variable (:constant-flag t) nil [1875 1886])
+            ("CONFIG_CONFFILENAME_DX__C" variable (:constant-flag t) nil [1915 1940])
+            ("CONFIG_CONFFILENAME__C" variable (:constant-flag t) nil [1969 1991])
+            ("CONFIG_EMBFILENAME__C" variable (:constant-flag t) nil [2019 2040])
+            ("ENV_ROOT_PATH__C" variable (:constant-flag t) nil [2068 2084])
+            ("TEMPLATE_ROOT_PATH__C" variable (:constant-flag t) nil [2116 2137])
+            ("QEMU_EXECUTABLE__C" variable (:constant-flag t) nil [2164 2182])
+            ("HS_EVENT_FILE__C" variable (:constant-flag t) nil [2213 2229])
+            ("HS_ID_EVENT_FILE__C" variable (:constant-flag t) nil [2255 2274])
+            ("HS_ETH_EVENT_FILE__C" variable (:constant-flag t) nil [2303 2323])
+            ("VM_NOT_RUNNING__C" variable (:constant-flag t) nil [2633 2650])
+            ("VM_WDT_PAUSE_STRING__C" variable (:constant-flag t) nil [2695 2717])
+            ("VMANAKVM_PID__C" variable (:constant-flag t) nil [2752 2767])
+            ("C_TEST_MSG_S_ID_OWN_TESTS__C" variable (:constant-flag t) nil [2787 2815])
+            ("C_TEST_MSG_S_SUB_ID_TICKS_TEST__C" variable (:constant-flag t) nil [2826 2859])
+            ("VMA_TRACE" variable (:constant-flag t) nil [3045 3054])
+            ("VMANA_USE_HUGEPAGES" variable (:constant-flag t) nil [3166 3185])
+            ("VMANA_NORMAL_SCHED" variable (:constant-flag t) nil [3194 3212])
+            ("VMANA_USE_X2APIC" variable (:constant-flag t) nil [3221 3237])
+            ("VMANA_MAP_IRQS" variable (:constant-flag t) nil [3276 3290])
+            ("VMANA_NIANTIC_SRIOV" variable (:constant-flag t) nil [3299 3318])
+            ("VMANA_QEMU_0_13_0" variable (:constant-flag t) nil [3364 3381])
+            ("VMANA_QEMU_0_14_0" variable (:constant-flag t) nil [3427 3444])
+            ("VMANA_QEMU_1_0_0" variable (:constant-flag t) nil [3489 3505])
+            ("VMANA_AFFINITY_CONFIG" variable (:constant-flag t) nil [3553 3574])
+            ("QEMU_EXTRA_PARAMETER" variable (:constant-flag t) nil [3623 3643])
+            ("VMANA_DISK_PARAMETER" variable (:constant-flag t) nil [3686 3706])
+            ("VMANA_USB_PARAMETER" variable (:constant-flag t) nil [3748 3767])
+            ("VMANA_MULTISOCKET_PARAMETER" variable (:constant-flag t) nil [3827 3854])
+            ("GUEST_UNIT_HAVE_RTM_INTERFACE" variable (:constant-flag t) nil [3940 3969])
+            ("VMANA_VMU_MIN_MEM" variable (:constant-flag t) nil [4090 4107])
+            ("VMANA_EXTRA_HB_COUNT" variable (:constant-flag t) nil [4121 4141])
+            ("MAX_USBS" variable (:constant-flag t) nil [4162 4170])
+            ("UNIT_REMOVED" variable (:constant-flag t) nil [4184 4196])
+            ("disk_access_type" type
+               (:members 
+                  ( ("NONE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4225 4230])
+                    ("PCI_PASS_THROUGH" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4232 4249])
+                    ("ISCSI_VHOST" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4251 4263])
+                    ("ISCSI_SR_IOV" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4265 4278])
+                    ("VIRTIO_BLK" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4280 4292]))                  
+                :type "enum")
+                nil [4200 4293])
+            ("virtproc_if" type
+               (:members 
+                  ( ("bindname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4325 4340])
+                    ("hwaddr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4347 4360])
+                    ("emulation" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4367 4383])
+                    ("pcidevice" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4390 4406]))                  
+                :type "struct")
+                nil [4298 4428])
+            ("virtproc_cpu" type
+               (:members 
+                  ( ("affinity" variable (:type "long") (reparse-symbol classsubparts) [4460 4474])
+                    ("thread_pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4508 4525]))                  
+                :type "struct")
+                nil [4432 4555])
+            ("virtproc_disk" type
+               (:members 
+                  ( ("in_config" variable (:type "int") (reparse-symbol classsubparts) [4588 4602])
+                    ("alloc" variable (:type "int") (reparse-symbol classsubparts) [4609 4619])
+                    ("in_use" variable (:type "int") (reparse-symbol classsubparts) [4626 4637])
+                    ("pcidevice" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4644 4660])
+                    ("disk_access" variable (:type ("disk_access_type" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [4667 4701]))                  
+                :type "struct")
+                nil [4559 4706])
+            ("virtproc_usb" type
+               (:members 
+                  ( ("in_config" variable (:type "int") (reparse-symbol classsubparts) [4738 4752])
+                    ("alloc" variable (:type "int") (reparse-symbol classsubparts) [4759 4769])
+                    ("count" variable (:type "int") (reparse-symbol classsubparts) [4776 4786])
+                    ("port" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [4793 4812]))                  
+                :type "struct")
+                nil [4710 4817])
+            ("virtproc_settings" type
+               (:members 
+                  ( ("vm_index" variable (:type "int") (reparse-symbol classsubparts) [4855 4868])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4931 4942])
+                    ("unit" variable (:type ("unit_it_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4976 4991])
+                    ("emb_addr" variable (:type "int") (reparse-symbol classsubparts) [5030 5043])
+                    ("loc" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5076 5086])
+                    ("mem" variable (:type "unsigned int") (reparse-symbol classsubparts) [5125 5142])
+                    ("cpus" variable (:type "unsigned int") (reparse-symbol classsubparts) [5188 5206])
+                    ("io_affinity" variable (:type "long") (reparse-symbol classsubparts) [5247 5264])
+                    ("cpuinfo" variable
+                       (:pointer 1
+                        :type ("virtproc_cpu" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5310 5339])
+                    ("vcpu_affinity_map" variable (:type "long") (reparse-symbol classsubparts) [5372 5395])
+                    ("affinity_map" variable (:type "long") (reparse-symbol classsubparts) [5428 5446])
+                    ("if_count" variable (:type "int") (reparse-symbol classsubparts) [5502 5515])
+                    ("if_info" variable
+                       (:dereference 1
+                        :type ("virtproc_if" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5560 5610])
+                    ("disk_info" variable (:type ("virtproc_disk" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5644 5675])
+                    ("usb_info" variable (:type ("virtproc_usb" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5712 5741])
+                    ("qemu_extra" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5777 5794]))                  
+                :type "struct")
+                nil [4822 5830])
+            ("virtproc" type
+               (:members 
+                  ( ("settings" variable (:type ("virtproc_settings" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5858 5892])
+                    ("affinity_set" variable (:type "int") (reparse-symbol classsubparts) [5899 5916])
+                    ("is_running" variable (:type "int") (reparse-symbol classsubparts) [5959 5974])
+                    ("p_pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6017 6029])
+                    ("mon_fd" variable (:type "int") (reparse-symbol classsubparts) [6081 6092])
+                    ("startup_valid" variable (:type "int") (reparse-symbol classsubparts) [6151 6169]))                  
+                :type "struct")
+                nil [5834 6208])
+            ("MAX_HT" variable (:constant-flag t) nil [6221 6227])
+            ("MAX_CORES" variable (:constant-flag t) nil [6245 6254])
+            ("MAX_LCPU" variable (:constant-flag t) nil [6270 6278])
+            ("cpu_core" type
+               (:members 
+                  ( ("ht_count" variable (:type "int") (reparse-symbol classsubparts) [6312 6325])
+                    ("lcpu" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [6370 6387])
+                    ("ht_mask" variable (:type "long") (reparse-symbol classsubparts) [6482 6495])
+                    ("physical_package" variable (:type "int") (reparse-symbol classsubparts) [6524 6545])
+                    ("core_id" variable (:type "int") (reparse-symbol classsubparts) [6552 6564]))                  
+                :type "struct")
+                nil [6288 6569])
+            ("cpu_lcpu" type
+               (:members 
+                  ( ("pp_id" variable (:type "int") (reparse-symbol classsubparts) [6597 6607])
+                    ("core" variable (:type "int") (reparse-symbol classsubparts) [6646 6655])
+                    ("ht" variable (:type "int") (reparse-symbol classsubparts) [6702 6709])
+                    ("ht_mask" variable (:type "long") (reparse-symbol classsubparts) [6766 6779]))                  
+                :type "struct")
+                nil [6573 6802])
+            ("cpu_info" type
+               (:members 
+                  ( ("core_count" variable (:type "int") (reparse-symbol classsubparts) [6830 6845])
+                    ("core" variable
+                       (:dereference 1
+                        :type ("cpu_core" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6852 6884]))                  
+                :type "struct")
+                nil [6806 6889])
+            ("sysinfo" type
+               (:members 
+                  ( ("pp_count" variable (:type "int") (reparse-symbol classsubparts) [6916 6929])
+                    ("core_count" variable (:type "int") (reparse-symbol classsubparts) [6936 6951])
+                    ("cpu" variable
+                       (:dereference 1
+                        :type ("cpu_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6958 6986])
+                    ("lcpu_count" variable (:type "int") (reparse-symbol classsubparts) [6993 7008])
+                    ("lcpu" variable
+                       (:dereference 1
+                        :type ("cpu_lcpu" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [7015 7046]))                  
+                :type "struct")
+                nil [6893 7088])
+            ("rtm_eth" type
+               (:members 
+                  ( ("present" variable (:type "int") (reparse-symbol classsubparts) [7115 7127]))                  
+                :type "struct")
+                nil [7092 7132])
+            ("rtm_eth" variable
+               (:typemodifiers ("extern")
+                :type ("rtm_eth" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7134 7164])
+            ("own_unit_piu_type" variable
+               (:typemodifiers ("extern")
+                :type "long")
+                nil [7165 7195])
+            ("VM_FILE_NAME_LEN" variable (:constant-flag t) nil [7205 7221])
+            ("OVMU0_EMB_ADDR" variable (:constant-flag t) nil [7233 7247])
+            ("OVMU1_EMB_ADDR" variable (:constant-flag t) nil [7262 7276])
+            ("g_is_omu_start" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [7283 7309])
+            ("own_unit_emb_addr" variable
+               (:typemodifiers ("extern")
+                :type "long")
+                nil [7311 7341])
+            ("isDebugMode" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7363 7368]))                  
+                :type "int")
+                nil [7347 7369])
+            ("getVirtmachineList" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7398 7403]))                  
+                :type ("GList" type (:type "class") nil nil))
+                nil [7372 7404])
+            ("getVmanaVersionId" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7430 7438]))                  
+                :type "void")
+                nil [7407 7439])
+            ("virt_conf_seq" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7469 7474]))                  
+                :type ("dmx_error_t" type (:type "class") nil nil))
+                nil [7443 7475])
+            ("apply_virt_conf" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7506 7518]))                  
+                :type ("dmx_error_t" type (:type "class") nil nil))
+                nil [7478 7519])
+            ("check_configuration" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vm_config" variable
+                       (:pointer 2
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7546 7564]))                  
+                :type "int")
+                nil [7522 7565])
+            ("adopt_configuration" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vm_config" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7592 7609]))                  
+                :type "int")
+                nil [7568 7610]))          
+    :file "vmana.h"
+    :pointmax 7634
+    :fsize 7633
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("UNUSED" (spp-arg-list ("x") 171 . 174) . ((semantic-list "(void)" 175 . 181) (semantic-list "(x)" 181 . 184)))
+          ("SRIOV_VFS_OF_ACPI5" . ((number "7" 1808 . 1809)))
+          ("NOT_CRITICAL" . ((number "0" 1865 . 1866)))
+          ("VM_WDT_PAUSE_STRING__C" . ((string "\"VM paused by watchdog\"" 2719 . 2742)))
+          ("VMANAKVM_PID__C" . ((number "0x928" 2772 . 2777)))
+          ("VMANA_VMU_MIN_MEM" . ((number "1024" 4108 . 4112)))
+          ("CONFIG_CONFFILENAME__C" . ((string "\"/tmp/vmana.conf\"" 1993 . 2010)))
+          ("VMANA_MAP_IRQS")
+          ("DEBUG_QEMU")
+          ("VMANA_LOG_NAME__C" . ((string "\"lnx-vmana-log\"" 1498 . 1513)))
+          ("MAX_NET_INTERFACES__C" . ((number "16" 1840 . 1842)))
+          ("TEMPLATE_ROOT_PATH__C" . ((string "\"/opt/vmanakvm\"" 2140 . 2155)))
+          ("HS_ETH_EVENT_FILE__C" . ((string "\"/tmp/vmana_hs_eth\"" 2325 . 2344)))
+          ("VMANA_USE_X2APIC")
+          ("VMANA_USB_PARAMETER")
+          ("UNIT_REMOVED" . ((number "2" 4197 . 4198)))
+          ("VMANA_NORMAL_SCHED")
+          ("VMANA_AFFINITY_CONFIG")
+          ("MAX_USBS" . ((number "4" 4171 . 4172)))
+          ("AFFINITY_LOG_FILE__C" . ((string "\"/tmp/qemu_affinity.log\"" 1447 . 1471)))
+          ("VMANA_USE_HUGEPAGES")
+          ("VMANA_QEMU_0_14_0")
+          ("VMANA_H_")
+          ("IFF_LOWER_UP" . ((number "0x10000" 320 . 327)))
+          ("C_TEST_MSG_S_SUB_ID_TICKS_TEST__C" . ((number "1" 2860 . 2861)))
+          ("QEMU_EXTRA_PARAMETER")
+          ("MAX_CORES" . ((number "16" 6257 . 6259)))
+          ("VM_SER_SOCKET_NAME__C" . ((string "\"/tmp/lnx-vmanakvm-d.%s.serial\"" 1546 . 1577)))
+          ("IS_CRITICAL" . ((number "1" 1888 . 1889)))
+          ("VMA_TRACE" (spp-arg-list ("f" "...") 3054 . 3062))
+          ("QEMU_LOG_FILE__C" . ((string "\"/tmp/vmanakvm_qemu.log\"" 1392 . 1416)))
+          ("VM_MON_SOCKET_NAME__C" . ((string "\"/tmp/lnx-vmanakvm-d.%s.monitor\"" 1609 . 1641)))
+          ("VMANA_QEMU_0_13_0")
+          ("VMANA_QEMU_1_0_0")
+          ("VMANA_DISK_PARAMETER")
+          ("VMANA_MULTISOCKET_PARAMETER")
+          ("CONFIG_EMBFILENAME__C" . ((string "\"/tmp/vmana.emb\"" 2043 . 2059)))
+          ("VM_NOT_RUNNING__C" . ((string "\"Virtual machine disconnected.\\n\"" 2653 . 2686)))
+          ("VM_FILE_NAME_LEN" . ((number "12" 7222 . 7224)))
+          ("DEBUG" . 
+              ((IF "if" 1270 . 1272) (semantic-list "(isDebugMode())" 1272 . 1287) (symbol "printf" 1287 . 1293)))
+          ("VM_MON_VMANA_NAME__C" . ((string "\"/tmp/lnx-vmanakvm-d.%s.vmana\"" 1672 . 1702)))
+          ("HS_EVENT_FILE__C" . ((string "\"/tmp/vmana_hs\"" 2231 . 2246)))
+          ("HS_ID_EVENT_FILE__C" . ((string "\"/tmp/vmana_hs_id\"" 2276 . 2294)))
+          ("C_TEST_MSG_S_ID_OWN_TESTS__C" . ((number "5" 2816 . 2817)))
+          ("VMANA_NIANTIC_SRIOV")
+          ("OVMU0_EMB_ADDR" . ((number "0x200" 7248 . 7253)))
+          ("CONFIG_CONFFILENAME_DX__C" . ((string "\"/tmp/vmana_dx.img\"" 1941 . 1960)))
+          ("QEMU_EXECUTABLE__C" . ((string "\"/opt/vmanakvm/qemu\"" 2184 . 2204)))
+          ("GUEST_UNIT_HAVE_RTM_INTERFACE" . ((number "1" 3970 . 3971)))
+          ("MAX_LCPU" . ((number "32" 6282 . 6284)))
+          ("OVMU1_EMB_ADDR" . ((number "0x201" 7277 . 7282)))
+          ("SRIOV_VFS_OF_ACPI4" . ((number "6" 1779 . 1780)))
+          ("ENV_ROOT_PATH__C" . ((string "\"/opt/vmanakvm/env\"" 2088 . 2107)))
+          ("VMANA_EXTRA_HB_COUNT" . ((number "150" 4142 . 4145)))
+          ("MAX_HT" . ((number "4" 6233 . 6234)))
+          )
+
+    )
+   (semanticdb-table "utilities.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("UTILITIES_H_" variable (:constant-flag t) nil [155 167])
+            ("vmana.h" include nil nil [169 187])
+            ("MEM_LINDX_USE" variable (:constant-flag t) nil [232 245])
+            ("MEM_USE" variable (:constant-flag t) nil [262 269])
+            ("log_error" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [311 321])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [322 326]))                  
+                :type "void")
+                nil [296 327])
+            ("log_warning" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [345 355])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [356 360]))                  
+                :type "void")
+                nil [328 361])
+            ("log_info" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [376 386])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [387 391]))                  
+                :type "void")
+                nil [362 392])
+            ("log_debug" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [408 418])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [419 423]))                  
+                :type "void")
+                nil [393 424])
+            ("is_module_loaded" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [446 457]))                  
+                :type "int")
+                nil [425 458])
+            ("kvm_load_module" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [480 485]))                  
+                :type "void")
+                nil [459 486])
+            ("read_number" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [503 515])
+                    ("base" variable (:type "int") (reparse-symbol arg-sub-list) [516 525])
+                    ("res" variable
+                       (:pointer 1
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [526 536]))                  
+                :type "int")
+                nil [487 537])
+            ("strip" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [550 560]))                  
+                :type "char")
+                nil [538 561])
+            ("my_tolower" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("c" variable (:type "char") (reparse-symbol arg-sub-list) [578 585]))                  
+                :type "char")
+                nil [562 586])
+            ("tapname" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("vname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [601 613])
+                    ("iname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [614 626]))                  
+                :type "char")
+                nil [587 627])
+            ("check_forced_netconfig" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [656 675])
+                    ("ifid" variable (:type "int") (reparse-symbol arg-sub-list) [676 685])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [686 709]))                  
+                :type "void")
+                nil [628 710])
+            ("mem_allocate" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mbytes_guest_mem" variable (:type "int") (reparse-symbol arg-sub-list) [728 749]))                  
+                :type "int")
+                nil [711 750])
+            ("mem_release" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mbytes_guest_mem" variable (:type "int") (reparse-symbol arg-sub-list) [768 789]))                  
+                :type "void")
+                nil [751 790])
+            ("list_to_mask" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [809 819]))                  
+                :type "long")
+                nil [791 820])
+            ("lcpu_to_mask" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [839 849]))                  
+                :type "long")
+                nil [821 850])
+            ("pp_lcpu_to_mask" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pp_id" variable (:type "long") (reparse-symbol arg-sub-list) [872 883])
+                    ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [884 894]))                  
+                :type "long")
+                nil [851 895])
+            ("mask_to_list" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mask" variable (:type "long") (reparse-symbol arg-sub-list) [914 924])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [925 935]))                  
+                :type "void")
+                nil [896 936])
+            ("get_own_unit_name" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("own_unit_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [960 980]))                  
+                :type "void")
+                nil [937 981])
+            ("get_own_unit_piu_type" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("own_unit_piu_type" variable
+                       (:pointer 1
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [1009 1033]))                  
+                :type "void")
+                nil [982 1034])
+            ("get_own_unit_phys_addr" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("emb_addr" variable
+                       (:pointer 1
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [1063 1078]))                  
+                :type "void")
+                nil [1035 1079])
+            ("get_own_unit_rest_ph" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("restart_phase" variable
+                       (:pointer 1
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [1106 1126]))                  
+                :type "void")
+                nil [1080 1127])
+            ("unit_state" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1146 1165]))                  
+                :type "char")
+                nil [1129 1166])
+            ("get_memory_amount" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1190 1201]))                  
+                :type "int")
+                nil [1167 1202])
+            ("get_phys_mem" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1220 1225]))                  
+                :type "int")
+                nil [1203 1226])
+            ("get_huge_page_size" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1250 1255]))                  
+                :type "int")
+                nil [1227 1256])
+            ("write_features_to_log" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1284 1289]))                  
+                :type "void")
+                nil [1257 1290])
+            ("affinity_dump" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1310 1315]))                  
+                :type "void")
+                nil [1291 1316])
+            ("open_vmana_print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1339 1344]))                  
+                :type "void")
+                nil [1317 1345])
+            ("vmana_print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1363 1373])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1374 1378]))                  
+                :type "void")
+                nil [1346 1379])
+            ("close_vmana_print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1403 1408]))                  
+                :type "void")
+                nil [1380 1409]))          
+    :file "utilities.h"
+    :pointmax 1437
+    :fsize 1436
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MEM_USE" (spp-arg-list ("mbytes") 269 . 277) . ((semantic-list "((mbytes) + 128)" 278 . 294)))
+          ("MEM_LINDX_USE" . ((semantic-list "(250)" 248 . 253)))
+          ("UTILITIES_H_")
+          )
+
+    )
+   (semanticdb-table "cpu.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CPU_H_" variable (:constant-flag t) nil [143 149])
+            ("select_cores_in_affinity_map" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("map" variable (:type "long") (reparse-symbol arg-sub-list) [249 258]))                  
+                :type "long")
+                nil [215 259])
+            ("affinity_sanity_checks" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [341 360])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [361 385]))                  
+                :type "void")
+                nil [313 386])
+            ("cpumap_invert" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("map" variable (:type "long") (reparse-symbol arg-sub-list) [407 416]))                  
+                :type "long")
+                nil [388 417])
+            ("affinity_unused_cores_map" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [450 474]))                  
+                :type "long")
+                nil [419 475])
+            ("affinity_non_vcpu_map" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("allow_ht" variable (:type "int") (reparse-symbol arg-sub-list) [683 696])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [697 721]))                  
+                :type "long")
+                nil [656 722])
+            ("collect_free_cpu_list" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("list_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [859 874])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [875 899]))                  
+                :type "int")
+                nil [833 900])
+            ("cpu_get_attr" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cpu" variable (:type "int") (reparse-symbol arg-sub-list) [987 995])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [996 1007])
+                    ("base" variable (:type "int") (reparse-symbol arg-sub-list) [1008 1017]))                  
+                :type "long")
+                nil [969 1018])
+            ("cpu_parse_cpu" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cpu" variable (:type "int") (reparse-symbol arg-sub-list) [1111 1119]))                  
+                :type "void")
+                nil [1092 1120])
+            ("cpu_dump" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1136 1141]))                  
+                :type "void")
+                nil [1122 1142])
+            ("cpu_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1235 1240]))                  
+                :type "void")
+                nil [1221 1241]))          
+    :file "cpu.h"
+    :pointmax 1264
+    :fsize 1263
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CPU_H_")
+          )
+
+    )
+   (semanticdb-table "vmana.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_GNU_SOURCE" variable (:constant-flag t) nil [9 20])
+            ("glib.h" include (:system-flag t) nil [23 40])
+            ("signal.h" include (:system-flag t) nil [41 60])
+            ("errno.h" include (:system-flag t) nil [61 79])
+            ("sys/wait.h" include (:system-flag t) nil [80 101])
+            ("vmana.h" include nil nil [103 121])
+            ("utilities.h" include nil nil [122 144])
+            ("cpu.h" include nil nil [145 161])
+            ("configuration.h" include nil nil [162 188])
+            ("virtprocess.h" include nil nil [189 213])
+            ("monitor.h" include nil nil [214 234])
+            ("messaging.h" include nil nil [235 257])
+            ("environment.h" include nil nil [258 282])
+            ("networking.h" include nil nil [283 306])
+            ("irq.h" include nil nil [307 323])
+            ("cli.h" include nil nil [324 340])
+            ("lnx-vmanakvm-bridge.h" include nil nil [341 373])
+            ("timeout.h" include nil nil [374 394])
+            ("hotswap.h" include nil nil [395 415])
+            ("virtmachine_list" variable
+               (:pointer 1
+                :type ("GList" type (:type "class") nil nil))
+                nil [417 448])
+            ("own_unit_name" variable
+               (:dereference 1
+                :type "char")
+                nil [449 472])
+            ("own_unit_piu_type" variable (:type "long") nil [473 496])
+            ("doexit" variable (:type "int") nil [497 512])
+            ("debug_mode" variable (:type "int") nil [513 532])
+            ("own_unit_emb_addr" variable (:type "long") nil [534 561])
+            ("g_restart_phase" variable (:type "long") nil [565 590])
+            ("g_is_omu_start" variable (:type "int") nil [591 614])
+            ("sysinfo" variable (:type ("sysinfo" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [616 639])
+            ("hs_info_data" variable (:type ("hs_info" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [640 668])
+            ("rtm_eth" variable (:type ("rtm_eth" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [669 692])
+            ("getVmanaVersionId" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1078 1086]))                  
+                :type "void")
+                nil [1055 1232])
+            ("isDebugMode" function (:type "int") nil [1234 1276])
+            ("getVirtmachineList" function
+               (:pointer 1
+                :type ("GList" type (:type "class") nil nil))
+                nil [1278 1336])
+            ("set_fdset" function
+               (:arguments 
+                  ( ("rdset" variable
+                       (:pointer 1
+                        :type ("fd_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1449 1463]))                  
+                :type "int")
+                nil [1435 1723])
+            ("handle_vm_sockets" function
+               (:arguments 
+                  ( ("rdset" variable
+                       (:pointer 1
+                        :type ("fd_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1790 1804]))                  
+                :type "void")
+                nil [1767 2067])
+            ("sigint_proc" function
+               (:arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [2086 2094])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("siginfo_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2095 2111])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2112 2122]))                  
+                :type "void")
+                nil [2069 2212])
+            ("sigpipe_proc" function
+               (:arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [2232 2240])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("siginfo_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2241 2257])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2258 2268]))                  
+                :type "void")
+                nil [2214 2310])
+            ("sigchld_proc" function
+               (:arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [2330 2338])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("siginfo_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2339 2355])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2356 2366]))                  
+                :type "void")
+                nil [2312 2947])
+            ("sig_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2963 2968]))                  
+                :type "void")
+                nil [2949 3923])
+            ("update_vm_unit_type" function (:type "void") nil [4806 5192])
+            ("adopt_configuration" function
+               (:arguments 
+                  ( ("vm_config" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5274 5291]))                  
+                :type "int")
+                nil [5250 7912])
+            ("check_configuration" function
+               (:arguments 
+                  ( ("vm_config" variable
+                       (:pointer 2
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7990 8008]))                  
+                :type "int")
+                nil [7966 8682])
+            ("load_conf_file" function
+               (:arguments 
+                  ( ("config_fname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8747 8766]))                  
+                :type "int")
+                nil [8728 11288])
+            ("setup_disk_for_other_unit" function
+               (:arguments 
+                  ( ("vm_config" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11601 11618]))                  
+                :type "void")
+                nil [11570 12881])
+            ("apply_virt_conf" function
+               (:arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13009 13021]))                  
+                :type ("dmx_error_t" type (:type "class") nil nil))
+                nil [12981 14525])
+            ("virt_conf_seq_ovmu" function (:type ("dmx_error_t" type (:type "class") nil nil)) nil [14617 15490])
+            ("launcher_other_unit" function (:type ("dmx_error_t" type (:type "class") nil nil)) nil [15606 16356])
+            ("virt_conf_seq" function (:type ("dmx_error_t" type (:type "class") nil nil)) nil [16426 16819])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [16868 16877])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16878 16891]))                  
+                :type "int")
+                nil [16859 24286]))          
+    :file "vmana.c"
+    :pointmax 24287
+    :fsize 24286
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GNU_SOURCE")
+          )
+
+    )
+   (semanticdb-table "configuration.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CONFIGURATION_H_" variable (:constant-flag t) nil [163 179])
+            ("vmana.h" include nil nil [181 199])
+            ("read_configuration" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vm_list" variable
+                       (:pointer 2
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [224 240])
+                    ("own_unit_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [241 261])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [262 285])
+                    ("min_vmu_memory" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [290 319])
+                    ("hugepage_extra_pages" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [320 356]))                  
+                :type "int")
+                nil [201 357])
+            ("read_emb_configuration" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vm_config" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [387 404]))                  
+                :type "void")
+                nil [359 405])
+            ("destroy_vm_list" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vm_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [428 443]))                  
+                :type "void")
+                nil [407 444])
+            ("disk_config_alloc" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vm_config" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [469 486]))                  
+                :type "void")
+                nil [446 487])
+            ("validate_conf_file" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("config_file" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [512 530]))                  
+                :type "int")
+                nil [489 531])
+            ("disk_find_dev" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [553 558]))                  
+                :type "char")
+                nil [533 559])
+            ("usb_config_alloc" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vm_config" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [583 600])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [601 624]))                  
+                :type "void")
+                nil [561 625])
+            ("check_hs_ifs" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [645 668]))                  
+                :type "void")
+                nil [627 669]))          
+    :file "configuration.h"
+    :pointmax 701
+    :fsize 700
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CONFIGURATION_H_")
+          )
+
+    )
+   (semanticdb-table "virtprocess.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("VIRTPROCESS_H_" variable (:constant-flag t) nil [159 173])
+            ("setup_priorities" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [197 221]))                  
+                :type "void")
+                nil [175 222])
+            ("virtproc_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [245 264]))                  
+                :type "void")
+                nil [223 265])
+            ("virtproc_alloc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [298 303]))                  
+                :type ("virtproc" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [266 304])
+            ("virtproc_set_affinity" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [332 351]))                  
+                :type "void")
+                nil [305 352])
+            ("virtproc_kill" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [372 391]))                  
+                :type "void")
+                nil [353 392])
+            ("virtproc_kill_all" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [416 440]))                  
+                :type "void")
+                nil [393 441])
+            ("virtproc_request_kill" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [469 488]))                  
+                :type "void")
+                nil [442 489])
+            ("virtproc_confirm_kill" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [517 536]))                  
+                :type "void")
+                nil [490 537])
+            ("virtproc_add_arg" function
+               (:prototype-flag t
+                :pointer 2
+                :arguments 
+                  ( ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [562 574])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [575 585]))                  
+                :type "char")
+                nil [538 586])
+            ("virtproc_build_argv" function
+               (:prototype-flag t
+                :pointer 2
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [614 633]))                  
+                :type "char")
+                nil [587 634])
+            ("virtproc_child" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [655 674]))                  
+                :type "void")
+                nil [635 675])
+            ("virtproc_spawn_single" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [702 721]))                  
+                :type "int")
+                nil [676 722])
+            ("virtproc_spawn" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [743 767]))                  
+                :type "void")
+                nil [723 768])
+            ("virtproc_compare" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v1" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [790 810])
+                    ("v2" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [811 831]))                  
+                :type "int")
+                nil [769 832])
+            ("virtproc_changed" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [854 873])
+                    ("new_vm_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [874 893]))                  
+                :type "int")
+                nil [833 894])
+            ("virtproc_find" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [926 938])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [939 950]))                  
+                :type ("virtproc" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [895 951])
+            ("virtproc_by_emb" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("emb_addr" variable (:type "int") (reparse-symbol arg-sub-list) [985 998])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [999 1023]))                  
+                :type ("virtproc" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [952 1024])
+            ("virtproc_allocate_vmindex" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1056 1075])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1076 1100]))                  
+                :type "void")
+                nil [1025 1101])
+            ("virtproc_recovery" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("time" variable (:type "long long") (reparse-symbol arg-sub-list) [1125 1140])
+                    ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1141 1160]))                  
+                :type "void")
+                nil [1102 1161])
+            ("setup_kvm_pit_wq_thrd_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1193 1209]))                  
+                :type "void")
+                nil [1163 1210]))          
+    :file "virtprocess.h"
+    :pointmax 1240
+    :fsize 1239
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("VIRTPROCESS_H_")
+          )
+
+    )
+   (semanticdb-table "monitor.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MONITOR_H_" variable (:constant-flag t) nil [151 161])
+            ("mon_disconnect" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [183 202]))                  
+                :type "void")
+                nil [163 203])
+            ("mon_write" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [219 238])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [239 252])
+                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [253 267]))                  
+                :type "void")
+                nil [204 268])
+            ("mon_read" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [286 305])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [306 319])
+                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [320 334]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [269 335])
+            ("mon_read_and_discard" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [362 381]))                  
+                :type "void")
+                nil [336 382])
+            ("mon_check_prompt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [404 414])
+                    ("buflen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [415 429]))                  
+                :type "int")
+                nil [383 430])
+            ("mon_remove_first_line" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [458 471]))                  
+                :type "void")
+                nil [431 472])
+            ("mon_remove_last_line" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [499 512]))                  
+                :type "void")
+                nil [473 513])
+            ("mon_read_until_prompt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [540 559])
+                    ("result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [560 573])
+                    ("reslen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [574 588]))                  
+                :type "int")
+                nil [514 589])
+            ("mon_execute_command" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [615 634])
+                    ("cmd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [635 645])
+                    ("result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [646 659])
+                    ("reslen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [664 678])
+                    ("critical" variable (:type "int") (reparse-symbol arg-sub-list) [679 692]))                  
+                :type "void")
+                nil [590 693])
+            ("mon_query_cpu_threads" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [721 740]))                  
+                :type "void")
+                nil [694 741])
+            ("mon_soft_reset" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [762 781]))                  
+                :type "void")
+                nil [742 782])
+            ("mon_add_disk" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [801 820]))                  
+                :type "void")
+                nil [783 821])
+            ("mon_remove_disk" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [843 862]))                  
+                :type "void")
+                nil [822 863])
+            ("mon_wdt_soft_reset_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1050 1066]))                  
+                :type "void")
+                nil [1023 1067])
+            ("mon_wdt_soft_reset" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1092 1111])
+                    ("timeout_ms" variable (:type "long long") (reparse-symbol arg-sub-list) [1112 1133]))                  
+                :type "void")
+                nil [1068 1134])
+            ("affinity_query_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1158 1174]))                  
+                :type "void")
+                nil [1135 1175])
+            ("affinity_query_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1201 1206]))                  
+                :type "void")
+                nil [1176 1207])
+            ("mon_connect" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1224 1235]))                  
+                :type "int")
+                nil [1208 1236])
+            ("mon_init_connect_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1262 1278]))                  
+                :type "void")
+                nil [1237 1279])
+            ("mon_init_connect" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1302 1307]))                  
+                :type "void")
+                nil [1280 1308]))          
+    :file "monitor.h"
+    :pointmax 1334
+    :fsize 1333
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MONITOR_H_")
+          )
+
+    )
+   (semanticdb-table "messaging.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MESSAGING_H_" variable (:constant-flag t) nil [155 167])
+            ("messaging_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("dmxmsg_fd" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [207 222]))                  
+                :type "void")
+                nil [187 223])
+            ("messaging_deinit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [247 252]))                  
+                :type "void")
+                nil [225 253])
+            ("messaging_send_reset_ack" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("src_msg" variable
+                       (:pointer 1
+                        :type ("msg_header_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [285 307])
+                    ("ref_id" variable (:type ("word" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [308 320]))                  
+                :type "void")
+                nil [255 321])
+            ("messaging_handle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [345 369]))                  
+                :type "void")
+                nil [323 370])
+            ("messaging_inq_conf_file" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("conf_msg" variable
+                       (:pointer 2
+                        :type ("rmv_configuration_change_s" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [402 440]))                  
+                :type "char")
+                nil [372 441])
+            ("messaging_inq_dmx_ticks" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("test_comp" variable (:type ("computer_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [479 500])
+                    ("dmx_tics_count" variable
+                       (:pointer 1
+                        :type ("dword" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [501 523]))                  
+                :type ("dmx_error_t" type (:type "class") nil nil))
+                nil [443 524])
+            ("messaging_send_conf_change_ack" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("src_msg" variable
+                       (:pointer 1
+                        :type ("rmv_configuration_change_s" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [562 598])
+                    ("status" variable (:type ("dmx_error_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [599 618]))                  
+                :type "void")
+                nil [526 619]))          
+    :file "messaging.h"
+    :pointmax 655
+    :fsize 654
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MESSAGING_H_")
+          )
+
+    )
+   (semanticdb-table "environment.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ENVIRONMENT_H_" variable (:constant-flag t) nil [159 173])
+            ("environment_mkdir" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [269 280]))                  
+                :type "int")
+                nil [247 281])
+            ("environment_rmdir" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [345 356]))                  
+                :type "void")
+                nil [322 357])
+            ("environment_symlink" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [440 451])
+                    ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [452 463])
+                    ("newname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [464 478]))                  
+                :type "int")
+                nil [416 479])
+            ("environment_unlink" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [505 516])
+                    ("newname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [517 531]))                  
+                :type "void")
+                nil [481 532])
+            ("environment_patch_dmx_config" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("template_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [567 587])
+                    ("emb_addr" variable (:type "int") (reparse-symbol arg-sub-list) [588 601])
+                    ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [606 617])
+                    ("newname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [618 632]))                  
+                :type "int")
+                nil [534 633])
+            ("environment_deinit_single" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [666 685]))                  
+                :type "void")
+                nil [635 686])
+            ("environment_init_single" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [716 735]))                  
+                :type "int")
+                nil [688 736])
+            ("environment_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [760 784]))                  
+                :type "void")
+                nil [738 785])
+            ("environment_deinit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [811 835]))                  
+                :type "void")
+                nil [787 836]))          
+    :file "environment.h"
+    :pointmax 1178
+    :fsize 1177
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("ENVIRONMENT_H_")
+          )
+
+    )
+   (semanticdb-table "networking.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("NETWORKING_H_" variable (:constant-flag t) nil [157 170])
+            ("tun_load_module" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [260 265]))                  
+                :type "void")
+                nil [239 266])
+            ("tun_create" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tun_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [283 298]))                  
+                :type "int")
+                nil [268 299])
+            ("tun_delete" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tun_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [316 331]))                  
+                :type "int")
+                nil [301 332])
+            ("sriov_bridge_if_path" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("bridge_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [456 474]))                  
+                :type "char")
+                nil [429 475])
+            ("sriov_dev_is_real_phys_device" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("devname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [605 619]))                  
+                :type "int")
+                nil [571 620])
+            ("sriov_bridge_phys_if_name" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("bridge_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [763 781]))                  
+                :type "char")
+                nil [731 782])
+            ("sriov_get_pf_device_id" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("phys_if_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [813 832]))                  
+                :type "char")
+                nil [784 833])
+            ("sriov_get_vf_pcidevice" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("phys_if_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [922 941])
+                    ("pf_device" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [942 958])
+                    ("vm_index" variable (:type "int") (reparse-symbol arg-sub-list) [959 972])
+                    ("if_index" variable (:type "int") (reparse-symbol arg-sub-list) [1002 1015])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [1016 1039]))                  
+                :type "char")
+                nil [893 1040])
+            ("sriov_find_device" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1137 1156])
+                    ("if_index" variable (:type "int") (reparse-symbol arg-sub-list) [1157 1170])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [1171 1194]))                  
+                :type "int")
+                nil [1115 1195])
+            ("sriov_in_use" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("emulation" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1273 1289]))                  
+                :type "int")
+                nil [1256 1290])
+            ("bridge_deinit_single" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1318 1337])
+                    ("force" variable (:type "int") (reparse-symbol arg-sub-list) [1338 1348]))                  
+                :type "void")
+                nil [1292 1349])
+            ("bridge_init_single" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1374 1393])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [1394 1417]))                  
+                :type "int")
+                nil [1351 1418])
+            ("bridge_deinit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1439 1463]))                  
+                :type "void")
+                nil [1420 1464])
+            ("eth_check_carrier" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ifname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1544 1557]))                  
+                :type "int")
+                nil [1522 1558])
+            ("virtio_set_initial_link_states" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1596 1615]))                  
+                :type "void")
+                nil [1560 1616])
+            ("netlink_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("netlink_fd" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1636 1652]))                  
+                :type "void")
+                nil [1618 1653])
+            ("netlink_handle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("netlink_fd" variable (:type "int") (reparse-symbol arg-sub-list) [1675 1690])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1691 1715]))                  
+                :type "void")
+                nil [1655 1716])
+            ("virtio_link_state_notify" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1796 1815])
+                    ("ifindex" variable (:type "int") (reparse-symbol arg-sub-list) [1816 1828])
+                    ("up" variable (:type "int") (reparse-symbol arg-sub-list) [1829 1836]))                  
+                :type "void")
+                nil [1766 1837])
+            ("virtio_link_state" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("phys_ifname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1965 1983])
+                    ("up" variable (:type "int") (reparse-symbol arg-sub-list) [1984 1991])
+                    ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1992 2016]))                  
+                :type "void")
+                nil [1942 2017]))          
+    :file "networking.h"
+    :pointmax 2047
+    :fsize 2046
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NETWORKING_H_")
+          )
+
+    )
+   (semanticdb-table "irq.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("IRQ_H_" variable (:constant-flag t) nil [142 148])
+            ("IRQ_FIRST_POLL_INTERVAL_C" variable (:constant-flag t) nil [158 183])
+            ("IRQ_POLL_INTERVAL_C" variable (:constant-flag t) nil [198 217])
+            ("irq_poll_timer_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [248 264]))                  
+                :type "void")
+                nil [225 265])
+            ("irq_poll_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [285 290]))                  
+                :type "void")
+                nil [266 291]))          
+    :file "irq.h"
+    :pointmax 313
+    :fsize 312
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("IRQ_H_")
+          ("IRQ_FIRST_POLL_INTERVAL_C" . ((number "20000" 184 . 189)))
+          ("IRQ_POLL_INTERVAL_C" . ((number "10000" 218 . 223)))
+          )
+
+    )
+   (semanticdb-table "cli.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CLI_H_" variable (:constant-flag t) nil [143 149])
+            ("cli_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cli_fd" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [165 177]))                  
+                :type "void")
+                nil [151 178])
+            ("cli_handle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cli_fd" variable (:type "int") (reparse-symbol arg-sub-list) [195 206]))                  
+                :type "void")
+                nil [179 207])
+            ("cli_deinit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cli_fd" variable (:type "int") (reparse-symbol arg-sub-list) [224 235]))                  
+                :type "void")
+                nil [208 236]))          
+    :file "cli.h"
+    :pointmax 258
+    :fsize 257
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CLI_H_")
+          )
+
+    )
+   (semanticdb-table "timeout.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TIMEOUT_H_" variable (:constant-flag t) nil [151 161])
+            ("timeout_cb" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [171 207])
+            ("timeout_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("timeout_ms" variable (:type "long long") (reparse-symbol classsubparts) [230 251])
+                          ("callback" variable (:type ("timeout_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [256 276])
+                          ("user_data" variable
+                             (:pointer 1
+                              :type "void")
+                              (reparse-symbol classsubparts) [277 293]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [209 306])
+            ("timeout_insert" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("time_ms" variable (:type "long long") (reparse-symbol arg-sub-list) [334 352])
+                    ("callback" variable (:type ("timeout_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [353 373])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [388 404]))                  
+                :type ("timeout_t" type (:type "class") nil nil))
+                nil [308 405])
+            ("timeout_next_timespec" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("next_timeout" variable
+                       (:pointer 1
+                        :type ("timespec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [433 463]))                  
+                :type "void")
+                nil [406 464])
+            ("timeout_handle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [485 490]))                  
+                :type "void")
+                nil [465 491]))          
+    :file "timeout.h"
+    :pointmax 517
+    :fsize 516
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax '((TYPEDEF 163 . 170))
+    :lexical-table 
+        '(("TIMEOUT_H_")
+          )
+
+    )
+   (semanticdb-table "hotswap.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("HOTSWAP_H_" variable (:constant-flag t) nil [192 202])
+            ("MAX_HS_FILES" variable (:constant-flag t) nil [267 279])
+            ("hs_file_info" type
+               (:members 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [314 323])
+                    ("wd" variable (:type "int") (reparse-symbol classsubparts) [325 332]))                  
+                :type "struct")
+                nil [291 335])
+            ("hs_info" type
+               (:members 
+                  ( ("inotify_fd" variable (:type "int") (reparse-symbol classsubparts) [355 370])
+                    ("hs_file" variable
+                       (:dereference 1
+                        :type ("hs_file_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [372 414]))                  
+                :type "struct")
+                nil [337 417])
+            ("hs_init" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("hs_info_data" variable
+                       (:pointer 1
+                        :type ("hs_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [439 468]))                  
+                :type "int")
+                nil [420 469])
+            ("hs_event" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("hs_info_data" variable
+                       (:pointer 1
+                        :type ("hs_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [491 520]))                  
+                :type "void")
+                nil [470 521])
+            ("hs_messaging_handle" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :type ("msg_header_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [554 572]))                  
+                :type "void")
+                nil [522 573])
+            ("hs_parse_type" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("hs_cmd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [592 605]))                  
+                :type "int")
+                nil [574 606])
+            ("hs_parse_dev" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("hs_cmd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [626 639])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [640 648]))                  
+                :type "char")
+                nil [607 649])
+            ("hs_find_fp_for_event" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("inotify_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [677 705])
+                    ("hs_info_data" variable
+                       (:pointer 1
+                        :type ("hs_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [712 741]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [650 742]))          
+    :file "hotswap.h"
+    :pointmax 769
+    :fsize 768
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("HOTSWAP_H_")
+          ("MAX_HS_FILES" . ((number "2" 281 . 282)))
+          )
+
+    )
+   (semanticdb-table "environment.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [128 150])
+            ("sys/stat.h" include (:system-flag t) nil [151 172])
+            ("vmana.h" include nil nil [174 192])
+            ("utilities.h" include nil nil [193 215])
+            ("environment.h" include nil nil [216 240])
+            ("environment_mkdir" function
+               (:arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [336 347]))                  
+                :type "int")
+                nil [314 573])
+            ("environment_rmdir" function
+               (:arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [637 648]))                  
+                :type "void")
+                nil [614 764])
+            ("environment_symlink" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [847 858])
+                    ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [859 870])
+                    ("newname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [871 885]))                  
+                :type "int")
+                nil [823 1149])
+            ("environment_unlink" function
+               (:arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1175 1186])
+                    ("newname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1187 1201]))                  
+                :type "void")
+                nil [1151 1330])
+            ("environment_patch_dmx_config" function
+               (:arguments 
+                  ( ("template_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1365 1385])
+                    ("emb_addr" variable (:type "int") (reparse-symbol arg-sub-list) [1386 1399])
+                    ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1404 1415])
+                    ("newname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1416 1430]))                  
+                :type "int")
+                nil [1332 3007])
+            ("environment_deinit_single" function
+               (:arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3040 3059]))                  
+                :type "void")
+                nil [3009 3798])
+            ("environment_init_single" function
+               (:arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3828 3847]))                  
+                :type "int")
+                nil [3800 7240])
+            ("environment_init" function
+               (:arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7264 7288]))                  
+                :type "void")
+                nil [7242 7475])
+            ("environment_deinit" function
+               (:arguments 
+                  ( ("virtmachine_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7501 7525]))                  
+                :type "void")
+                nil [7477 7707]))          
+    :file "environment.c"
+    :pointmax 10286
+    :fsize 10285
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "configuration.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_GNU_SOURCE" variable (:constant-flag t) nil [137 148])
+            ("errno.h" include (:system-flag t) nil [150 168])
+            ("dirent.h" include (:system-flag t) nil [169 188])
+            ("vmana.h" include nil nil [190 208])
+            ("virtprocess.h" include nil nil [209 233])
+            ("configuration.h" include nil nil [234 260])
+            ("utilities.h" include nil nil [261 283])
+            ("CF_CS_OFFSET" variable (:constant-flag t) nil [334 346])
+            ("CF_CS_LEN" variable (:constant-flag t) nil [366 375])
+            ("CF_DATA_OFFSET" variable (:constant-flag t) nil [398 412])
+            ("VMB_FILE_HEAD_LEN" variable (:constant-flag t) nil [456 473])
+            ("disk_info_array" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "unsigned int")
+                nil [529 610])
+            ("usb_port_info" type
+               (:members 
+                  ( ("piu_type" variable (:type "long") (reparse-symbol classsubparts) [639 653])
+                    ("count" variable (:type "int") (reparse-symbol classsubparts) [658 668])
+                    ("list" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [673 694]))                  
+                :type "struct")
+                nil [612 697])
+            ("usb_port_array" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type ("usb_port_info" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [726 995])
+            ("affinity_parse_single" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1030 1049])
+                    ("confstr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1050 1064]))                  
+                :type "int")
+                nil [997 2218])
+            ("affinity_parse" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2313 2332])
+                    ("confstr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2333 2347]))                  
+                :type "int")
+                nil [2287 2711])
+            ("affinity_update_maps" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6077 6096]))                  
+                :type "void")
+                nil [6044 6554])
+            ("is_gpld" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("unit_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6575 6591]))                  
+                :type "int")
+                nil [6556 6652])
+            ("netconfig_parse_single" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6688 6707])
+                    ("confstr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6708 6722])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [6723 6746]))                  
+                :type "int")
+                nil [6654 9318])
+            ("netconfig_parse" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9347 9366])
+                    ("confstr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9367 9381])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [9382 9405]))                  
+                :type "int")
+                nil [9320 9869])
+            ("read_conf_group" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("keyfile" variable
+                       (:pointer 1
+                        :type ("GKeyFile" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9898 9916])
+                    ("group" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9917 9929])
+                    ("v" variable
+                       (:pointer 1
+                        :type ("virtproc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9930 9949])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [9950 9973]))                  
+                :type "int")
+                nil [9871 20809])
+            ("usb_get_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptype" variable (:type "long") (reparse-symbol arg-sub-list) [22023 22034])
+                    ("ucnt" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [22035 22045])
+                    ("ulist" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [22046 22057]))                  
+                :type "void")
+                nil [21996 22472])
+            ("read_configuration" function
+               (:arguments 
+                  ( ("vm_list" variable
+                       (:pointer 2
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22497 22513])
+                    ("own_unit_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22514 22534])
+                    ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [22535 22558])
+                    ("min_vmu_memory" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [22563 22592])
+                    ("hugepage_extra_pages" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [22593 22629]))                  
+                :type "int")
+                nil [22474 26913])
+            ("read_emb_configuration" function
+               (:arguments 
+                  ( ("vm_config" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27142 27159]))                  
+                :type "void")
+                nil [27114 28234])
+            ("destroy_vm_list" function
+               (:arguments 
+                  ( ("vm_list" variable
+                       (:pointer 1
+                        :type ("GList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28258 28273]))                  
+                :type "void")
+                nil [28237 28441])
+            ("validate_conf_file" function
+               (:arguments 
+                  ( ("config_file_dx" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [29816 29837]))                  
+                :type "int")
+                nil [29793 31850])
+            ("find_pci_dev" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pci_fn" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32885 32898]))                  
+                :type "int")
+                nil [32861 33426])
+            ("check_hs_ifs" function
+               (:arguments 
+                  ( ("own_unit_piu_type" variable (:type "long") (reparse-symbol arg-sub-list) [33446 33469]))                  
+                :type "void")
+                nil [33428 33855]))          
+    :file "configuration.c"
+    :pointmax 33856
+    :fsize 33855
+    :lastmodtime '(22301 55815 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GNU_SOURCE")
+          ("CF_CS_LEN" . ((number "4" 388 . 389)))
+          ("VMB_FILE_HEAD_LEN" . ((number "216" 478 . 481)))
+          ("CF_CS_OFFSET" . ((number "8" 356 . 357)))
+          ("CF_DATA_OFFSET" . ((semantic-list "(CF_CS_OFFSET + CF_CS_LEN)" 420 . 446)))
+          )
+
+    )
+   )
+  :file "!home!k1jin!Dropbox!OSP_PLATFORM!16 - PRB-SRC-CODE!SS_LNXVMANAKVM_4.43!SS_LNXvmanakvm!src!vmana!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

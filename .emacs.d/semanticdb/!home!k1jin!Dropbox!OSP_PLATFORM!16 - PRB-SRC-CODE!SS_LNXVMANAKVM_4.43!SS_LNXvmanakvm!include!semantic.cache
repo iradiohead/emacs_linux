@@ -1,0 +1,71 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "lnx-vmanakvm-bridge.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("vmanakvm_bridge_add_br" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("br_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [29 43]))                  
+                :type "int")
+                nil [2 44])
+            ("vmanakvm_bridge_del_br" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("br_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [72 86]))                  
+                :type "int")
+                nil [45 87])
+            ("vmanakvm_bridge_add_if" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("br_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [115 129])
+                    ("dev" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [130 140]))                  
+                :type "int")
+                nil [88 141])
+            ("vmanakvm_bridge_del_if" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("br_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [169 183])
+                    ("dev" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [184 194]))                  
+                :type "int")
+                nil [142 195])
+            ("vmanakvm_bridge_clear_forward_delay" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("br_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [236 250]))                  
+                :type "int")
+                nil [196 251]))          
+    :file "lnx-vmanakvm-bridge.h"
+    :pointmax 253
+    :fsize 252
+    :lastmodtime '(22301 55808 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!k1jin!Dropbox!OSP_PLATFORM!16 - PRB-SRC-CODE!SS_LNXVMANAKVM_4.43!SS_LNXvmanakvm!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

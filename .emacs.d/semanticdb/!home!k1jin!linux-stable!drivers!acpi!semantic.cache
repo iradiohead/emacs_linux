@@ -1,0 +1,27 @@
+;; Object acpi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "acpi/"
+  :tables (list 
+   (semanticdb-table "acpi_amba.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "acpi_amba.c"
+    :pointmax 2830
+    :fsize 2829
+    :lastmodtime '(22436 15369 187006 568000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "acpi_cmos_rtc.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "acpi_cmos_rtc.c"
+    :pointmax 2180
+    :fsize 2179
+    :lastmodtime '(22436 15369 187006 568000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!k1jin!linux-stable!drivers!acpi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

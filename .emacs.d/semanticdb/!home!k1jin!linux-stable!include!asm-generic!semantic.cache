@@ -1,0 +1,472 @@
+;; Object asm-generic/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "asm-generic/"
+  :tables (list 
+   (semanticdb-table "atomic-long.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_ASM_GENERIC_ATOMIC_LONG_H" variable (:constant-flag t) nil [44 70])
+            ("asm/types.h" include (:system-flag t) nil [267 289])
+            ("atomic_long_t" type
+               (:typedef ("atomic_t" type (:type "class") nil nil)
+                :superclasses "atomic_t"
+                :type "typedef")
+                nil [677 708])
+            ("ATOMIC_LONG_INIT" variable (:constant-flag t) nil [718 734])
+            ("ATOMIC_LONG_PFX" variable (:constant-flag t) nil [761 776])
+            ("ATOMIC_LONG_READ_OP" variable (:constant-flag t) nil [809 828])
+            ("atomic_long_read" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1036 1057])
+            ("atomic_long_read_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1058 1087])
+            ("ATOMIC_LONG_SET_OP" variable (:constant-flag t) nil [1125 1143])
+            ("atomic_long_set" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil)
+                    ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [1341 1361])
+            ("atomic_long_set_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil)
+                    ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [1362 1390])
+            ("ATOMIC_LONG_ADD_SUB_OP" variable (:constant-flag t) nil [1427 1449])
+            ("atomic_long_add_return" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1691 1719])
+            ("atomic_long_add_return_relaxed" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1720 1757])
+            ("atomic_long_add_return_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1758 1795])
+            ("atomic_long_add_return_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1796 1833])
+            ("atomic_long_sub_return" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1834 1862])
+            ("atomic_long_sub_return_relaxed" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1863 1900])
+            ("atomic_long_sub_return_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1901 1938])
+            ("atomic_long_sub_return_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1939 1976])
+            ("atomic_long_cmpxchg_relaxed" variable (:constant-flag t) nil [2017 2044])
+            ("atomic_long_cmpxchg_acquire" variable (:constant-flag t) nil [2157 2184])
+            ("atomic_long_cmpxchg_release" variable (:constant-flag t) nil [2297 2324])
+            ("atomic_long_cmpxchg" variable (:constant-flag t) nil [2437 2456])
+            ("atomic_long_xchg_relaxed" variable (:constant-flag t) nil [2552 2576])
+            ("atomic_long_xchg_acquire" variable (:constant-flag t) nil [2664 2688])
+            ("atomic_long_xchg_release" variable (:constant-flag t) nil [2776 2800])
+            ("atomic_long_xchg" variable (:constant-flag t) nil [2888 2904])
+            ("atomic_long_inc" function
+               (:arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3021 3038]))                  
+                :type "void")
+                nil [3000 3122])
+            ("atomic_long_dec" function
+               (:arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3168 3185]))                  
+                :type "void")
+                nil [3147 3269])
+            ("ATOMIC_LONG_OP" variable (:constant-flag t) nil [3279 3293])
+            ("atomic_long_add" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3506 3525])
+            ("atomic_long_sub" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3526 3545])
+            ("atomic_long_and" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3546 3565])
+            ("atomic_long_or" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3566 3584])
+            ("atomic_long_xor" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3585 3604])
+            ("atomic_long_andnot" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3605 3627])
+            ("atomic_long_sub_and_test" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) [3695 3702])
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3703 3720]))                  
+                :type "int")
+                nil [3652 3823])
+            ("atomic_long_dec_and_test" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3868 3885]))                  
+                :type "int")
+                nil [3825 3985])
+            ("atomic_long_inc_and_test" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4030 4047]))                  
+                :type "int")
+                nil [3987 4147])
+            ("atomic_long_add_negative" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) [4192 4199])
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4200 4217]))                  
+                :type "int")
+                nil [4149 4320])
+            ("ATOMIC_LONG_INC_DEC_OP" variable (:constant-flag t) nil [4330 4352])
+            ("atomic_long_inc_return" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4584 4612])
+            ("atomic_long_inc_return_relaxed" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4613 4650])
+            ("atomic_long_inc_return_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4651 4688])
+            ("atomic_long_inc_return_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4689 4726])
+            ("atomic_long_dec_return" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4727 4755])
+            ("atomic_long_dec_return_relaxed" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4756 4793])
+            ("atomic_long_dec_return_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4794 4831])
+            ("atomic_long_dec_return_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4832 4869])
+            ("atomic_long_add_unless" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4944 4961])
+                    ("a" variable (:type "long") (reparse-symbol arg-sub-list) [4962 4969])
+                    ("u" variable (:type "long") (reparse-symbol arg-sub-list) [4970 4977]))                  
+                :type "long")
+                nil [4902 5087])
+            ("atomic_long_inc_not_zero" variable (:constant-flag t) nil [5097 5121]))          
+    :file "atomic-long.h"
+    :pointmax 5231
+    :fsize 5230
+    :lastmodtime '(22436 15429 779053 931000)
+    :unmatched-syntax '((symbol "__inline" 3605 . 3627) (STATIC "static" 3605 . 3627) (symbol "__inline" 3585 . 3604) (STATIC "static" 3585 . 3604) (symbol "__inline" 3566 . 3584) (STATIC "static" 3566 . 3584) (symbol "__inline" 3546 . 3565) (STATIC "static" 3546 . 3565) (symbol "__inline" 3526 . 3545) (STATIC "static" 3526 . 3545) (symbol "__inline" 3506 . 3525) (STATIC "static" 3506 . 3525) (symbol "__inline" 3131 . 3146) (STATIC 3124 . 3130) (symbol "__inline" 2984 . 2999) (STATIC 2977 . 2983))
+    :lexical-table 
+        '(("atomic_long_cmpxchg_acquire" (spp-arg-list ("l" "old" "new") 2184 . 2197) . ((semantic-list "(ATOMIC_LONG_PFX(_cmpxchg_acquire)((ATOMIC_LONG_PFX(_t) *)(l), \\
+					   (old), (new)))" 2201 . 2288)))
+          ("atomic_long_cmpxchg_release" (spp-arg-list ("l" "old" "new") 2324 . 2337) . ((semantic-list "(ATOMIC_LONG_PFX(_cmpxchg_release)((ATOMIC_LONG_PFX(_t) *)(l), \\
+					   (old), (new)))" 2341 . 2428)))
+          ("ATOMIC_LONG_PFX" (spp-arg-list ("x") 776 . 779) . ((spp-symbol-merge ((symbol "atomic" 780 . 786) (symbol "x" 790 . 791)) 780 . 791)))
+          ("atomic_long_xchg_relaxed" (spp-arg-list ("v" "new") 2576 . 2584) . ((semantic-list "(ATOMIC_LONG_PFX(_xchg_relaxed)((ATOMIC_LONG_PFX(_t) *)(v), (new)))" 2588 . 2655)))
+          ("atomic_long_cmpxchg_relaxed" (spp-arg-list ("l" "old" "new") 2044 . 2057) . ((semantic-list "(ATOMIC_LONG_PFX(_cmpxchg_relaxed)((ATOMIC_LONG_PFX(_t) *)(l), \\
+					   (old), (new)))" 2061 . 2148)))
+          ("atomic_long_cmpxchg" (spp-arg-list ("l" "old" "new") 2456 . 2469) . ((semantic-list "(ATOMIC_LONG_PFX(_cmpxchg)((ATOMIC_LONG_PFX(_t) *)(l), (old), (new)))" 2473 . 2542)))
+          ("_ASM_GENERIC_ATOMIC_LONG_H")
+          ("atomic_long_xchg" (spp-arg-list ("v" "new") 2904 . 2912) . ((semantic-list "(ATOMIC_LONG_PFX(_xchg)((ATOMIC_LONG_PFX(_t) *)(v), (new)))" 2916 . 2975)))
+          ("atomic_long_inc_not_zero" (spp-arg-list ("l") 5121 . 5124) . 
+              ((symbol "ATOMIC_LONG_PFX" 5128 . 5143) (semantic-list "(_inc_not_zero)" 5143 . 5158) (semantic-list "((ATOMIC_LONG_PFX(_t) *)(l))" 5158 . 5186)))
+          ("ATOMIC_LONG_INIT" (spp-arg-list ("i") 734 . 737) . ((symbol "ATOMIC_INIT" 738 . 749) (semantic-list "(i)" 749 . 752)))
+          ("atomic_long_xchg_acquire" (spp-arg-list ("v" "new") 2688 . 2696) . ((semantic-list "(ATOMIC_LONG_PFX(_xchg_acquire)((ATOMIC_LONG_PFX(_t) *)(v), (new)))" 2700 . 2767)))
+          ("atomic_long_xchg_release" (spp-arg-list ("v" "new") 2800 . 2808) . ((semantic-list "(ATOMIC_LONG_PFX(_xchg_release)((ATOMIC_LONG_PFX(_t) *)(v), (new)))" 2812 . 2879)))
+          )
+
+    )
+   (semanticdb-table "param.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__ASM_GENERIC_PARAM_H" variable (:constant-flag t) nil [39 60])
+            ("uapi/asm-generic/param.h" include (:system-flag t) nil [62 97])
+            ("HZ" variable (:constant-flag t) nil [119 121])
+            ("USER_HZ" variable (:constant-flag t) nil [180 187])
+            ("CLOCKS_PER_SEC" variable (:constant-flag t) nil [233 247]))          
+    :file "param.h"
+    :pointmax 329
+    :fsize 328
+    :lastmodtime '(22436 15429 951054 65000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__ASM_GENERIC_PARAM_H")
+          ("CLOCKS_PER_SEC" . ((semantic-list "(USER_HZ)" 248 . 257)))
+          ("HZ" . ((symbol "CONFIG_HZ" 123 . 132)))
+          ("USER_HZ" . ((number "100" 188 . 191)))
+          )
+
+    )
+   (semanticdb-table "int-ll64.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_ASM_GENERIC_INT_LL64_H" variable (:constant-flag t) nil [162 185])
+            ("uapi/asm-generic/int-ll64.h" include (:system-flag t) nil [187 225])
+            ("s8" type
+               (:typedef ("signed char")
+                :superclasses "signed char"
+                :type "typedef")
+                nil [250 273])
+            ("u8" type
+               (:typedef ("unsigned char")
+                :superclasses "unsigned char"
+                :type "typedef")
+                nil [274 299])
+            ("s16" type
+               (:typedef ("signed short")
+                :superclasses "signed short"
+                :type "typedef")
+                nil [301 326])
+            ("u16" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [327 354])
+            ("s32" type
+               (:typedef ("signed int")
+                :superclasses "signed int"
+                :type "typedef")
+                nil [356 379])
+            ("u32" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [380 405])
+            ("s64" type
+               (:typedef ("signed long long")
+                :superclasses "signed long long"
+                :type "typedef")
+                nil [407 436])
+            ("u64" type
+               (:typedef ("unsigned long long")
+                :superclasses "unsigned long long"
+                :type "typedef")
+                nil [437 468])
+            ("S8_C" variable (:constant-flag t) nil [478 482])
+            ("U8_C" variable (:constant-flag t) nil [497 501])
+            ("S16_C" variable (:constant-flag t) nil [521 526])
+            ("U16_C" variable (:constant-flag t) nil [540 545])
+            ("S32_C" variable (:constant-flag t) nil [564 569])
+            ("U32_C" variable (:constant-flag t) nil [583 588])
+            ("S64_C" variable (:constant-flag t) nil [607 612])
+            ("U64_C" variable (:constant-flag t) nil [632 637]))          
+    :file "int-ll64.h"
+    :pointmax 894
+    :fsize 893
+    :lastmodtime '(22436 15429 943054 59000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("S8_C" (spp-arg-list ("x") 482 . 485) . ((symbol "x" 487 . 488)))
+          ("U32_C" (spp-arg-list ("x") 588 . 591) . ((spp-symbol-merge ((symbol "x" 592 . 593) (symbol "U" 597 . 598)) 592 . 598)))
+          ("U8_C" (spp-arg-list ("x") 501 . 504) . ((spp-symbol-merge ((symbol "x" 506 . 507) (symbol "U" 511 . 512)) 506 . 512)))
+          ("S16_C" (spp-arg-list ("x") 526 . 529) . ((symbol "x" 530 . 531)))
+          ("S64_C" (spp-arg-list ("x") 612 . 615) . ((spp-symbol-merge ((symbol "x" 616 . 617) (symbol "LL" 621 . 623)) 616 . 623)))
+          ("_ASM_GENERIC_INT_LL64_H")
+          ("S32_C" (spp-arg-list ("x") 569 . 572) . ((symbol "x" 573 . 574)))
+          ("U16_C" (spp-arg-list ("x") 545 . 548) . ((spp-symbol-merge ((symbol "x" 549 . 550) (symbol "U" 554 . 555)) 549 . 555)))
+          ("U64_C" (spp-arg-list ("x") 637 . 640) . ((spp-symbol-merge ((symbol "x" 641 . 642) (symbol "ULL" 646 . 649)) 641 . 649)))
+          )
+
+    )
+   (semanticdb-table "rtc.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "rtc.h"
+    :pointmax 6169
+    :fsize 6168
+    :lastmodtime '(22436 15429 958054 71000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!k1jin!linux-stable!include!asm-generic!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

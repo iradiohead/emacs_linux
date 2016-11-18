@@ -1,0 +1,510 @@
+;; Object amba/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "amba/"
+  :tables (list 
+   (semanticdb-table "bus.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ASMARM_AMBA_H" variable (:constant-flag t) nil [520 533])
+            ("linux/clk.h" include (:system-flag t) nil [535 557])
+            ("linux/device.h" include (:system-flag t) nil [558 583])
+            ("linux/mod_devicetable.h" include (:system-flag t) nil [584 618])
+            ("linux/err.h" include (:system-flag t) nil [619 641])
+            ("linux/resource.h" include (:system-flag t) nil [642 669])
+            ("linux/regulator/consumer.h" include (:system-flag t) nil [670 707])
+            ("AMBA_NR_IRQS" variable (:constant-flag t) nil [717 729])
+            ("AMBA_CID" variable (:constant-flag t) nil [740 748])
+            ("CORESIGHT_CID" variable (:constant-flag t) nil [768 781])
+            ("clk" type
+               (:prototype t
+                :type "struct")
+                nil [794 805])
+            ("amba_device" type
+               (:members 
+                  ( ("dev" variable (:type ("device" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [829 848])
+                    ("res" variable (:type ("resource" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [850 871])
+                    ("pclk" variable
+                       (:pointer 1
+                        :type ("clk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [873 891])
+                    ("periphid" variable (:type "unsigned int") (reparse-symbol classsubparts) [893 916])
+                    ("irq" variable
+                       (:dereference 1
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [918 950])
+                    ("driver_override" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [952 976]))                  
+                :type "struct")
+                nil [807 979])
+            ("amba_driver" type
+               (:members 
+                  ( ("drv" variable (:type ("device_driver" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1003 1028])
+                    ("probe" variable
+                       (:functionpointer-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1030 1091])
+                    ("remove" variable
+                       (:functionpointer-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1093 1131])
+                    ("shutdown" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1133 1174])
+                    ("id_table" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("amba_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1176 1207]))                  
+                :type "struct")
+                nil [981 1210])
+            ("amba_vendor" type
+               (:members 
+                  ( ("AMBA_VENDOR_ARM" variable
+                       (:constant-flag t
+                        :default-value (1413 1417)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1395 1417])
+                    ("AMBA_VENDOR_ST" variable
+                       (:constant-flag t
+                        :default-value (1437 1441)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1420 1441])
+                    ("AMBA_VENDOR_QCOM" variable
+                       (:constant-flag t
+                        :default-value (1463 1467)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1444 1467])
+                    ("AMBA_VENDOR_LSI" variable
+                       (:constant-flag t
+                        :default-value (1488 1492)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1470 1492]))                  
+                :type "enum")
+                nil [1375 1496])
+            ("amba_bustype" variable
+               (:typemodifiers ("extern")
+                :type ("bus_type" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1498 1534])
+            ("to_amba_device" variable (:constant-flag t) nil [1544 1558])
+            ("amba_get_drvdata" variable (:constant-flag t) nil [1612 1628])
+            ("amba_set_drvdata" variable (:constant-flag t) nil [1665 1681])
+            ("amba_driver_register" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("amba_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1741 1762]))                  
+                :type "int")
+                nil [1716 1763])
+            ("amba_driver_unregister" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("amba_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1792 1813]))                  
+                :type "void")
+                nil [1764 1814])
+            ("amba_device_alloc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1853 1866])
+                    ("" variable (:type ("resource_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1867 1883])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1884 1891]))                  
+                :type ("amba_device" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1815 1892])
+            ("amba_device_put" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1914 1935]))                  
+                :type "void")
+                nil [1893 1936])
+            ("amba_device_add" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1957 1978])
+                    ("" variable
+                       (:pointer 1
+                        :type ("resource" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1979 1997]))                  
+                :type "int")
+                nil [1937 1998])
+            ("amba_device_register" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2024 2045])
+                    ("" variable
+                       (:pointer 1
+                        :type ("resource" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2046 2064]))                  
+                :type "int")
+                nil [1999 2065])
+            ("amba_apb_device_add" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2106 2128])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2129 2146])
+                    ("base" variable (:type ("resource_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2152 2173])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2174 2186])
+                    ("irq1" variable (:type "int") (reparse-symbol arg-sub-list) [2192 2201])
+                    ("irq2" variable (:type "int") (reparse-symbol arg-sub-list) [2202 2211])
+                    ("pdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2212 2224])
+                    ("periphid" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2230 2252]))                  
+                :type ("amba_device" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2066 2253])
+            ("amba_ahb_device_add" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2294 2316])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2317 2334])
+                    ("base" variable (:type ("resource_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2340 2361])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2362 2374])
+                    ("irq1" variable (:type "int") (reparse-symbol arg-sub-list) [2380 2389])
+                    ("irq2" variable (:type "int") (reparse-symbol arg-sub-list) [2390 2399])
+                    ("pdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2400 2412])
+                    ("periphid" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2418 2440]))                  
+                :type ("amba_device" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2254 2441])
+            ("amba_apb_device_add_res" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2487 2509])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2510 2527])
+                    ("base" variable (:type ("resource_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2531 2552])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2553 2565])
+                    ("irq1" variable (:type "int") (reparse-symbol arg-sub-list) [2566 2575])
+                    ("irq2" variable (:type "int") (reparse-symbol arg-sub-list) [2579 2588])
+                    ("pdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2589 2601])
+                    ("periphid" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2602 2624])
+                    ("resbase" variable
+                       (:pointer 1
+                        :type ("resource" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2628 2653]))                  
+                :type ("amba_device" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2442 2654])
+            ("amba_ahb_device_add_res" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2700 2722])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2723 2740])
+                    ("base" variable (:type ("resource_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2744 2765])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2766 2778])
+                    ("irq1" variable (:type "int") (reparse-symbol arg-sub-list) [2779 2788])
+                    ("irq2" variable (:type "int") (reparse-symbol arg-sub-list) [2792 2801])
+                    ("pdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2802 2814])
+                    ("periphid" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2815 2837])
+                    ("resbase" variable
+                       (:pointer 1
+                        :type ("resource" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2841 2866]))                  
+                :type ("amba_device" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2655 2867])
+            ("amba_device_unregister" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2896 2917]))                  
+                :type "void")
+                nil [2868 2918])
+            ("amba_find_device" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2956 2969])
+                    ("" variable
+                       (:pointer 1
+                        :type ("device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2970 2986])
+                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2987 3000])
+                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3001 3014]))                  
+                :type ("amba_device" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2919 3015])
+            ("amba_request_regions" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3041 3062])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3063 3076]))                  
+                :type "int")
+                nil [3016 3077])
+            ("amba_release_regions" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3104 3125]))                  
+                :type "void")
+                nil [3078 3126])
+            ("amba_pclk_enable" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3163 3187]))                  
+                :type "int")
+                nil [3128 3222])
+            ("amba_pclk_disable" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3261 3285]))                  
+                :type "void")
+                nil [3224 3314])
+            ("amba_pclk_prepare" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3352 3376]))                  
+                :type "int")
+                nil [3316 3412])
+            ("amba_pclk_unprepare" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("amba_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3453 3477]))                  
+                :type "void")
+                nil [3414 3508])
+            ("AMBA_CONFIG_BITS" variable (:constant-flag t) nil [3570 3586])
+            ("AMBA_REV_BITS" variable (:constant-flag t) nil [3619 3632])
+            ("AMBA_MANF_BITS" variable (:constant-flag t) nil [3665 3679])
+            ("AMBA_PART_BITS" variable (:constant-flag t) nil [3712 3726])
+            ("amba_config" variable (:constant-flag t) nil [3753 3764])
+            ("amba_rev" variable (:constant-flag t) nil [3808 3816])
+            ("amba_manf" variable (:constant-flag t) nil [3857 3866])
+            ("amba_part" variable (:constant-flag t) nil [3908 3917])
+            ("__AMBA_DEV" variable (:constant-flag t) nil [3960 3970])
+            ("AMBA_APB_DEVICE" variable (:constant-flag t) nil [4363 4378])
+            ("AMBA_AHB_DEVICE" variable (:constant-flag t) nil [4657 4672])
+            ("module_amba_driver" variable (:constant-flag t) nil [5150 5168])
+            ("builtin_amba_driver" variable (:constant-flag t) nil [5522 5541]))          
+    :file "bus.h"
+    :pointmax 5614
+    :fsize 5613
+    :lastmodtime '(22436 15430 864054 779000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("AMBA_MANF_BITS" (spp-arg-list ("a") 3679 . 3682) . ((semantic-list "(((a) >> 12) & 0xff)" 3683 . 3703)))
+          ("AMBA_PART_BITS" (spp-arg-list ("a") 3726 . 3729) . ((semantic-list "((a) & 0xfff)" 3730 . 3743)))
+          ("AMBA_AHB_DEVICE" (spp-arg-list ("name" "busid" "id" "base" "irqs" "data") 4672 . 4707) . 
+              ((STRUCT "struct" 4710 . 4716) (symbol "amba_device" 4717 . 4728) (spp-symbol-merge ((symbol "name" 4729 . 4733) (symbol "_device" 4735 . 4742)) 4729 . 4742) (punctuation "=" 4743 . 4744) (semantic-list "{				\\
+	.dev = __AMBA_DEV(busid, data, ~0ULL),			\\
+	.res = DEFINE_RES_MEM(base, SZ_4K),			\\
+	.irq = irqs,						\\
+	.periphid = id,						\\
+}" 4745 . 4883)))
+          ("to_amba_device" (spp-arg-list ("d") 1558 . 1561) . ((symbol "container_of" 1562 . 1574) (semantic-list "(d, struct amba_device, dev)" 1574 . 1602)))
+          ("amba_set_drvdata" (spp-arg-list ("d" "p") 1681 . 1686) . ((symbol "dev_set_drvdata" 1687 . 1702) (semantic-list "(&d->dev, p)" 1702 . 1714)))
+          ("ASMARM_AMBA_H")
+          ("AMBA_CID" . ((number "0xb105f00d" 749 . 759)))
+          ("AMBA_REV_BITS" (spp-arg-list ("a") 3632 . 3635) . ((semantic-list "(((a) >> 20) & 0x0f)" 3636 . 3656)))
+          ("AMBA_CONFIG_BITS" (spp-arg-list ("a") 3586 . 3589) . ((semantic-list "(((a) >> 24) & 0xff)" 3590 . 3610)))
+          ("amba_get_drvdata" (spp-arg-list ("d") 1628 . 1631) . ((symbol "dev_get_drvdata" 1632 . 1647) (semantic-list "(&d->dev)" 1647 . 1656)))
+          ("amba_rev" (spp-arg-list ("d") 3816 . 3819) . ((symbol "AMBA_REV_BITS" 3820 . 3833) (semantic-list "((d)->periphid)" 3833 . 3848)))
+          ("__AMBA_DEV" (spp-arg-list ("busid" "data" "mask") 3970 . 3989) . ((semantic-list "{							\\
+		.coherent_dma_mask = mask,			\\
+		.init_name = busid,				\\
+		.platform_data = data,				\\
+	}" 3996 . 4098)))
+          ("AMBA_APB_DEVICE" (spp-arg-list ("name" "busid" "id" "base" "irqs" "data") 4378 . 4413) . 
+              ((STRUCT "struct" 4416 . 4422) (symbol "amba_device" 4423 . 4434) (spp-symbol-merge ((symbol "name" 4435 . 4439) (symbol "_device" 4441 . 4448)) 4435 . 4448) (punctuation "=" 4449 . 4450) (semantic-list "{				\\
+	.dev = __AMBA_DEV(busid, data, 0),			\\
+	.res = DEFINE_RES_MEM(base, SZ_4K),			\\
+	.irq = irqs,						\\
+	.periphid = id,						\\
+}" 4451 . 4585)))
+          ("module_amba_driver" (spp-arg-list ("__amba_drv") 5168 . 5180) . ((symbol "module_driver" 5184 . 5197) (semantic-list "(__amba_drv, amba_driver_register, amba_driver_unregister)" 5197 . 5255)))
+          ("builtin_amba_driver" (spp-arg-list ("__amba_drv") 5541 . 5553) . ((symbol "builtin_driver" 5557 . 5571) (semantic-list "(__amba_drv, amba_driver_register)" 5571 . 5605)))
+          ("amba_config" (spp-arg-list ("d") 3764 . 3767) . ((symbol "AMBA_CONFIG_BITS" 3768 . 3784) (semantic-list "((d)->periphid)" 3784 . 3799)))
+          ("amba_manf" (spp-arg-list ("d") 3866 . 3869) . ((symbol "AMBA_MANF_BITS" 3870 . 3884) (semantic-list "((d)->periphid)" 3884 . 3899)))
+          ("CORESIGHT_CID" . ((number "0xb105900d" 782 . 792)))
+          ("AMBA_NR_IRQS" . ((number "9" 730 . 731)))
+          ("amba_part" (spp-arg-list ("d") 3917 . 3920) . ((symbol "AMBA_PART_BITS" 3921 . 3935) (semantic-list "((d)->periphid)" 3935 . 3950)))
+          )
+
+    )
+   )
+  :file "!home!k1jin!linux-stable!include!linux!amba!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

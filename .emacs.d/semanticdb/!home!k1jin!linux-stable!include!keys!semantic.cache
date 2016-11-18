@@ -1,0 +1,217 @@
+;; Object keys/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "keys/"
+  :tables (list 
+   (semanticdb-table "asymmetric-type.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_KEYS_ASYMMETRIC_TYPE_H" variable (:constant-flag t) nil [521 544])
+            ("linux/key-type.h" include (:system-flag t) nil [546 573])
+            ("linux/verification.h" include (:system-flag t) nil [574 605])
+            ("key_type_asymmetric" variable
+               (:typemodifiers ("extern")
+                :type ("key_type" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [607 650])
+            ("asymmetric_payload_bits" type
+               (:members 
+                  ( ("asym_crypto" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [775 787])
+                    ("asym_subtype" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [826 839])
+                    ("asym_key_ids" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [892 905])
+                    ("asym_auth" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [954 1023]))                  
+                :type "enum")
+                nil [743 1024])
+            ("asymmetric_key_id" type
+               (:members 
+                  ( ("len" variable (:type "unsigned short") (reparse-symbol classsubparts) [2020 2039])
+                    ("data" variable
+                       (:dereference 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [2041 2062]))                  
+                :type "struct")
+                nil [1992 2065])
+            ("asymmetric_key_ids" type
+               (:members 
+                  ( ("id" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2096 2109]))                  
+                :type "struct")
+                nil [2067 2112])
+            ("asymmetric_key_id_same" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("kid1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("asymmetric_key_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2149 2186])
+                    ("kid2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("asymmetric_key_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2194 2231]))                  
+                :type "bool")
+                nil [2114 2232])
+            ("asymmetric_key_id_partial" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("kid1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("asymmetric_key_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2272 2309])
+                    ("kid2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("asymmetric_key_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2320 2357]))                  
+                :type "bool")
+                nil [2234 2358])
+            ("asymmetric_key_generate_id" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("val_1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2420 2438])
+                    ("len_1" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2450 2463])
+                    ("val_2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2475 2493])
+                    ("len_2" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2505 2518]))                  
+                :type ("asymmetric_key_id" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2360 2519])
+            ("asymmetric_key_ids" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :constant-flag t
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("key" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2586 2608]))                  
+                :type ("asymmetric_key_ids" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2520 2653])
+            ("find_asymmetric_key" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("keyring" variable
+                       (:pointer 1
+                        :type ("key" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2694 2714])
+                    ("id_0" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("asymmetric_key_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2726 2763])
+                    ("id_1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("asymmetric_key_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2775 2812])
+                    ("partial" variable (:type "bool") (reparse-symbol arg-sub-list) [2824 2837]))                  
+                :type ("key" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2655 2838]))          
+    :file "asymmetric-type.h"
+    :pointmax 2937
+    :fsize 2936
+    :lastmodtime '(22436 15430 849054 767000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_KEYS_ASYMMETRIC_TYPE_H")
+          )
+
+    )
+   (semanticdb-table "system_keyring.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_KEYS_SYSTEM_KEYRING_H" variable (:constant-flag t) nil [460 482])
+            ("linux/key.h" include (:system-flag t) nil [484 506])
+            ("restrict_link_by_builtin_trusted" variable (:constant-flag t) nil [708 740])
+            ("restrict_link_by_builtin_and_secondary_trusted" variable (:constant-flag t) nil [971 1017])
+            ("get_ima_blacklist_keyring" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1289 1294]))                  
+                :type ("key" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1237 1312]))          
+    :file "system_keyring.h"
+    :pointmax 1393
+    :fsize 1392
+    :lastmodtime '(22436 15430 850054 768000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("restrict_link_by_builtin_and_secondary_trusted" . ((symbol "restrict_link_by_builtin_trusted" 1018 . 1050)))
+          ("_KEYS_SYSTEM_KEYRING_H")
+          ("restrict_link_by_builtin_trusted" . ((symbol "restrict_link_reject" 741 . 761)))
+          )
+
+    )
+   )
+  :file "!home!k1jin!linux-stable!include!keys!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
