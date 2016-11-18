@@ -4,11 +4,30 @@
   :tables (list 
    (semanticdb-table "hello.c"
     :major-mode 'c-mode
-    :tags nil
+    :tags 
+        '( ("hello.h" include nil nil [1 19])
+            ("stdio.h" include nil nil [20 38])
+            ("stdlib.h" include (:system-flag t) nil [39 58])
+            ("unistd.h" include (:system-flag t) nil [59 78])
+            ("glib.h" include (:system-flag t) nil [79 96])
+            ("before_main" function (:type "void") nil [125 186])
+            ("after_main" function (:type "void") nil [218 279])
+            ("file_name" variable (:constant-flag t) nil [291 300])
+            ("print_trace" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [361 366]))                  
+                :type "void")
+                nil [343 800])
+            ("test_trace" function (:type "void") nil [802 842])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [853 858]))                  
+                :type "int")
+                nil [844 2049]))          
     :file "hello.c"
-    :pointmax 1535
-    :fsize 1534
-    :lastmodtime '(22350 40971 0 0)
+    :pointmax 2052
+    :fsize 2054
+    :lastmodtime '(22494 21369 466507 119000)
     :unmatched-syntax 'nil
     :lexical-table 
         '(("file_name" . ((string "\"/vagrant_data/helloword/data_g_key.txt\"" 302 . 342)))
@@ -17,11 +36,47 @@
     )
    (semanticdb-table "hello.h"
     :major-mode 'c-mode
-    :tags nil
+    :tags 
+        '( ("hello" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15 33]))                  
+                :type "void")
+                nil [4 34])
+            ("aaa" variable
+               (:dereference 1
+                :type "int")
+                nil [35 49])
+            ("test_netconfig_parse" function
+               (:prototype-flag t
+                :type "void")
+                nil [50 78]))          
     :file "hello.h"
     :pointmax 79
     :fsize 78
     :lastmodtime '(22349 31073 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags nil
+    :file "makefile"
+    :pointmax 194
+    :fsize 192
+    :lastmodtime '(22494 22005 702270 519000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hello_fn.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "hello_fn.c"
+    :pointmax 5780
+    :fsize 5779
+    :lastmodtime '(22349 31545 0 0)
     :unmatched-syntax 'nil
     )
    )

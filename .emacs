@@ -193,15 +193,16 @@
 (add-hook 'emacs-lisp-mode-hook 'highlight-parentheses-mode)
 
 
-;;Setting for ibuffer
-(require 'ibuffer)
-(global-set-key (kbd "C-x C-b") 'ibuffer)  
+;; ;;Setting for ibuffer -kjin 暂时不用
+;; (require 'ibuffer)
+;; (global-set-key (kbd "C-x C-b") 'ibuffer)  
 
 
 ;;Setting for wb-line-number
 ;;(require 'wb-line-number)
 ;;(setq truncate-partial-width-windows nil) ; use continuous line
 ;;(set-scroll-bar-mode nil)                 ; no scroll bar, even in x-window system
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;Setting for code-reading
@@ -226,20 +227,18 @@
   (imenu-add-to-menubar "TAGS"))
 (add-hook 'semantic-init-hooks 'my-semantic-hook)
 
-;;;; Semantic DataBase存储位置
-(setq semanticdb-default-save-directory
-      (expand-file-name "~/.emacs.d/semanticdb"))
+;; ;;;; Semantic DataBase存储位置
+;; (setq semanticdb-default-save-directory
+;;       (expand-file-name "~/.emacs.d/semanticdb"))
 
 ;; 使用 gnu global 的TAGS。
 (require 'semantic/db-global)
 (semanticdb-enable-gnu-global-databases 'c-mode)
 (semanticdb-enable-gnu-global-databases 'c++-mode)
 
-
 ;;;; Include settings
 (require 'semantic/bovine/gcc)
 (require 'semantic/bovine/c)
-
 (defconst cedet-user-include-dirs
   (list ".." "../include" "../inc" "../common" "../public" "."
         "../.." "../../include" "../../inc" "../../common" "../../public"))
@@ -253,7 +252,6 @@
                               "/usr/include/gtk-2.0/gtk"
                               "/usr/local/include"
                               "/usr/local/include"))
-
 (let ((include-dirs cedet-user-include-dirs))
   (setq include-dirs (append include-dirs cedet-sys-include-dirs))
   (mapc (lambda (dir)
@@ -262,52 +260,42 @@
         include-dirs))
 (setq semantic-c-dependency-system-include-path "/usr/include/")
 
+;;;; 当输入"."或">"时，在另一个窗口中列出结构体或类的成员;   自动补全
+(defun my-c-mode-cedet-hook ()
+(local-set-key "." 'semantic-complete-self-insert)
+(local-set-key ">" 'semantic-complete-self-insert))
+(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
 
-(ede-cpp-root-project "Kernel"
-                :name "Kernel Project"
-                :file "~/linux-stable/Makefile"
-                :include-path '("/"
-                                "/include"
-                               )
-                :system-include-path '("/usr/include")    )
+;; ;;
+;; (ede-cpp-root-project "Kernel"
+;;                 :name "Kernel Project"
+;;                 :file "~/linux-stable/Makefile"
+;;                 :include-path '("/"
+;;                                 "/include"
+;;                                )
+;;                 :system-include-path '("/usr/include")    )
 
-
-(ede-cpp-root-project "Kernel"
-                :name "Kernel Project"
-                :file "~/Dropbox/personal/sourcecode/cscope.files"
-                :include-path '("/"
-                                "/include"
-                               )
-                :system-include-path '("/usr/include")    )
-
-;Added by Ferry on 08/07/2012 for omitting the warning in Emacs 24.1.1
-;; (setq byte-compile-warnings nil)
-;; (add-hook 'texinfo-mode-hook (lambda () (require 'sb-texinfo)))
-;; (load-file "~/site-lisp/cedet/common/cedet.el")
-;; (load-file "~/site-lisp/cedet/contrib/cedet-contrib.el")
-;; (load-file "~/site-lisp/cedet/ede/ede.el")
-;; (load-file "~/site-lisp/cedet/cogre/cogre.el")
-;; (load "speedbar")
-;; (load-file "~/site-lisp/cedet/eieio/eieio.el")
-;; (semantic-load-enable-code-helpers)
-;; (autoload 'speedbar-frame-mode "speedbar" "Popup a speedbar frame" t)
-;; (autoload 'speedbar-get-focus "speedbar" "Jump to speedbar frame" t)
-;; (define-key-after (lookup-key global-map [menu-bar tools])
-;;   [speedbar]
-;;   '("Speedbar" .
-;; 	speedbar-frame-mode)
-;;   [calendar]) 
+;; (ede-cpp-root-project "Kernel"
+;;                 :name "Kernel Project"
+;;                 :file "~/Dropbox/personal/sourcecode/cscope.files"
+;;                 :include-path '("/"
+;;                                 "/include"
+;;                                )
+;;                 :system-include-path '("/usr/include")    )
 ;----------------------------------------------------------
 ;;ecb
-;Added by Ferry on 08/07/2012 for omitting the warning in Emacs 24.1.1
-;; (setq stack-trace-on-error nil)
-
 (add-to-list 'load-path "~/.emacs.d/elisp/ecb/")
 ;; (load-file "~/site-lisp/ecb/ecb.el")
 (require 'ecb)
-;;(require 'ecb-autoloads)
-(setq ecb-auto-activate nil
-      ecb-tip-of-the-day nil)
+
+(setq ;;ecb-auto-activate t
+          ecb-tip-of-the-day nil
+          ecb-tree-indent 4
+          ecb-windows-height 0.5
+          ecb-windows-width 0.2
+          ecb-auto-compatibility-check nil
+          ecb-version-check nil
+          inhibit-startup-message t)
 
 (global-set-key [M-left] 'windmove-left)
 (global-set-key [M-right] 'windmove-right)
@@ -322,70 +310,54 @@
 
 (global-set-key (kbd "<C-f7>") 'my-ecb-active-or-deactive)
 
-;;(require 'ecb-autoloads)
-;; (setq ;;ecb-auto-activate t
-;;           ecb-tip-of-the-day nil
-;;           ecb-tree-indent 4
-;;           ecb-windows-height 0.5
-;;           ecb-windows-width 0.2
-;;           ecb-auto-compatibility-check nil
-;;           ecb-version-check nil
-;;           inhibit-startup-message t)
-;; ;--------------------------------------------
-;; (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-;; '(column-number-mode t)
-;; '(display-time-mode t)
-;; '(ecb-gzip-setup (quote cons))
-;; '(ecb-options-version "2.40")
-;; '(ecb-source-path (quote ("d:/Current_Task/Source")))
-;; '(ecb-tar-setup (quote cons))
-;; '(ecb-wget-setup (quote cons))
-;; '(show-paren-mode t)
-;; '(tabbar-buffer-groups-function (quote tabbar-buffer-ignore-groups))
-;; '(tabbar-buffer-list-function (quote tabbar-buffer-list))
-;; '(tabbar-cycling-scope nil)
-;; '(tabbar-mode t)
-;; '(transient-mark-mode t))
-;; (custom-set-faces
-;;   ;; custom-set-faces was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;; )
-;----------------------------------------------
-;; (setq semanticdb-project-roots 
-;;           (list
-;;         (expand-file-name "/")))
-;; (setq semanticdb-default-save-directory "~/.emacs.d/auto-save-list")
-;;设置semantic.cache路径
-
-
 ;;auto complete;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;自动补全功能，这事从王垠的网站直接Copy过来的，引用一些他对此的说明
 ;;你可以设置以下 hippie-expand 的补全方式。它是一个优先列表， hippie-expand 会优先使用表最前面的函数来补全
 ;;这是说，首先使用当前的buffer补全，如果找不到，就到别的可见的窗口里寻找，如果还找不到，那么到所有打开的buffer去找，如果还……那么到kill-ring里，到文件名，到简称列表里，到list，…… 当前使用的匹配方式会在 echo 区域显示。
 ;;特别有意思的是 try-expand-line，它可以帮你补全整整一行文字。我很多时后有两行文字大致相同，只有几个字不一样，但是我懒得去拷贝粘贴以下。那么我就输入这行文字的前面几个字。然后多按几下 M-/ 就能得到那一行。
-(global-set-key [(meta ?/)] 'hippie-expand)
-(setq hippie-expand-try-functions-list
-	  '(try-expand-line
-		try-expand-line-all-buffers
-		try-expand-list
-		try-expand-list-all-buffers
-		try-expand-dabbrev
-		try-expand-dabbrev-visible
-		try-expand-dabbrev-all-buffers
-		try-expand-dabbrev-from-kill
-		try-complete-file-name
-		try-complete-file-name-partially
-		try-complete-lisp-symbol
-		try-complete-lisp-symbol-partially
-		try-expand-whole-kill))
+;; (global-set-key [(meta ?/)] 'hippie-expand)
+;; (setq hippie-expand-try-functions-list
+;; 	  '(try-expand-line
+;; 		try-expand-line-all-buffers
+;; 		try-expand-list
+;; 		try-expand-list-all-buffers
+;; 		try-expand-dabbrev
+;; 		try-expand-dabbrev-visible
+;; 		try-expand-dabbrev-all-buffers
+;; 		try-expand-dabbrev-from-kill
+;; 		try-complete-file-name
+;; 		try-complete-file-name-partially
+;; 		try-complete-lisp-symbol
+;; 		try-complete-lisp-symbol-partially
+;; 		try-expand-whole-kill))
+;; ;;
+(defun my-indent-or-complete ()
+   (interactive)
+   (if (looking-at "\\>")
+          (hippie-expand nil)
+          (indent-for-tab-command))
+)
+(global-set-key [(control tab)] 'my-indent-or-complete)
 
+
+(autoload 'senator-try-expand-semantic "senator")
+
+(setq hippie-expand-try-functions-list
+          '(
+                senator-try-expand-semantic
+                try-expand-dabbrev
+                try-expand-dabbrev-visible
+                try-expand-dabbrev-all-buffers
+                try-expand-dabbrev-from-kill
+                try-expand-list
+                try-expand-list-all-buffers
+                try-expand-line
+        try-expand-line-all-buffers
+        try-complete-file-name-partially
+        try-complete-file-name
+        try-expand-whole-kill
+        )
+)
 ;;kjin  auto-complete
 ;;(require 'popup)
 (add-to-list 'load-path "~/.emacs.d/elisp/autocomplete")
@@ -408,7 +380,7 @@
 (setq ac-quick-helpelp-delay 0.5)
 ;; (ac-set-trigger-key "TAB")  
 ;;(define-key ac-mode-map  (kbd "M-/") 'auto-complete)  
-(define-key ac-mode-map  [(control tab)] 'auto-complete)  
+(define-key ac-mode-map  [(control tab)] 'auto-complete)  ;; tab is reserved for yasnippet  
 (defun my-ac-config ()  
   (setq ac-clang-flags  
         (mapcar(lambda (item)(concat "-I" item))  
@@ -434,21 +406,20 @@
 ;; ac-source-gtags  
 (my-ac-config)  
 
-;;
-(defun my-indent-or-complete ()
-   (interactive)
-   (if (looking-at "\\>")
-          (hippie-expand nil)
-          (indent-for-tab-command))
-)
-(global-set-key [(control tab)] 'my-indent-or-complete)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;kjin  bm  https://github.com/joodland/bm
 (require 'bm)
+
+;; kjin
+(require 'session)
+(add-hook'after-init-hook 'session-initialize)
+
+;;kjin -- do not know how to use it , jump to header file
+;; (require 'sourcepair)
+;; ;;(define-key global-map "\C-xx" 'sourcepair-load)
+;; (global-set-key         (kbd "C-x z")      'sourcepair-jump-to-headerfile)
+;; (setq sourcepair-source-path    '( “.” “../*” “../../*”))
+;; (setq sourcepair-header-path    '( “.” “include”“../include” “../*” “../../*”))
+;; (setq sourcepair-recurse-ignore '( “.git”  “Debug”“Release” ))
 
 

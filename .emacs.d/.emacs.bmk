@@ -2,7 +2,22 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("SHARE_FOR_VM"
+(("BSP+virtualization"
+ (filename . "~/Dropbox/OSP_PLATFORM/5 - Core Service/BSP+virtualization/")
+ (front-context-string . "NOTES\n  -rw-r--r")
+ (rear-context-string . "96 Jul 15 14:53 ")
+ (position . 894))
+("jk-key-bindings.el"
+ (filename . "~/.emacs.d/elisp/jk-key-bindings.el")
+ (front-context-string . ";;统一设置键帮定，并尽量放在配")
+ (rear-context-string)
+ (position . 1))
+("C_C++_projects"
+ (filename . "~/Dropbox/SHARE_FOR_VM/C_C++_projects/")
+ (front-context-string . "hwcpp\n  drwxr-xr")
+ (rear-context-string . "96 Aug  7 22:31 ")
+ (position . 350))
+("SHARE_FOR_VM"
  (filename . "~/Dropbox/SHARE_FOR_VM/")
  (front-context-string . "C_C++_projects\n ")
  (rear-context-string . "68 Jul 31 18:12 ")

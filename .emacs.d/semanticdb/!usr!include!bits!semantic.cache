@@ -1973,6 +1973,617 @@
           )
 
     )
+   (semanticdb-table "sigset.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_SIGSET_H_types" variable (:constant-flag t) nil [929 944])
+            ("__sig_atomic_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [948 975])
+            ("_SIGSET_NWORDS" variable (:constant-flag t) nil [1034 1048])
+            ("__sigset_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("__val" variable
+                             (:dereference 1
+                              :type "unsigned long int")
+                              (reparse-symbol classsubparts) [1114 1154]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1091 1170]))          
+    :file "sigset.h"
+    :pointmax 4588
+    :fsize 4587
+    :lastmodtime '(22276 34814 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SIGSET_NWORDS" . ((semantic-list "(1024 / (8 * sizeof (unsigned long int)))" 1049 . 1090)))
+          ("_SIGSET_H_types" . ((number "1" 945 . 946)))
+          )
+
+    )
+   (semanticdb-table "signum.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "signum.h"
+    :pointmax 3418
+    :fsize 3417
+    :lastmodtime '(22276 34814 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "time.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "time.h"
+    :pointmax 3340
+    :fsize 3339
+    :lastmodtime '(22276 34818 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pthreadtypes.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_BITS_PTHREADTYPES_H" variable (:constant-flag t) nil [833 853])
+            ("bits/wordsize.h" include (:system-flag t) nil [857 883])
+            ("__SIZEOF_PTHREAD_ATTR_T" variable (:constant-flag t) nil [1299 1322])
+            ("__SIZEOF_PTHREAD_MUTEX_T" variable (:constant-flag t) nil [1336 1360])
+            ("__SIZEOF_PTHREAD_MUTEXATTR_T" variable (:constant-flag t) nil [1374 1402])
+            ("__SIZEOF_PTHREAD_COND_T" variable (:constant-flag t) nil [1415 1438])
+            ("__SIZEOF_PTHREAD_CONDATTR_T" variable (:constant-flag t) nil [1452 1479])
+            ("__SIZEOF_PTHREAD_RWLOCK_T" variable (:constant-flag t) nil [1492 1517])
+            ("__SIZEOF_PTHREAD_RWLOCKATTR_T" variable (:constant-flag t) nil [1531 1560])
+            ("__SIZEOF_PTHREAD_BARRIER_T" variable (:constant-flag t) nil [1573 1599])
+            ("__SIZEOF_PTHREAD_BARRIERATTR_T" variable (:constant-flag t) nil [1613 1643])
+            ("pthread_t" type
+               (:typedef ("unsigned long int")
+                :superclasses "unsigned long int"
+                :type "typedef")
+                nil [2111 2147])
+            ("pthread_attr_t" type
+               (:members 
+                  ( ("__size" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2175 2212])
+                    ("__align" variable (:type "long int") (reparse-symbol classsubparts) [2215 2232]))                  
+                :type "union")
+                nil [2150 2235])
+            ("pthread_attr_t" type
+               (:typedef ("pthread_attr_t" type (:type "union") nil nil)
+                :superclasses "pthread_attr_t"
+                :type "typedef")
+                nil [2266 2310])
+            ("__have_pthread_attr_t" variable (:constant-flag t) nil [2320 2341])
+            ("__pthread_list_t" type
+               (:typedef ("__pthread_internal_list" type (:type "struct") nil nil)
+                :superclasses "__pthread_internal_list"
+                :type "typedef")
+                nil [2371 2515])
+            ("__pthread_internal_list" type
+               (:members 
+                  ( ("__prev" variable
+                       (:pointer 1
+                        :type ("__pthread_internal_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2414 2453])
+                    ("__next" variable
+                       (:pointer 1
+                        :type ("__pthread_internal_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2456 2495]))                  
+                :type "struct")
+                nil [2371 2515])
+            ("pthread_mutex_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("__pthread_mutex_s" type
+                             (:members 
+                                ( ("__lock" variable (:type "int") (reparse-symbol classsubparts) [2798 2809])
+                                  ("__count" variable (:type "unsigned int") (reparse-symbol classsubparts) [2814 2835])
+                                  ("__owner" variable (:type "int") (reparse-symbol classsubparts) [2840 2852])
+                                  ("__nusers" variable (:type "unsigned int") (reparse-symbol classsubparts) [2875 2897])
+                                  ("__kind" variable (:type "int") (reparse-symbol classsubparts) [3010 3021])
+                                  ("__spins" variable (:type "int") (reparse-symbol classsubparts) [3044 3056])
+                                  ("__list" variable (:type ("__pthread_list_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3061 3085])
+                                  ("__PTHREAD_MUTEX_HAVE_PREV" variable (:constant-flag t) (reparse-symbol classsubparts) [3095 3120]))                                
+                              :type "struct")
+                              (reparse-symbol classsubparts) [2765 3262])
+                          ("__data" variable (:type ("__pthread_mutex_s" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [2765 3262])
+                          ("__size" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3265 3303])
+                          ("__align" variable (:type "long int") (reparse-symbol classsubparts) [3306 3323]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [2747 3342])
+            ("pthread_mutexattr_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("__size" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3362 3404])
+                          ("__align" variable (:type "int") (reparse-symbol classsubparts) [3407 3419]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [3344 3442])
+            ("pthread_cond_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("__data" variable (:type ("" type
+                               (:members 
+                                  ( ("__lock" variable (:type "int") (reparse-symbol classsubparts) [3602 3613])
+                                    ("__futex" variable (:type "unsigned int") (reparse-symbol classsubparts) [3618 3639])
+                                    ("__total_seq" variable (:type "long int") (reparse-symbol classsubparts) [3672 3693])
+                                    ("__wakeup_seq" variable (:type "long int") (reparse-symbol classsubparts) [3726 3748])
+                                    ("__woken_seq" variable (:type "long int") (reparse-symbol classsubparts) [3781 3802])
+                                    ("__mutex" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3807 3821])
+                                    ("__nwaiters" variable (:type "unsigned int") (reparse-symbol classsubparts) [3826 3850])
+                                    ("__broadcast_seq" variable (:type "unsigned int") (reparse-symbol classsubparts) [3855 3884]))                                  
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [3587 3896])
+                          ("__size" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3899 3936])
+                          ("__align" variable (:type "long int") (reparse-symbol classsubparts) [3958 3975]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [3569 3993])
+            ("pthread_condattr_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("__size" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [4013 4054])
+                          ("__align" variable (:type "int") (reparse-symbol classsubparts) [4057 4069]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [3995 4091])
+            ("pthread_key_t" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [4130 4165])
+            ("pthread_once_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [4194 4221]))          
+    :file "pthreadtypes.h"
+    :pointmax 6160
+    :fsize 6159
+    :lastmodtime '(22276 34818 0 0)
+    :unmatched-syntax '((LONG 3953 . 3957) (symbol 3939 . 3952) (LONG 3776 . 3780) (UNSIGNED 3767 . 3775) (symbol 3753 . 3766) (LONG 3721 . 3725) (UNSIGNED 3712 . 3720) (symbol 3698 . 3711) (LONG 3667 . 3671) (UNSIGNED 3658 . 3666) (symbol 3644 . 3657))
+    :lexical-table 
+        '(("__SIZEOF_PTHREAD_MUTEX_T" . ((number "32" 1361 . 1363)))
+          ("__SIZEOF_PTHREAD_RWLOCK_T" . ((number "44" 1518 . 1520)))
+          ("__SIZEOF_PTHREAD_RWLOCKATTR_T" . ((number "8" 1561 . 1562)))
+          ("__SIZEOF_PTHREAD_BARRIERATTR_T" . ((number "4" 1644 . 1645)))
+          ("_BITS_PTHREADTYPES_H" . ((number "1" 854 . 855)))
+          ("__SIZEOF_PTHREAD_CONDATTR_T" . ((number "4" 1480 . 1481)))
+          ("__have_pthread_attr_t" . ((number "1" 2342 . 2343)))
+          ("__SIZEOF_PTHREAD_BARRIER_T" . ((number "20" 1600 . 1602)))
+          ("__SIZEOF_PTHREAD_MUTEXATTR_T" . ((number "4" 1403 . 1404)))
+          ("__SIZEOF_PTHREAD_ATTR_T" . ((number "32" 1323 . 1325)))
+          ("__PTHREAD_MUTEX_HAVE_PREV" . ((number "1" 3121 . 3122)))
+          ("__SIZEOF_PTHREAD_COND_T" . ((number "48" 1439 . 1441)))
+          )
+
+    )
+   (semanticdb-table "setjmp.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_BITS_SETJMP_H" variable (:constant-flag t) nil [905 919])
+            ("bits/wordsize.h" include (:system-flag t) nil [1052 1078])
+            ("__jmp_buf" variable
+               (:dereference 1
+                :type "long int")
+                nil [1187 1209]))          
+    :file "setjmp.h"
+    :pointmax 1288
+    :fsize 1287
+    :lastmodtime '(22276 34813 0 0)
+    :unmatched-syntax '((LONG 1182 . 1186) (TYPEDEF 1174 . 1181) (string 978 . 1043) (symbol 972 . 977) (punctuation 970 . 971))
+    :lexical-table 
+        '(("_BITS_SETJMP_H" . ((number "1" 921 . 922)))
+          )
+
+    )
+   (semanticdb-table "endian.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__BYTE_ORDER" variable (:constant-flag t) nil [148 160]))          
+    :file "endian.h"
+    :pointmax 177
+    :fsize 176
+    :lastmodtime '(22276 34817 0 0)
+    :unmatched-syntax '((string 66 . 131) (symbol 60 . 65) (punctuation 58 . 59))
+    :lexical-table 
+        '(("__BYTE_ORDER" . ((symbol "__LITTLE_ENDIAN" 161 . 176)))
+          )
+
+    )
+   (semanticdb-table "sched.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("SCHED_OTHER" variable (:constant-flag t) nil [1096 1107])
+            ("SCHED_FIFO" variable (:constant-flag t) nil [1119 1129])
+            ("SCHED_RR" variable (:constant-flag t) nil [1141 1149])
+            ("sched_param" type
+               (:members 
+                  ( ("__sched_priority" variable (:type "int") (reparse-symbol classsubparts) [3173 3194]))                  
+                :type "struct")
+                nil [3146 3199])
+            ("C" extern nil nil [3201 3214]))          
+    :file "sched.h"
+    :pointmax 7544
+    :fsize 7543
+    :lastmodtime '(22276 34819 0 0)
+    :unmatched-syntax '((close-paren "}" 3665 . 3676) (string 985 . 1048) (symbol 979 . 984) (punctuation 977 . 978))
+    :lexical-table 
+        '(("SCHED_RR" . ((number "2" 1151 . 1152)))
+          ("SCHED_OTHER" . ((number "0" 1109 . 1110)))
+          ("SCHED_FIFO" . ((number "1" 1131 . 1132)))
+          )
+
+    )
+   (semanticdb-table "huge_val.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("HUGE_VAL" variable (:constant-flag t) nil [1283 1291]))          
+    :file "huge_val.h"
+    :pointmax 1875
+    :fsize 1874
+    :lastmodtime '(22276 34812 0 0)
+    :unmatched-syntax '((string 976 . 1041) (symbol 970 . 975) (punctuation 968 . 969))
+    :lexical-table 
+        '(("HUGE_VAL" . ((semantic-list "(__extension__							      \\
+   ((union { unsigned __l __attribute__((__mode__(__DI__))); double __d; })   \\
+    { __l: 0x7ff0000000000000ULL }).__d)" 1296 . 1445)))
+          )
+
+    )
+   (semanticdb-table "mathdef.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "mathdef.h"
+    :pointmax 2181
+    :fsize 2180
+    :lastmodtime '(22276 34812 0 0)
+    :unmatched-syntax '((string 842 . 905) (symbol 836 . 841) (punctuation 834 . 835))
+    )
+   (semanticdb-table "mathcalls.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("acos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2169 2174]))                  
+                :type ("_Mdouble_BEGIN_NAMESPACE" type (:type "class") nil nil))
+                nil [2108 2193])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("asin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2228 2233]))                  
+                :type "int")
+                nil [2216 2252])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("atan" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2290 2295]))                  
+                :type "int")
+                nil [2278 2314])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("atan2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2354 2360]))                  
+                :type "int")
+                nil [2342 2394])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("cos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2428 2432]))                  
+                :type "int")
+                nil [2416 2451])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("sin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2482 2486]))                  
+                :type "int")
+                nil [2470 2505])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("tan" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2539 2543]))                  
+                :type "int")
+                nil [2527 2562])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("cosh" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2637 2642]))                  
+                :type "int")
+                nil [2625 2661])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("sinh" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2703 2708]))                  
+                :type "int")
+                nil [2691 2727])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("tanh" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2772 2777]))                  
+                :type "int")
+                nil [2760 2796])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("exp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3427 3431]))                  
+                :type ("_Mdouble_BEGIN_NAMESPACE" type (:type "class") nil nil))
+                nil [3356 3450])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("frexp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3538 3544]))                  
+                :type "int")
+                nil [3526 3580])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("ldexp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3633 3639]))                  
+                :type "int")
+                nil [3621 3674])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("log" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3719 3723]))                  
+                :type "int")
+                nil [3707 3742])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("log10" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3788 3794]))                  
+                :type "int")
+                nil [3776 3813])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("modf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3882 3887]))                  
+                :type "int")
+                nil [3870 3964])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("pow" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4873 4877]))                  
+                :type ("_Mdouble_BEGIN_NAMESPACE" type (:type "class") nil nil))
+                nil [4804 4911])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("sqrt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4961 4966]))                  
+                :type "int")
+                nil [4949 4985])
+            ("__MATHCALLX" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("ceil" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5569 5574]))                  
+                :type ("_Mdouble_BEGIN_NAMESPACE" type (:type "class") nil nil))
+                nil [5483 5606])
+            ("__MATHCALLX" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("fabs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5649 5654]))                  
+                :type "int")
+                nil [5636 5686])
+            ("__MATHCALLX" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("floor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5744 5750]))                  
+                :type "int")
+                nil [5731 5782])
+            ("__MATHCALL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("fmod" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5843 5848]))                  
+                :type "int")
+                nil [5831 5882])
+            ("__MATHDECL_1" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [5991 5995])
+                    ("" variable (:type ("__isinf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5995 6003]))                  
+                :type "int")
+                nil [5977 6054])
+            ("__MATHDECL_1" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [6124 6128])
+                    ("" variable (:type ("__finite" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6128 6137]))                  
+                :type "int")
+                nil [6110 6188])
+            ("__MATHDECL_1" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [7218 7222])
+                    ("" variable (:type ("__isnan" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7222 7230]))                  
+                :type ("_Mdouble_END_NAMESPACE" type (:type "class") nil nil))
+                nil [6189 7281]))          
+    :file "mathcalls.h"
+    :pointmax 11575
+    :fsize 11574
+    :lastmodtime '(22276 34812 0 0)
+    :unmatched-syntax '((semantic-list 7232 . 7251) (semantic-list 6139 . 6158) (semantic-list 6005 . 6024) (semantic-list 5850 . 5880) (semantic-list 5769 . 5780) (semantic-list 5752 . 5767) (semantic-list 5673 . 5684) (semantic-list 5656 . 5671) (semantic-list 5593 . 5604) (semantic-list 5576 . 5591) (symbol 4986 . 5008) (semantic-list 4968 . 4983) (semantic-list 4879 . 4909) (symbol 3965 . 3987) (semantic-list 3889 . 3923) (semantic-list 3796 . 3811) (semantic-list 3725 . 3740) (semantic-list 3641 . 3672) (semantic-list 3546 . 3578) (semantic-list 3433 . 3448) (symbol 2797 . 2819) (semantic-list 2779 . 2794) (semantic-list 2710 . 2725) (semantic-list 2644 . 2659) (semantic-list 2545 . 2560) (semantic-list 2488 . 2503) (semantic-list 2434 . 2449) (semantic-list 2362 . 2392) (semantic-list 2297 . 2312) (semantic-list 2235 . 2250) (semantic-list 2176 . 2191) (string 1995 . 2065) (symbol 1989 . 1994) (punctuation 1987 . 1988))
+    )
+   (semanticdb-table "errno.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "errno.h"
+    :pointmax 2164
+    :fsize 2163
+    :lastmodtime '(22276 34814 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dirent.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("dirent" type
+               (:members 
+                  ( ("d_ino" variable (:type ("__ino_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [940 954])
+                    ("d_off" variable (:type ("__off_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [959 973])
+                    ("d_reclen" variable (:type "unsigned short int") (reparse-symbol classsubparts) [1033 1061])
+                    ("d_type" variable (:type "unsigned char") (reparse-symbol classsubparts) [1066 1087])
+                    ("d_name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1092 1109]))                  
+                :type "struct")
+                nil [890 1151])
+            ("d_fileno" variable (:constant-flag t) nil [1379 1387])
+            ("_DIRENT_HAVE_D_RECLEN" variable (:constant-flag t) nil [1465 1486])
+            ("_DIRENT_HAVE_D_OFF" variable (:constant-flag t) nil [1495 1513])
+            ("_DIRENT_HAVE_D_TYPE" variable (:constant-flag t) nil [1522 1541]))          
+    :file "dirent.h"
+    :pointmax 1729
+    :fsize 1728
+    :lastmodtime '(22276 34818 0 0)
+    :unmatched-syntax '((string 816 . 881) (symbol 810 . 815) (punctuation 808 . 809))
+    :lexical-table 
+        '(("_DIRENT_HAVE_D_RECLEN")
+          ("d_fileno" . ((symbol "d_ino" 1388 . 1393)))
+          ("_DIRENT_HAVE_D_OFF")
+          ("_DIRENT_HAVE_D_TYPE")
+          )
+
+    )
+   (semanticdb-table "waitflags.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("WNOHANG" variable (:constant-flag t) nil [1050 1057])
+            ("WUNTRACED" variable (:constant-flag t) nil [1097 1106])
+            ("WSTOPPED" variable (:constant-flag t) nil [1208 1216])
+            ("WEXITED" variable (:constant-flag t) nil [1275 1282])
+            ("WCONTINUED" variable (:constant-flag t) nil [1320 1330])
+            ("WNOWAIT" variable (:constant-flag t) nil [1372 1379])
+            ("__WNOTHREAD" variable (:constant-flag t) nil [1438 1449])
+            ("__WALL" variable (:constant-flag t) nil [1543 1549])
+            ("__WCLONE" variable (:constant-flag t) nil [1597 1605]))          
+    :file "waitflags.h"
+    :pointmax 1649
+    :fsize 1648
+    :lastmodtime '(22276 34818 0 0)
+    :unmatched-syntax '((string 914 . 984) (symbol 908 . 913) (punctuation 906 . 907))
+    :lexical-table 
+        '(("WCONTINUED" . ((number "8" 1331 . 1332)))
+          ("WUNTRACED" . ((number "2" 1107 . 1108)))
+          ("WSTOPPED" . ((number "2" 1217 . 1218)))
+          ("__WNOTHREAD" . ((number "0x20000000" 1454 . 1464)))
+          ("WEXITED" . ((number "4" 1284 . 1285)))
+          ("__WALL" . ((number "0x40000000" 1551 . 1561)))
+          ("__WCLONE" . ((number "0x80000000" 1606 . 1616)))
+          ("WNOHANG" . ((number "1" 1059 . 1060)))
+          ("WNOWAIT" . ((number "0x01000000" 1381 . 1391)))
+          )
+
+    )
+   (semanticdb-table "waitstatus.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__WEXITSTATUS" variable (:constant-flag t) nil [1123 1136])
+            ("__WTERMSIG" variable (:constant-flag t) nil [1236 1246])
+            ("__WSTOPSIG" variable (:constant-flag t) nil [1347 1357])
+            ("__WIFEXITED" variable (:constant-flag t) nil [1452 1463])
+            ("__WIFSIGNALED" variable (:constant-flag t) nil [1567 1580])
+            ("__WIFSTOPPED" variable (:constant-flag t) nil [1710 1722])
+            ("__WCOREDUMP" variable (:constant-flag t) nil [2061 2072])
+            ("__W_EXITCODE" variable (:constant-flag t) nil [2161 2173])
+            ("__W_STOPCODE" variable (:constant-flag t) nil [2213 2225])
+            ("__W_CONTINUED" variable (:constant-flag t) nil [2259 2272])
+            ("__WCOREFLAG" variable (:constant-flag t) nil [2289 2300]))          
+    :file "waitstatus.h"
+    :pointmax 3573
+    :fsize 3572
+    :lastmodtime '(22276 34819 0 0)
+    :unmatched-syntax '((string 913 . 984) (symbol 907 . 912) (punctuation 905 . 906))
+    :lexical-table 
+        '(("__WTERMSIG" (spp-arg-list ("status") 1246 . 1254) . ((semantic-list "((status) & 0x7f)" 1255 . 1272)))
+          ("__W_CONTINUED" . ((number "0xffff" 2274 . 2280)))
+          ("__WCOREFLAG" . ((number "0x80" 2302 . 2306)))
+          ("__WIFSTOPPED" (spp-arg-list ("status") 1722 . 1730) . ((semantic-list "(((status) & 0xff) == 0x7f)" 1731 . 1758)))
+          ("__W_EXITCODE" (spp-arg-list ("ret" "sig") 2173 . 2183) . ((semantic-list "((ret) << 8 | (sig))" 2184 . 2204)))
+          ("__WEXITSTATUS" (spp-arg-list ("status") 1136 . 1144) . ((semantic-list "(((status) & 0xff00) >> 8)" 1145 . 1171)))
+          ("__WIFEXITED" (spp-arg-list ("status") 1463 . 1471) . ((semantic-list "(__WTERMSIG(status) == 0)" 1472 . 1497)))
+          ("__WCOREDUMP" (spp-arg-list ("status") 2072 . 2080) . ((semantic-list "((status) & __WCOREFLAG)" 2081 . 2105)))
+          ("__W_STOPCODE" (spp-arg-list ("sig") 2225 . 2230) . ((semantic-list "((sig) << 8 | 0x7f)" 2231 . 2250)))
+          ("__WSTOPSIG" (spp-arg-list ("status") 1357 . 1365) . ((symbol "__WEXITSTATUS" 1366 . 1379) (semantic-list "(status)" 1379 . 1387)))
+          ("__WIFSIGNALED" (spp-arg-list ("status") 1580 . 1588) . ((semantic-list "(((signed char) (((status) & 0x7f) + 1) >> 1) > 0)" 1593 . 1643)))
+          )
+
+    )
+   (semanticdb-table "locale.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_BITS_LOCALE_H" variable (:constant-flag t) nil [998 1012])
+            ("__LC_CTYPE" variable (:constant-flag t) nil [1024 1034])
+            ("__LC_NUMERIC" variable (:constant-flag t) nil [1047 1059])
+            ("__LC_TIME" variable (:constant-flag t) nil [1072 1081])
+            ("__LC_COLLATE" variable (:constant-flag t) nil [1094 1106])
+            ("__LC_MONETARY" variable (:constant-flag t) nil [1119 1132])
+            ("__LC_MESSAGES" variable (:constant-flag t) nil [1145 1158])
+            ("__LC_ALL" variable (:constant-flag t) nil [1171 1179])
+            ("__LC_PAPER" variable (:constant-flag t) nil [1192 1202])
+            ("__LC_NAME" variable (:constant-flag t) nil [1215 1224])
+            ("__LC_ADDRESS" variable (:constant-flag t) nil [1237 1249])
+            ("__LC_TELEPHONE" variable (:constant-flag t) nil [1262 1276])
+            ("__LC_MEASUREMENT" variable (:constant-flag t) nil [1289 1305])
+            ("__LC_IDENTIFICATION" variable (:constant-flag t) nil [1317 1336]))          
+    :file "locale.h"
+    :pointmax 1368
+    :fsize 1367
+    :lastmodtime '(22276 34801 0 0)
+    :unmatched-syntax '((string 893 . 958) (symbol 887 . 892) (punctuation 885 . 886))
+    :lexical-table 
+        '(("__LC_ALL" . ((number "6" 1182 . 1183)))
+          ("__LC_IDENTIFICATION" . ((number "12" 1337 . 1339)))
+          ("_BITS_LOCALE_H" . ((number "1" 1013 . 1014)))
+          ("__LC_ADDRESS" . ((number "9" 1252 . 1253)))
+          ("__LC_MEASUREMENT" . ((number "11" 1306 . 1308)))
+          ("__LC_TELEPHONE" . ((number "10" 1278 . 1280)))
+          ("__LC_NUMERIC" . ((number "1" 1062 . 1063)))
+          ("__LC_MONETARY" . ((number "4" 1135 . 1136)))
+          ("__LC_PAPER" . ((number "7" 1205 . 1206)))
+          ("__LC_MESSAGES" . ((number "5" 1161 . 1162)))
+          ("__LC_COLLATE" . ((number "3" 1109 . 1110)))
+          ("__LC_CTYPE" . ((number "0" 1037 . 1038)))
+          ("__LC_TIME" . ((number "2" 1084 . 1085)))
+          ("__LC_NAME" . ((number "8" 1227 . 1228)))
+          )
+
+    )
+   (semanticdb-table "stat.h"
+    :file "stat.h"
+    :fsize 7641
+    :lastmodtime '(22276 34819 0 0)
+    )
    )
   :file "!usr!include!bits!semantic.cache"
   :semantic-tag-version "2.0"

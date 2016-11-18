@@ -33,6 +33,63 @@
     :lastmodtime '(18862 15056 0 0)
     :unmatched-syntax 'nil
     )
+   (semanticdb-table "DRPhotoView.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdafx.h" include nil nil [73 92])
+            ("../CommonInterface/iphotoview.h" include nil nil [93 135])
+            ("DRphotoview.h" include nil nil [136 160])
+            ("DRPhotoviewwnd.h" include nil nil [161 188])
+            ("../CommonInterface/IExtras.h" include nil nil [189 228])
+            ("g_hModule" variable (:type ("HINSTANCE" type (:type "class") nil nil)) nil [230 257])
+            ("DLL_Init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [647 652]))                  
+                :type "void")
+                nil [603 719])
+            ("DLL_Uninit" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [765 770]))                  
+                :type "void")
+                nil [720 793])
+            ("IsEqualGUID" function
+               (:arguments 
+                  ( ("riid1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("GUID" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [812 830])
+                    ("riid2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("GUID" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [831 849]))                  
+                :type ("BOOL" type (:type "class") nil nil))
+                nil [795 928])
+            ("CoCreateDRObject" function
+               (:arguments 
+                  ( ("clsid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("GUID" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [980 998])
+                    ("riid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("GUID" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [998 1015])
+                    ("ppvObject" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1015 1032]))                  
+                :type ("HRESULT" type (:type "class") nil nil))
+                nil [954 1384]))          
+    :file "DRPhotoView.cpp"
+    :pointmax 1387
+    :fsize 1453
+    :lastmodtime '(18862 15056 0 0)
+    :unmatched-syntax '((symbol 938 . 953))
+    )
    )
   :file "!home!k1jin!Dropbox!personal!sourcecode!DRBrowserPhotoView!semantic.cache"
   :semantic-tag-version "2.0"

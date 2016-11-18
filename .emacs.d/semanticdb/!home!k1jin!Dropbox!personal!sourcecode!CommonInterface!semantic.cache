@@ -11,6 +11,15 @@
     :lastmodtime '(18862 15055 0 0)
     :unmatched-syntax 'nil
     )
+   (semanticdb-table "IExtras.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "IExtras.h"
+    :pointmax 9593
+    :fsize 9618
+    :lastmodtime '(18862 15055 0 0)
+    :unmatched-syntax 'nil
+    )
    )
   :file "!home!k1jin!Dropbox!personal!sourcecode!CommonInterface!semantic.cache"
   :semantic-tag-version "2.0"

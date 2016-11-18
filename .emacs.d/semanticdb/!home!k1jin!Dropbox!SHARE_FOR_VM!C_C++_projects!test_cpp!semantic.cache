@@ -10,21 +10,21 @@
             ("std" using (:type ("std" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [37 57])
+                  nil nil)) nil [38 58])
             ("main" function
                (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [68 77])
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [69 78])
                     ("argv" variable
                        (:pointer 1
                         :dereference 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [78 91]))                  
+                        (reparse-symbol arg-sub-list) [79 92]))                  
                 :type "int")
-                nil [59 261]))          
+                nil [60 319]))          
     :file "main.cpp"
-    :pointmax 269
-    :fsize 268
-    :lastmodtime '(22438 59294 387024 708000)
+    :pointmax 327
+    :fsize 321
+    :lastmodtime '(22447 7695 95571 26000)
     :unmatched-syntax 'nil
     )
    )

@@ -27,19 +27,15 @@
             ("unistd.h" include (:system-flag t) nil [59 78])
             ("glib.h" include (:system-flag t) nil [79 96])
             ("file_name" variable (:constant-flag t) nil [107 116])
-            ("bbb" variable
-               (:dereference 1
-                :type "int")
-                nil [159 178])
             ("main" function
                (:arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [188 193]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [191 196]))                  
                 :type "int")
-                nil [179 1143]))          
+                nil [182 1167]))          
     :file "hello.cpp"
-    :pointmax 1146
-    :fsize 1145
-    :lastmodtime '(22338 27157 0 0)
+    :pointmax 1170
+    :fsize 1169
+    :lastmodtime '(22446 32344 864917 920000)
     :unmatched-syntax 'nil
     :lexical-table 
         '(("file_name" . ((string "\"/vagrant_data/helloword/data_g_key.txt\"" 118 . 158)))
@@ -68,6 +64,48 @@
     :fsize 50
     :lastmodtime '(22338 26990 0 0)
     :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hello_fn.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("hello.h" include nil nil [20 38])
+            ("string" include (:system-flag t) nil [39 56])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [57 77])
+            ("hello" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [90 108]))                  
+                :type "void")
+                nil [79 199]))          
+    :file "hello_fn.cpp"
+    :pointmax 209
+    :fsize 208
+    :lastmodtime '(22446 31441 737240 830000)
+    :unmatched-syntax '((string 158 . 169) (string 158 . 169) (string 158 . 169) (symbol 183 . 184) (semantic-list 204 . 212) (semantic-list 185 . 203) (FOR 181 . 184))
+    )
+   (semanticdb-table "makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [3 15])
+            ("CFLAGS" variable (:default-value ("-g" "-Wall")) nil [15 31])
+            ("CXXFLAGS" variable (:default-value ("-g" "-Wall")) nil [31 51])
+            ("CFLAGS" variable (:default-value ("`pkg-config --cflags glib-2.0`")) nil [51 92])
+            ("CPPFLAGS" variable (:default-value ("`pkg-config --cflags glib-2.0`")) nil [92 135])
+            ("LDFLAGS" variable (:default-value ("`pkg-config --libs glib-2.0`")) nil [135 175])
+            ("hello" function (:arguments ("hello_fn.o" "hello.o")) nil [176 201])
+            ("clean" function nil nil [202 241]))          
+    :file "makefile"
+    :pointmax 241
+    :fsize 240
+    :lastmodtime '(22446 34578 390592 432000)
+    :unmatched-syntax '((shell-command 210 . 240) (bol 209 . 209))
     )
    )
   :file "!home!k1jin!Dropbox!SHARE_FOR_VM!C_C++_projects!hwcpp!semantic.cache"

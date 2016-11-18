@@ -162,6 +162,1278 @@
           )
 
     )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CFLAGS_aha152x.o" variable (:default-value ("-DAHA152X_STAT" "-DAUTOCONF")) nil [569 616])
+            ("CFLAGS_gdth.o" variable nil nil [616 694])
+            ("scsi_mod-y" variable (:default-value ("scsi.o" "hosts.o" "scsi_ioctl.o" "scsicam.o" "scsi_error.o" "scsi_lib.o")) nil [6481 6568])
+            ("scsi_mod-y" variable (:default-value ("scsi_common.o")) nil [6568 6598])
+            ("scsi_mod-y" variable (:default-value ("scsi_scan.o" "scsi_sysfs.o" "scsi_devinfo.o")) nil [6693 6749])
+            ("scsi_mod-y" variable (:default-value ("scsi_trace.o" "scsi_logging.o")) nil [6889 6933])
+            ("hv_storvsc-y" variable (:default-value ("storvsc_drv.o")) nil [7010 7042])
+            ("sd_mod-objs" variable (:default-value ("sd.o")) nil [7043 7063])
+            ("sr_mod-objs" variable (:default-value ("sr.o" "sr_ioctl.o" "sr_vendor.o")) nil [7111 7154])
+            ("ncr53c8xx-flags-" function (:arguments ("=" "-DCONFIG_NCR53C8XX_PREFETCH" "-DSCSI_NCR_BIG_ENDIAN" "-DCONFIG_SCSI_NCR53C8XX_NO_WORD_TRANSFERS")) nil [7154 7295])
+            ("CFLAGS_ncr53c8xx.o" variable (:default-value ("$(ncr53c8xx-flags-y)" "$(ncr53c8xx-flags-m)")) nil [7295 7359])
+            ("zalon7xx-objs" variable (:default-value ("zalon.o" "ncr53c8xx.o")) nil [7359 7396])
+            ("NCR_Q720_mod-objs" variable (:default-value ("NCR_Q720.o" "ncr53c8xx.o")) nil [7396 7440])
+            ("oktagon_esp_mod-objs" variable (:default-value ("oktagon_esp.o" "oktagon_io.o")) nil [7440 7491])
+            ("clean-files" variable (:default-value ("53c700_d.h" "53c700_u.h")) nil [7548 7585])
+            ("$(obj)" function (:arguments ("$(obj)/53c700_d.h")) nil [7586 7652])
+            ("$(MODVERDIR)" function (:arguments ("$(obj)/53c700_d.h")) nil [7586 7652])
+            ("$(obj)" function (:arguments ("$(src)/53c700.scr" "$(src)/script_asm.pl")) nil [7755 7884]))          
+    :file "Makefile"
+    :pointmax 7891
+    :fsize 7890
+    :lastmodtime '(22436 15412 962040 785000)
+    :unmatched-syntax '((symbol 7101 . 7109) (punctuation 7099 . 7100) (punctuation 7098 . 7099) (semantic-list 7071 . 7097) (punctuation 7070 . 7071) (symbol 7063 . 7070) (bol 7063 . 7063) (symbol 6999 . 7008) (punctuation 6997 . 6998) (punctuation 6996 . 6997) (semantic-list 6979 . 6995) (punctuation 6978 . 6979) (symbol 6969 . 6978) (bol 6969 . 6969) (symbol 6959 . 6968) (punctuation 6957 . 6958) (punctuation 6956 . 6957) (semantic-list 6943 . 6954) (punctuation 6942 . 6943) (symbol 6933 . 6942) (bol 6933 . 6933) (symbol 6877 . 6888) (punctuation 6875 . 6876) (punctuation 6874 . 6875) (semantic-list 6852 . 6873) (punctuation 6851 . 6852) (symbol 6842 . 6851) (bol 6842 . 6842) (symbol 6828 . 6841) (punctuation 6826 . 6827) (punctuation 6825 . 6826) (semantic-list 6809 . 6824) (punctuation 6808 . 6809) (symbol 6799 . 6808) (bol 6799 . 6799) (symbol 6784 . 6798) (punctuation 6782 . 6783) (punctuation 6781 . 6782) (semantic-list 6759 . 6780) (punctuation 6758 . 6759) (symbol 6749 . 6758) (bol 6749 . 6749) (symbol 6678 . 6692) (punctuation 6676 . 6677) (punctuation 6675 . 6676) (semantic-list 6657 . 6674) (punctuation 6656 . 6657) (symbol 6647 . 6656) (bol 6647 . 6647) (symbol 6635 . 6646) (punctuation 6633 . 6634) (punctuation 6632 . 6633) (semantic-list 6608 . 6631) (punctuation 6607 . 6608) (symbol 6598 . 6607) (bol 6598 . 6598) (symbol 6468 . 6480) (punctuation 6466 . 6467) (punctuation 6465 . 6466) (semantic-list 6445 . 6464) (punctuation 6444 . 6445) (symbol 6440 . 6444) (bol 6440 . 6440) (symbol 6369 . 6378) (punctuation 6367 . 6368) (punctuation 6366 . 6367) (semantic-list 6343 . 6365) (punctuation 6342 . 6343) (symbol 6338 . 6342) (bol 6338 . 6338) (symbol 6333 . 6337) (punctuation 6331 . 6332) (punctuation 6330 . 6331) (semantic-list 6302 . 6329) (punctuation 6301 . 6302) (symbol 6297 . 6301) (bol 6297 . 6297) (symbol 6290 . 6295) (punctuation 6288 . 6289) (punctuation 6287 . 6288) (semantic-list 6263 . 6286) (punctuation 6262 . 6263) (symbol 6258 . 6262) (bol 6258 . 6258) (symbol 6253 . 6257) (punctuation 6251 . 6252) (punctuation 6250 . 6251) (semantic-list 6229 . 6249) (punctuation 6228 . 6229) (symbol 6224 . 6228) (bol 6224 . 6224) (symbol 6219 . 6223) (punctuation 6217 . 6218) (punctuation 6216 . 6217) (semantic-list 6196 . 6215) (punctuation 6195 . 6196) (symbol 6191 . 6195) (bol 6191 . 6191) (symbol 6182 . 6190) (punctuation 6180 . 6181) (punctuation 6179 . 6180) (semantic-list 6159 . 6178) (punctuation 6158 . 6159) (symbol 6154 . 6158) (bol 6154 . 6154) (symbol 6145 . 6153) (punctuation 6143 . 6144) (punctuation 6142 . 6143) (semantic-list 6122 . 6141) (punctuation 6121 . 6122) (symbol 6117 . 6121) (bol 6117 . 6117) (symbol 6110 . 6116) (punctuation 6108 . 6109) (punctuation 6107 . 6108) (semantic-list 6085 . 6106) (punctuation 6084 . 6085) (symbol 6080 . 6084) (bol 6080 . 6080) (symbol 6075 . 6079) (punctuation 6073 . 6074) (punctuation 6072 . 6073) (semantic-list 6052 . 6071) (punctuation 6051 . 6052) (symbol 6047 . 6051) (bol 6047 . 6047) (symbol 6041 . 6045) (punctuation 6039 . 6040) (punctuation 6038 . 6039) (semantic-list 6024 . 6036) (punctuation 6023 . 6024) (symbol 6019 . 6023) (bol 6019 . 6019) (symbol 6009 . 6017) (punctuation 6007 . 6008) (punctuation 6006 . 6007) (semantic-list 5985 . 6005) (punctuation 5984 . 5985) (symbol 5980 . 5984) (bol 5980 . 5980) (symbol 5967 . 5979) (punctuation 5965 . 5966) (punctuation 5964 . 5965) (semantic-list 5940 . 5963) (punctuation 5939 . 5940) (symbol 5935 . 5939) (bol 5935 . 5935) (symbol 5919 . 5934) (punctuation 5917 . 5918) (punctuation 5916 . 5917) (semantic-list 5889 . 5915) (punctuation 5888 . 5889) (symbol 5884 . 5888) (bol 5884 . 5884) (symbol 5871 . 5883) (punctuation 5869 . 5870) (punctuation 5868 . 5869) (semantic-list 5845 . 5867) (punctuation 5844 . 5845) (symbol 5840 . 5844) (bol 5840 . 5840) (symbol 5826 . 5839) (punctuation 5824 . 5825) (punctuation 5823 . 5824) (semantic-list 5802 . 5822) (punctuation 5801 . 5802) (symbol 5797 . 5801) (bol 5797 . 5797) (symbol 5787 . 5796) (punctuation 5785 . 5786) (punctuation 5784 . 5785) (semantic-list 5762 . 5783) (punctuation 5761 . 5762) (symbol 5757 . 5761) (bol 5757 . 5757) (symbol 5749 . 5756) (punctuation 5747 . 5748) (punctuation 5746 . 5747) (semantic-list 5725 . 5745) (punctuation 5724 . 5725) (symbol 5720 . 5724) (bol 5720 . 5720) (symbol 5710 . 5719) (symbol 5699 . 5709) (punctuation 5697 . 5698) (punctuation 5696 . 5697) (semantic-list 5677 . 5694) (punctuation 5676 . 5677) (symbol 5672 . 5676) (bol 5672 . 5672) (symbol 5665 . 5671) (symbol 5654 . 5664) (punctuation 5652 . 5653) (punctuation 5651 . 5652) (semantic-list 5626 . 5650) (punctuation 5625 . 5626) (symbol 5621 . 5625) (bol 5621 . 5621) (symbol 5614 . 5620) (symbol 5599 . 5613) (symbol 5588 . 5598) (punctuation 5586 . 5587) (punctuation 5585 . 5586) (semantic-list 5559 . 5584) (punctuation 5558 . 5559) (symbol 5554 . 5558) (bol 5554 . 5554) (symbol 5547 . 5553) (symbol 5532 . 5546) (symbol 5521 . 5531) (punctuation 5519 . 5520) (punctuation 5518 . 5519) (semantic-list 5492 . 5517) (punctuation 5491 . 5492) (symbol 5487 . 5491) (bol 5487 . 5487) (symbol 5478 . 5486) (punctuation 5476 . 5477) (punctuation 5475 . 5476) (semantic-list 5457 . 5473) (punctuation 5456 . 5457) (symbol 5452 . 5456) (bol 5452 . 5452) (symbol 5444 . 5451) (punctuation 5442 . 5443) (punctuation 5441 . 5442) (semantic-list 5421 . 5440) (punctuation 5420 . 5421) (symbol 5416 . 5420) (bol 5416 . 5416) (symbol 5409 . 5415) (punctuation 5407 . 5408) (punctuation 5406 . 5407) (semantic-list 5386 . 5405) (punctuation 5385 . 5386) (symbol 5381 . 5385) (bol 5381 . 5381) (symbol 5374 . 5380) (punctuation 5372 . 5373) (punctuation 5371 . 5372) (semantic-list 5351 . 5369) (punctuation 5350 . 5351) (symbol 5346 . 5350) (bol 5346 . 5346) (symbol 5337 . 5345) (punctuation 5335 . 5336) (punctuation 5334 . 5335) (semantic-list 5313 . 5333) (punctuation 5312 . 5313) (symbol 5308 . 5312) (bol 5308 . 5308) (symbol 5298 . 5307) (punctuation 5296 . 5297) (punctuation 5295 . 5296) (semantic-list 5274 . 5294) (punctuation 5273 . 5274) (symbol 5269 . 5273) (bol 5269 . 5269) (symbol 5259 . 5268) (punctuation 5257 . 5258) (punctuation 5256 . 5257) (semantic-list 5233 . 5255) (punctuation 5232 . 5233) (symbol 5228 . 5232) (bol 5228 . 5228) (symbol 5222 . 5227) (punctuation 5220 . 5221) (punctuation 5219 . 5220) (semantic-list 5200 . 5217) (punctuation 5199 . 5200) (symbol 5195 . 5199) (bol 5195 . 5195) (symbol 5187 . 5194) (punctuation 5185 . 5186) (punctuation 5184 . 5185) (semantic-list 5164 . 5183) (punctuation 5163 . 5164) (symbol 5159 . 5163) (bol 5159 . 5159) (symbol 5146 . 5158) (symbol 5137 . 5145) (punctuation 5135 . 5136) (punctuation 5134 . 5135) (semantic-list 5109 . 5133) (punctuation 5108 . 5109) (symbol 5104 . 5108) (bol 5104 . 5104) (symbol 5094 . 5103) (symbol 5085 . 5093) (punctuation 5083 . 5084) (punctuation 5082 . 5083) (semantic-list 5060 . 5081) (punctuation 5059 . 5060) (symbol 5055 . 5059) (bol 5055 . 5055) (symbol 5043 . 5054) (symbol 5032 . 5042) (punctuation 5030 . 5031) (punctuation 5029 . 5030) (semantic-list 5009 . 5027) (punctuation 5008 . 5009) (symbol 5004 . 5008) (bol 5004 . 5004) (symbol 4993 . 5003) (symbol 4982 . 4992) (punctuation 4980 . 4981) (punctuation 4979 . 4980) (semantic-list 4960 . 4977) (punctuation 4959 . 4960) (symbol 4955 . 4959) (bol 4955 . 4955) (symbol 4949 . 4954) (punctuation 4947 . 4948) (punctuation 4946 . 4947) (semantic-list 4927 . 4944) (punctuation 4926 . 4927) (symbol 4922 . 4926) (bol 4922 . 4922) (symbol 4916 . 4921) (punctuation 4914 . 4915) (punctuation 4913 . 4914) (semantic-list 4894 . 4911) (punctuation 4893 . 4894) (symbol 4889 . 4893) (bol 4889 . 4889) (symbol 4880 . 4888) (punctuation 4878 . 4879) (punctuation 4877 . 4878) (semantic-list 4856 . 4876) (punctuation 4855 . 4856) (symbol 4851 . 4855) (bol 4851 . 4851) (symbol 4841 . 4850) (punctuation 4839 . 4840) (punctuation 4838 . 4839) (semantic-list 4816 . 4837) (punctuation 4815 . 4816) (symbol 4811 . 4815) (bol 4811 . 4811) (symbol 4801 . 4810) (punctuation 4799 . 4800) (punctuation 4798 . 4799) (semantic-list 4768 . 4797) (punctuation 4767 . 4768) (symbol 4763 . 4767) (bol 4763 . 4763) (symbol 4752 . 4762) (punctuation 4750 . 4751) (punctuation 4749 . 4750) (semantic-list 4726 . 4748) (punctuation 4725 . 4726) (symbol 4721 . 4725) (bol 4721 . 4721) (symbol 4714 . 4720) (punctuation 4712 . 4713) (punctuation 4711 . 4712) (semantic-list 4691 . 4709) (punctuation 4690 . 4691) (symbol 4686 . 4690) (bol 4686 . 4686) (symbol 4674 . 4685) (punctuation 4672 . 4673) (punctuation 4671 . 4672) (semantic-list 4647 . 4670) (punctuation 4646 . 4647) (symbol 4642 . 4646) (bol 4642 . 4642) (symbol 4632 . 4641) (punctuation 4630 . 4631) (punctuation 4629 . 4630) (semantic-list 4607 . 4628) (punctuation 4606 . 4607) (symbol 4602 . 4606) (bol 4602 . 4602) (symbol 4593 . 4601) (punctuation 4591 . 4592) (punctuation 4590 . 4591) (semantic-list 4569 . 4589) (punctuation 4568 . 4569) (symbol 4564 . 4568) (bol 4564 . 4564) (symbol 4557 . 4563) (punctuation 4555 . 4556) (punctuation 4554 . 4555) (semantic-list 4534 . 4552) (punctuation 4533 . 4534) (symbol 4529 . 4533) (bol 4529 . 4529) (symbol 4519 . 4528) (symbol 4508 . 4518) (punctuation 4506 . 4507) (punctuation 4505 . 4506) (semantic-list 4484 . 4504) (punctuation 4483 . 4484) (symbol 4479 . 4483) (bol 4479 . 4479) (symbol 4469 . 4478) (punctuation 4467 . 4468) (punctuation 4466 . 4467) (semantic-list 4446 . 4465) (punctuation 4445 . 4446) (symbol 4441 . 4445) (bol 4441 . 4441) (symbol 4436 . 4440) (punctuation 4434 . 4435) (punctuation 4433 . 4434) (semantic-list 4412 . 4432) (punctuation 4411 . 4412) (symbol 4407 . 4411) (bol 4407 . 4407) (symbol 4398 . 4406) (punctuation 4396 . 4397) (punctuation 4395 . 4396) (semantic-list 4373 . 4394) (punctuation 4372 . 4373) (symbol 4368 . 4372) (bol 4368 . 4368) (symbol 4358 . 4367) (punctuation 4356 . 4357) (punctuation 4355 . 4356) (semantic-list 4333 . 4354) (punctuation 4332 . 4333) (symbol 4328 . 4332) (bol 4328 . 4328) (symbol 4318 . 4327) (punctuation 4316 . 4317) (punctuation 4315 . 4316) (semantic-list 4290 . 4314) (punctuation 4289 . 4290) (symbol 4285 . 4289) (bol 4285 . 4285) (symbol 4274 . 4284) (punctuation 4272 . 4273) (punctuation 4271 . 4272) (semantic-list 4246 . 4270) (punctuation 4245 . 4246) (symbol 4241 . 4245) (bol 4241 . 4241) (symbol 4231 . 4240) (punctuation 4229 . 4230) (punctuation 4228 . 4229) (semantic-list 4209 . 4226) (punctuation 4208 . 4209) (symbol 4204 . 4208) (bol 4204 . 4204) (symbol 4193 . 4203) (symbol 4182 . 4192) (punctuation 4180 . 4181) (punctuation 4179 . 4180) (semantic-list 4156 . 4178) (punctuation 4155 . 4156) (symbol 4151 . 4155) (bol 4151 . 4151) (symbol 4142 . 4150) (punctuation 4140 . 4141) (punctuation 4139 . 4140) (semantic-list 4118 . 4138) (punctuation 4117 . 4118) (symbol 4113 . 4117) (bol 4113 . 4113) (symbol 4106 . 4112) (punctuation 4104 . 4105) (punctuation 4103 . 4104) (semantic-list 4083 . 4101) (punctuation 4082 . 4083) (symbol 4078 . 4082) (bol 4078 . 4078) (symbol 4069 . 4077) (punctuation 4067 . 4068) (punctuation 4066 . 4067) (semantic-list 4042 . 4065) (punctuation 4041 . 4042) (symbol 4037 . 4041) (bol 4037 . 4037) (symbol 4026 . 4036) (punctuation 4024 . 4025) (punctuation 4023 . 4024) (semantic-list 4000 . 4022) (punctuation 3999 . 4000) (symbol 3995 . 3999) (bol 3995 . 3995) (symbol 3984 . 3994) (punctuation 3982 . 3983) (punctuation 3981 . 3982) (semantic-list 3961 . 3980) (punctuation 3960 . 3961) (symbol 3956 . 3960) (bol 3956 . 3956) (symbol 3943 . 3955) (punctuation 3941 . 3942) (punctuation 3940 . 3941) (semantic-list 3914 . 3939) (punctuation 3913 . 3914) (symbol 3909 . 3913) (bol 3909 . 3909) (symbol 3903 . 3908) (punctuation 3901 . 3902) (punctuation 3900 . 3901) (semantic-list 3878 . 3899) (punctuation 3877 . 3878) (symbol 3873 . 3877) (bol 3873 . 3873) (symbol 3866 . 3872) (punctuation 3864 . 3865) (punctuation 3863 . 3864) (semantic-list 3843 . 3861) (punctuation 3842 . 3843) (symbol 3838 . 3842) (bol 3838 . 3838) (symbol 3827 . 3837) (punctuation 3825 . 3826) (punctuation 3824 . 3825) (semantic-list 3801 . 3823) (punctuation 3800 . 3801) (symbol 3796 . 3800) (bol 3796 . 3796) (symbol 3789 . 3795) (punctuation 3787 . 3788) (punctuation 3786 . 3787) (semantic-list 3766 . 3784) (punctuation 3765 . 3766) (symbol 3761 . 3765) (bol 3761 . 3761) (symbol 3753 . 3760) (punctuation 3751 . 3752) (punctuation 3750 . 3751) (semantic-list 3730 . 3749) (punctuation 3729 . 3730) (symbol 3725 . 3729) (bol 3725 . 3725) (symbol 3715 . 3724) (punctuation 3713 . 3714) (punctuation 3712 . 3713) (semantic-list 3685 . 3711) (punctuation 3684 . 3685) (symbol 3680 . 3684) (bol 3680 . 3680) (symbol 3675 . 3679) (punctuation 3673 . 3674) (punctuation 3672 . 3673) (semantic-list 3651 . 3671) (punctuation 3650 . 3651) (symbol 3646 . 3650) (bol 3646 . 3646) (symbol 3640 . 3645) (punctuation 3638 . 3639) (punctuation 3637 . 3638) (semantic-list 3617 . 3635) (punctuation 3616 . 3617) (symbol 3612 . 3616) (bol 3612 . 3612) (symbol 3603 . 3611) (symbol 3592 . 3602) (punctuation 3590 . 3591) (punctuation 3589 . 3590) (semantic-list 3565 . 3588) (punctuation 3564 . 3565) (symbol 3560 . 3564) (bol 3560 . 3560) (symbol 3551 . 3559) (punctuation 3549 . 3550) (punctuation 3548 . 3549) (semantic-list 3527 . 3547) (punctuation 3526 . 3527) (symbol 3522 . 3526) (bol 3522 . 3522) (symbol 3511 . 3520) (punctuation 3509 . 3510) (punctuation 3508 . 3509) (semantic-list 3482 . 3507) (punctuation 3481 . 3482) (symbol 3477 . 3481) (bol 3477 . 3477) (symbol 3462 . 3476) (punctuation 3460 . 3461) (punctuation 3459 . 3460) (semantic-list 3436 . 3458) (punctuation 3435 . 3436) (symbol 3431 . 3435) (bol 3431 . 3431) (symbol 3419 . 3430) (symbol 3404 . 3418) (punctuation 3402 . 3403) (punctuation 3401 . 3402) (semantic-list 3376 . 3400) (punctuation 3375 . 3376) (symbol 3371 . 3375) (bol 3371 . 3371) (symbol 3359 . 3370) (punctuation 3357 . 3358) (punctuation 3356 . 3357) (semantic-list 3332 . 3355) (punctuation 3331 . 3332) (symbol 3327 . 3331) (bol 3327 . 3327) (symbol 3312 . 3326) (punctuation 3310 . 3311) (punctuation 3309 . 3310) (semantic-list 3286 . 3308) (punctuation 3285 . 3286) (symbol 3281 . 3285) (bol 3281 . 3281) (symbol 3270 . 3280) (symbol 3261 . 3269) (punctuation 3259 . 3260) (punctuation 3258 . 3259) (semantic-list 3235 . 3257) (punctuation 3234 . 3235) (symbol 3230 . 3234) (bol 3230 . 3230) (symbol 3217 . 3229) (punctuation 3215 . 3216) (punctuation 3214 . 3215) (semantic-list 3189 . 3213) (punctuation 3188 . 3189) (symbol 3184 . 3188) (bol 3184 . 3184) (symbol 3167 . 3183) (punctuation 3165 . 3166) (punctuation 3164 . 3165) (semantic-list 3129 . 3163) (punctuation 3128 . 3129) (symbol 3124 . 3128) (bol 3124 . 3124) (symbol 3112 . 3123) (punctuation 3110 . 3111) (punctuation 3109 . 3110) (semantic-list 3079 . 3108) (punctuation 3078 . 3079) (symbol 3074 . 3078) (bol 3074 . 3074) (symbol 3065 . 3073) (punctuation 3063 . 3064) (punctuation 3062 . 3063) (semantic-list 3041 . 3061) (punctuation 3040 . 3041) (symbol 3036 . 3040) (bol 3036 . 3036) (symbol 3026 . 3035) (punctuation 3024 . 3025) (punctuation 3023 . 3024) (semantic-list 2996 . 3023) (punctuation 2995 . 2996) (symbol 2991 . 2995) (bol 2991 . 2991) (symbol 2985 . 2990) (punctuation 2983 . 2984) (punctuation 2982 . 2983) (semantic-list 2963 . 2980) (punctuation 2962 . 2963) (symbol 2958 . 2962) (bol 2958 . 2958) (symbol 2952 . 2957) (punctuation 2950 . 2951) (punctuation 2949 . 2950) (semantic-list 2929 . 2947) (punctuation 2928 . 2929) (symbol 2924 . 2928) (bol 2924 . 2924) (symbol 2916 . 2923) (punctuation 2914 . 2915) (punctuation 2913 . 2914) (semantic-list 2892 . 2912) (punctuation 2891 . 2892) (symbol 2887 . 2891) (bol 2887 . 2887) (symbol 2878 . 2886) (punctuation 2876 . 2877) (punctuation 2875 . 2876) (semantic-list 2853 . 2874) (punctuation 2852 . 2853) (symbol 2848 . 2852) (bol 2848 . 2848) (symbol 2839 . 2847) (punctuation 2837 . 2838) (punctuation 2836 . 2837) (semantic-list 2814 . 2835) (punctuation 2813 . 2814) (symbol 2809 . 2813) (bol 2809 . 2809) (symbol 2800 . 2808) (punctuation 2798 . 2799) (punctuation 2797 . 2798) (semantic-list 2775 . 2796) (punctuation 2774 . 2775) (symbol 2770 . 2774) (bol 2770 . 2770) (symbol 2761 . 2769) (punctuation 2759 . 2760) (punctuation 2758 . 2759) (semantic-list 2736 . 2757) (punctuation 2735 . 2736) (symbol 2731 . 2735) (bol 2731 . 2731) (symbol 2721 . 2730) (punctuation 2719 . 2720) (punctuation 2718 . 2719) (semantic-list 2696 . 2717) (punctuation 2695 . 2696) (symbol 2691 . 2695) (bol 2691 . 2691) (symbol 2681 . 2690) (punctuation 2679 . 2680) (punctuation 2678 . 2679) (semantic-list 2656 . 2677) (punctuation 2655 . 2656) (symbol 2651 . 2655) (bol 2651 . 2651) (symbol 2641 . 2650) (punctuation 2639 . 2640) (punctuation 2638 . 2639) (semantic-list 2616 . 2637) (punctuation 2615 . 2616) (symbol 2611 . 2615) (bol 2611 . 2611) (symbol 2599 . 2610) (punctuation 2597 . 2598) (punctuation 2596 . 2597) (semantic-list 2572 . 2595) (punctuation 2571 . 2572) (symbol 2567 . 2571) (bol 2567 . 2567) (symbol 2559 . 2566) (punctuation 2557 . 2558) (punctuation 2556 . 2557) (semantic-list 2535 . 2555) (punctuation 2534 . 2535) (symbol 2530 . 2534) (bol 2530 . 2530) (symbol 2520 . 2529) (punctuation 2518 . 2519) (punctuation 2517 . 2518) (semantic-list 2495 . 2516) (punctuation 2494 . 2495) (symbol 2490 . 2494) (bol 2490 . 2490) (symbol 2480 . 2489) (punctuation 2478 . 2479) (punctuation 2477 . 2478) (semantic-list 2455 . 2476) (punctuation 2454 . 2455) (symbol 2450 . 2454) (bol 2450 . 2450) (symbol 2439 . 2449) (punctuation 2437 . 2438) (punctuation 2436 . 2437) (semantic-list 2413 . 2435) (punctuation 2412 . 2413) (symbol 2408 . 2412) (bol 2408 . 2408) (symbol 2397 . 2407) (punctuation 2395 . 2396) (punctuation 2394 . 2395) (semantic-list 2371 . 2393) (punctuation 2370 . 2371) (symbol 2366 . 2370) (bol 2366 . 2366) (symbol 2357 . 2365) (symbol 2348 . 2356) (punctuation 2346 . 2347) (punctuation 2345 . 2346) (semantic-list 2324 . 2344) (punctuation 2323 . 2324) (symbol 2319 . 2323) (bol 2319 . 2319) (symbol 2303 . 2318) (symbol 2294 . 2302) (punctuation 2292 . 2293) (punctuation 2291 . 2292) (semantic-list 2268 . 2290) (punctuation 2267 . 2268) (symbol 2263 . 2267) (bol 2263 . 2263) (symbol 2248 . 2262) (symbol 2239 . 2247) (punctuation 2237 . 2238) (punctuation 2236 . 2237) (semantic-list 2214 . 2235) (punctuation 2213 . 2214) (symbol 2209 . 2213) (bol 2209 . 2209) (symbol 2193 . 2208) (symbol 2180 . 2191) (punctuation 2178 . 2179) (punctuation 2177 . 2178) (semantic-list 2157 . 2175) (punctuation 2156 . 2157) (symbol 2152 . 2156) (bol 2152 . 2152) (symbol 2142 . 2151) (symbol 2131 . 2141) (punctuation 2129 . 2130) (punctuation 2128 . 2129) (semantic-list 2106 . 2127) (punctuation 2105 . 2106) (symbol 2101 . 2105) (bol 2101 . 2101) (symbol 2090 . 2100) (punctuation 2088 . 2089) (punctuation 2087 . 2088) (semantic-list 2068 . 2085) (punctuation 2067 . 2068) (symbol 2063 . 2067) (bol 2063 . 2063) (symbol 2050 . 2062) (punctuation 2048 . 2049) (punctuation 2047 . 2048) (semantic-list 2027 . 2046) (punctuation 2026 . 2027) (symbol 2022 . 2026) (bol 2022 . 2022) (symbol 2012 . 2021) (symbol 2002 . 2011) (punctuation 2000 . 2001) (punctuation 1999 . 2000) (semantic-list 1977 . 1998) (punctuation 1976 . 1977) (symbol 1972 . 1976) (bol 1972 . 1972) (symbol 1962 . 1971) (symbol 1952 . 1961) (punctuation 1950 . 1951) (punctuation 1949 . 1950) (semantic-list 1927 . 1948) (punctuation 1926 . 1927) (symbol 1922 . 1926) (bol 1922 . 1922) (symbol 1912 . 1921) (symbol 1904 . 1911) (punctuation 1902 . 1903) (punctuation 1901 . 1902) (semantic-list 1881 . 1900) (punctuation 1880 . 1881) (symbol 1876 . 1880) (bol 1876 . 1876) (symbol 1866 . 1875) (symbol 1858 . 1865) (punctuation 1856 . 1857) (punctuation 1855 . 1856) (semantic-list 1835 . 1854) (punctuation 1834 . 1835) (symbol 1830 . 1834) (bol 1830 . 1830) (symbol 1820 . 1829) (symbol 1812 . 1819) (punctuation 1810 . 1811) (punctuation 1809 . 1810) (semantic-list 1789 . 1808) (punctuation 1788 . 1789) (symbol 1784 . 1788) (bol 1784 . 1784) (symbol 1773 . 1783) (symbol 1764 . 1772) (punctuation 1762 . 1763) (punctuation 1761 . 1762) (semantic-list 1738 . 1760) (punctuation 1737 . 1738) (symbol 1733 . 1737) (bol 1733 . 1733) (symbol 1724 . 1732) (symbol 1715 . 1723) (punctuation 1713 . 1714) (punctuation 1712 . 1713) (semantic-list 1691 . 1711) (punctuation 1690 . 1691) (symbol 1686 . 1690) (bol 1686 . 1686) (symbol 1667 . 1685) (punctuation 1665 . 1666) (punctuation 1664 . 1665) (semantic-list 1638 . 1663) (punctuation 1637 . 1638) (symbol 1633 . 1637) (bol 1633 . 1633) (symbol 1622 . 1632) (punctuation 1620 . 1621) (punctuation 1619 . 1620) (semantic-list 1593 . 1617) (punctuation 1592 . 1593) (symbol 1588 . 1592) (bol 1588 . 1588) (symbol 1576 . 1587) (symbol 1561 . 1575) (symbol 1550 . 1560) (punctuation 1548 . 1549) (punctuation 1547 . 1548) (semantic-list 1527 . 1545) (punctuation 1526 . 1527) (symbol 1522 . 1526) (bol 1522 . 1522) (symbol 1514 . 1521) (symbol 1508 . 1513) (symbol 1501 . 1507) (punctuation 1499 . 1500) (punctuation 1498 . 1499) (semantic-list 1473 . 1497) (punctuation 1472 . 1473) (symbol 1468 . 1472) (bol 1468 . 1468) (symbol 1462 . 1467) (punctuation 1460 . 1461) (punctuation 1459 . 1460) (semantic-list 1439 . 1457) (punctuation 1438 . 1439) (symbol 1434 . 1438) (bol 1434 . 1434) (symbol 1428 . 1433) (punctuation 1426 . 1427) (punctuation 1425 . 1426) (semantic-list 1405 . 1423) (punctuation 1404 . 1405) (symbol 1400 . 1404) (bol 1400 . 1400) (symbol 1394 . 1399) (punctuation 1392 . 1393) (punctuation 1391 . 1392) (semantic-list 1376 . 1389) (punctuation 1375 . 1376) (symbol 1371 . 1375) (bol 1371 . 1371) (symbol 1365 . 1370) (punctuation 1363 . 1364) (punctuation 1362 . 1363) (semantic-list 1344 . 1360) (punctuation 1343 . 1344) (symbol 1339 . 1343) (bol 1339 . 1339) (symbol 1332 . 1338) (punctuation 1330 . 1331) (punctuation 1329 . 1330) (semantic-list 1313 . 1327) (punctuation 1312 . 1313) (symbol 1308 . 1312) (bol 1308 . 1308) (symbol 1291 . 1306) (punctuation 1289 . 1290) (punctuation 1288 . 1289) (semantic-list 1270 . 1286) (punctuation 1269 . 1270) (symbol 1265 . 1269) (bol 1265 . 1265) (symbol 1244 . 1264) (punctuation 1242 . 1243) (punctuation 1241 . 1242) (semantic-list 1217 . 1240) (punctuation 1216 . 1217) (symbol 1212 . 1216) (bol 1212 . 1212) (symbol 1204 . 1211) (punctuation 1202 . 1203) (punctuation 1201 . 1202) (semantic-list 1176 . 1200) (punctuation 1175 . 1176) (symbol 1171 . 1175) (bol 1171 . 1171) (symbol 1150 . 1170) (punctuation 1148 . 1149) (punctuation 1147 . 1148) (semantic-list 1123 . 1146) (punctuation 1122 . 1123) (symbol 1118 . 1122) (bol 1118 . 1118) (symbol 1095 . 1117) (punctuation 1093 . 1094) (punctuation 1092 . 1093) (semantic-list 1066 . 1091) (punctuation 1065 . 1066) (symbol 1061 . 1065) (bol 1061 . 1061) (symbol 1041 . 1060) (punctuation 1039 . 1040) (punctuation 1038 . 1039) (semantic-list 1014 . 1036) (punctuation 1013 . 1014) (symbol 1009 . 1013) (bol 1009 . 1009) (symbol 988 . 1008) (punctuation 986 . 987) (punctuation 985 . 986) (semantic-list 961 . 984) (punctuation 960 . 961) (symbol 956 . 960) (bol 956 . 956) (symbol 792 . 804) (punctuation 790 . 791) (punctuation 789 . 790) (semantic-list 769 . 788) (punctuation 768 . 769) (symbol 764 . 768) (bol 764 . 764) (symbol 752 . 762) (punctuation 750 . 751) (punctuation 749 . 750) (semantic-list 734 . 747) (punctuation 733 . 734) (symbol 729 . 733) (bol 729 . 729) (symbol 720 . 727) (punctuation 718 . 719) (punctuation 717 . 718) (semantic-list 700 . 715) (punctuation 699 . 700) (symbol 695 . 699) (bol 695 . 695))
+    )
+   (semanticdb-table "eata.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "eata.c"
+    :pointmax 77921
+    :fsize 77920
+    :lastmodtime '(22436 15414 77041 657000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_PCI" . ((number "16" 25032 . 25034)))
+          ("TAG_DISABLED" . ((number "0" 25576 . 25577)))
+          ("READ_CONFIG_DMA" . ((number "0xfd" 26342 . 26346)))
+          ("DEV2H16" (spp-arg-list ("x") 35236 . 35239) . ((symbol "be16_to_cpu" 35240 . 35251) (semantic-list "(x)" 35251 . 35254)))
+          ("LOCKED" . ((number "2" 25433 . 25434)))
+          ("MAX_ISA_ADDR" . ((number "0x03ff" 25937 . 25943)))
+          ("ASST" . ((number "0x01" 26466 . 26470)))
+          ("H2DEV" (spp-arg-list ("x") 35132 . 35135) . ((symbol "cpu_to_be32" 35138 . 35149) (semantic-list "(x)" 35149 . 35152)))
+          ("MAX_VESA" . ((number "0" 24994 . 24995)))
+          ("MAX_INTERNAL_RETRIES" . ((number "64" 25264 . 25266)))
+          ("IN_USE" . ((number "1" 25414 . 25415)))
+          ("ABORTING" . ((number "6" 25509 . 25510)))
+          ("MAXLOOP" . ((number "10000" 25549 . 25554)))
+          ("REG_CMD" . ((number "7" 25649 . 25650)))
+          ("REG_MID" . ((number "4" 25857 . 25858)))
+          ("H2DEV16" (spp-arg-list ("x") 35202 . 35205) . ((symbol "cpu_to_be16" 35206 . 35217) (semantic-list "(x)" 35217 . 35220)))
+          ("MAX_BOOT_OPTIONS_SIZE" . ((number "256" 36381 . 36384)))
+          ("MAX_ISA" . ((number "4" 24975 . 24976)))
+          ("TAG_ORDERED" . ((number "2" 25622 . 25623)))
+          ("REGION_SIZE" . ((symbol "9UL" 25909 . 25912)))
+          ("EATA_2_0B_SIZE" . ((number "30" 26760 . 26762)))
+          ("MAX_BOARDS" . ((semantic-list "(MAX_ISA + MAX_VESA + MAX_EISA + MAX_PCI)" 25054 . 25095)))
+          ("SKIP" . ((symbol "ULONG_MAX" 25372 . 25381)))
+          ("REG_LOW" . ((number "2" 25805 . 25806)))
+          ("REG_MSB" . ((number "5" 25883 . 25884)))
+          ("SET_CONFIG_PIO" . ((number "0xf1" 26187 . 26191)))
+          ("MAX_CHANNEL" . ((number "4" 25116 . 25117)))
+          ("MAX_SGLIST" . ((number "64" 25203 . 25205)))
+          ("FREE" . ((number "0" 25395 . 25396)))
+          ("NO_DMA" . ((number "0xff" 25527 . 25531)))
+          ("REG_LM" . ((number "3" 25831 . 25832)))
+          ("DRQ_ASSERTED" . ((number "0x08" 26063 . 26067)))
+          ("TRUNCATE_XFR_PIO" . ((number "0xf4" 26280 . 26284)))
+          ("YESNO" (spp-arg-list ("a") 26485 . 26488) . ((semantic-list "((a) ? 'y' : 'n')" 26489 . 26506)))
+          ("REG_SEE" . ((number "6" 25779 . 25780)))
+          ("READ_CONFIG_PIO" . ((number "0xf0" 26156 . 26160)))
+          ("RECEIVE_SP_PIO" . ((number "0xf3" 26249 . 26253)))
+          ("SEND_CP_DMA" . ((number "0xff" 26404 . 26408)))
+          ("ASOK" . ((number "0x00" 26435 . 26439)))
+          ("EATA_SIG_BE" . ((number "0x45415441" 26627 . 26637)))
+          ("CP_TAIL_SIZE" . ((semantic-list "(sizeof(struct sglist *) + sizeof(dma_addr_t))" 33109 . 33155)))
+          ("REG2H" (spp-arg-list ("x") 35347 . 35350) . ((symbol "le16_to_cpu" 35353 . 35364) (semantic-list "(x)" 35364 . 35367)))
+          ("MAX_INT_PARAM" . ((number "10" 36348 . 36350)))
+          ("MAX_TARGET" . ((number "32" 25156 . 25158)))
+          ("MAX_EISA_ADDR" . ((number "0xfc88" 25999 . 26005)))
+          ("EATA_2_0A_SIZE" . ((number "28" 26734 . 26736)))
+          ("MAX_EISA" . ((number "15" 25013 . 25015)))
+          ("MAX_MAILBOXES" . ((number "64" 25181 . 25183)))
+          ("MAX_CMD_PER_LUN" . ((number "2" 25291 . 25292)))
+          ("TAG_SIMPLE" . ((number "1" 25599 . 25600)))
+          ("REG_DATA2" . ((number "1" 25753 . 25754)))
+          ("DEV2H" (spp-arg-list ("x") 35166 . 35169) . ((symbol "be32_to_cpu" 35172 . 35183) (semantic-list "(x)" 35183 . 35186)))
+          ("ISA" . ((number "0" 24716 . 24717)))
+          ("IN_RESET" . ((number "3" 25452 . 25453)))
+          ("MAX_LUN" . ((number "32" 25134 . 25136)))
+          ("READY" . ((number "5" 25490 . 25491)))
+          ("REG_STATUS" . ((number "7" 25675 . 25676)))
+          ("REG_AUX_STATUS" . ((number "8" 25701 . 25702)))
+          ("MIN_EISA_ADDR" . ((number "0x1c88" 25968 . 25974)))
+          ("IGNORE" . ((number "4" 25471 . 25472)))
+          ("BSY_ASSERTED" . ((number "0x80" 26032 . 26036)))
+          ("ABSY_ASSERTED" . ((number "0x01" 26094 . 26098)))
+          ("IRQ_ASSERTED" . ((number "0x02" 26125 . 26129)))
+          ("RESET_PIO" . ((number "0xf9" 26311 . 26315)))
+          ("SET_CONFIG_DMA" . ((number "0xfe" 26373 . 26377)))
+          ("TLDEV" (spp-arg-list ("type") 26520 . 26526) . ((semantic-list "((type) == TYPE_DISK || (type) == TYPE_ROM)" 26527 . 26570)))
+          ("ESA" . ((number "1" 24730 . 24731)))
+          ("MAX_LARGE_SGLIST" . ((number "122" 25231 . 25234)))
+          ("MAX_TAGGED_CMD_PER_LUN" . ((semantic-list "(MAX_MAILBOXES - MAX_CMD_PER_LUN)" 25324 . 25357)))
+          ("REG_DATA" . ((number "0" 25727 . 25728)))
+          ("SEND_CP_PIO" . ((number "0xf2" 26218 . 26222)))
+          ("EATA_2_0C_SIZE" . ((number "34" 26786 . 26788)))
+          )
+
+    )
+   (semanticdb-table "eata_pio.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("linux/module.h" include (:system-flag t) nil [2871 2896])
+            ("linux/kernel.h" include (:system-flag t) nil [2897 2922])
+            ("linux/string.h" include (:system-flag t) nil [2923 2948])
+            ("linux/ioport.h" include (:system-flag t) nil [2949 2974])
+            ("linux/in.h" include (:system-flag t) nil [2975 2996])
+            ("linux/pci.h" include (:system-flag t) nil [2997 3019])
+            ("linux/proc_fs.h" include (:system-flag t) nil [3020 3046])
+            ("linux/interrupt.h" include (:system-flag t) nil [3047 3075])
+            ("linux/blkdev.h" include (:system-flag t) nil [3076 3101])
+            ("linux/spinlock.h" include (:system-flag t) nil [3102 3129])
+            ("linux/delay.h" include (:system-flag t) nil [3130 3154])
+            ("asm/io.h" include (:system-flag t) nil [3156 3175])
+            ("scsi/scsi.h" include (:system-flag t) nil [3177 3199])
+            ("scsi/scsi_cmnd.h" include (:system-flag t) nil [3200 3227])
+            ("scsi/scsi_device.h" include (:system-flag t) nil [3228 3257])
+            ("scsi/scsi_host.h" include (:system-flag t) nil [3258 3285])
+            ("eata_generic.h" include nil nil [3287 3312])
+            ("eata_pio.h" include nil nil [3313 3334])
+            ("ISAbases" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "unsigned int")
+                nil [3337 3409])
+            ("ISAirqs" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "unsigned int")
+                nil [3411 3469])
+            ("EISAbases" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "unsigned char")
+                nil [3471 3561])
+            ("registered_HBAs" variable
+               (:typemodifiers ("static")
+                :type "unsigned int")
+                nil [3563 3599])
+            ("last_HBA" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("Scsi_Host" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3600 3634])
+            ("first_HBA" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("Scsi_Host" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3635 3670])
+            ("reg_IRQ" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "unsigned char")
+                nil [3671 3704])
+            ("reg_IRQL" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "unsigned char")
+                nil [3705 3739])
+            ("int_counter" variable
+               (:typemodifiers ("static")
+                :type "unsigned long")
+                nil [3740 3773])
+            ("queue_counter" variable
+               (:typemodifiers ("static")
+                :type "unsigned long")
+                nil [3774 3809])
+            ("driver_template" variable
+               (:typemodifiers ("static")
+                :type ("scsi_host_template" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3811 3860])
+            ("eata_pio_show_info" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("m" variable
+                       (:pointer 1
+                        :type ("seq_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3892 3911])
+                    ("shost" variable
+                       (:pointer 1
+                        :type ("Scsi_Host" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3912 3936]))                  
+                :type "int")
+                nil [3862 4534])
+            ("eata_pio_release" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sh" variable
+                       (:pointer 1
+                        :type ("Scsi_Host" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4564 4585]))                  
+                :type "int")
+                nil [4536 4919])
+            ("IncStat" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("SCp" variable
+                       (:pointer 1
+                        :type ("scsi_pointer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4941 4966])
+                    ("Increment" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4967 4990]))                  
+                :type "void")
+                nil [4921 5238])
+            ("eata_pio_int_handler" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("irq" variable (:type "int") (reparse-symbol arg-sub-list) [5280 5288])
+                    ("dev_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5289 5302]))                  
+                :type ("irqreturn_t" type (:type "class") nil nil))
+                nil [5240 5303])
+            ("do_eata_pio_int_handler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("irq" variable (:type "int") (reparse-symbol arg-sub-list) [5348 5356])
+                    ("dev_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5357 5370]))                  
+                :type ("irqreturn_t" type (:type "class") nil nil))
+                nil [5305 5594])
+            ("eata_pio_int_handler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("irq" variable (:type "int") (reparse-symbol arg-sub-list) [5636 5644])
+                    ("dev_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5645 5658]))                  
+                :type ("irqreturn_t" type (:type "class") nil nil))
+                nil [5596 8590])
+            ("eata_pio_send_command" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("base" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [8641 8660])
+                    ("command" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [8661 8683]))                  
+                :type "unsigned int")
+                nil [8592 9052])
+            ("eata_pio_queue_lck" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("scsi_cmnd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9084 9106])
+                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [9109 9121]))                  
+                :type "int")
+                nil [9054 11596])
+            ("eata_pio_abort" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("scsi_cmnd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11662 11684]))                  
+                :type "int")
+                nil [11636 12594])
+            ("eata_pio_host_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("scsi_cmnd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12627 12649]))                  
+                :type "int")
+                nil [12596 14435])
+            ("get_pio_board_data" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [14469 14488])
+                    ("irq" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [14489 14506])
+                    ("id" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [14507 14523])
+                    ("cplen" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [14524 14544])
+                    ("cppadlen" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [14545 14569]))                  
+                :type "char")
+                nil [14437 15573])
+            ("get_pio_conf_PIO" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [15603 15622])
+                    ("buf" variable
+                       (:pointer 1
+                        :type ("get_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15623 15644]))                  
+                :type "int")
+                nil [15575 16912])
+            ("print_pio_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gc" variable
+                       (:pointer 1
+                        :type ("get_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16943 16963]))                  
+                :type "void")
+                nil [16914 17493])
+            ("print_selftest" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [17530 17548]))                  
+                :type "unsigned int")
+                nil [17495 18193])
+            ("register_pio_HBA" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable (:type "long") (reparse-symbol arg-sub-list) [18223 18233])
+                    ("gc" variable
+                       (:pointer 1
+                        :type ("get_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18234 18254])
+                    ("pdev" variable
+                       (:pointer 1
+                        :type ("pci_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18255 18276]))                  
+                :type "int")
+                nil [18195 21514])
+            ("find_pio_ISA" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("get_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21541 21562]))                  
+                :type "void")
+                nil [21516 21819])
+            ("find_pio_EISA" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("get_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21847 21868]))                  
+                :type "void")
+                nil [21821 22912])
+            ("find_pio_PCI" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("get_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22939 22960]))                  
+                :type "void")
+                nil [22914 24719])
+            ("eata_pio_detect" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tpnt" variable
+                       (:pointer 1
+                        :type ("scsi_host_template" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24748 24780]))                  
+                :type "int")
+                nil [24721 26100])
+            ("driver_template" variable
+               (:typemodifiers ("static")
+                :type ("scsi_host_template" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [26102 26539])
+            ("MODULE_AUTHOR" function
+               (:prototype-flag t
+                :type "int")
+                nil [26541 26589])
+            ("MODULE_DESCRIPTION" function
+               (:prototype-flag t
+                :type "int")
+                nil [26590 26633])
+            ("MODULE_LICENSE" function
+               (:prototype-flag t
+                :type "int")
+                nil [26634 26656])
+            ("scsi_module.c" include nil nil [26658 26682]))          
+    :file "eata_pio.c"
+    :pointmax 26683
+    :fsize 26682
+    :lastmodtime '(22436 15414 79041 658000)
+    :unmatched-syntax '((string 26649 . 26654) (string 26609 . 26631) (string 26555 . 26587) (semantic-list 11618 . 11634) (symbol 11605 . 11618) (STATIC 11598 . 11604) (semantic-list 9121 . 9141) (semantic-list 9114 . 9121))
+    )
+   (semanticdb-table "eata_generic.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_EATA_GENERIC_H" variable (:constant-flag t) nil [519 534])
+            ("R_LIMIT" variable (:constant-flag t) nil [672 679])
+            ("MAXISA" variable (:constant-flag t) nil [697 703])
+            ("MAXEISA" variable (:constant-flag t) nil [717 724])
+            ("MAXPCI" variable (:constant-flag t) nil [740 746])
+            ("MAXIRQ" variable (:constant-flag t) nil [760 766])
+            ("MAXTARGET" variable (:constant-flag t) nil [781 790])
+            ("MAXCHANNEL" variable (:constant-flag t) nil [802 812])
+            ("IS_ISA" variable (:constant-flag t) nil [824 830])
+            ("IS_EISA" variable (:constant-flag t) nil [846 853])
+            ("IS_PCI" variable (:constant-flag t) nil [869 875])
+            ("BROKEN_INQUIRY" variable (:constant-flag t) nil [892 906])
+            ("BUSMASTER" variable (:constant-flag t) nil [918 927])
+            ("PIO" variable (:constant-flag t) nil [947 950])
+            ("EATA_SIGNATURE" variable (:constant-flag t) nil [977 991])
+            ("DPT_ID1" variable (:constant-flag t) nil [1052 1059])
+            ("DPT_ID2" variable (:constant-flag t) nil [1081 1088])
+            ("ATT_ID1" variable (:constant-flag t) nil [1111 1118])
+            ("ATT_ID2" variable (:constant-flag t) nil [1140 1147])
+            ("ATT_ID3" variable (:constant-flag t) nil [1169 1176])
+            ("NEC_ID1" variable (:constant-flag t) nil [1198 1205])
+            ("NEC_ID2" variable (:constant-flag t) nil [1227 1234])
+            ("NEC_ID3" variable (:constant-flag t) nil [1256 1263])
+            ("EATA_CP_SIZE" variable (:constant-flag t) nil [1288 1300])
+            ("MAX_PCI_DEVICES" variable (:constant-flag t) nil [1314 1329])
+            ("MAX_METHOD_2" variable (:constant-flag t) nil [1385 1397])
+            ("MAX_PCI_BUS" variable (:constant-flag t) nil [1449 1460])
+            ("SG_SIZE" variable (:constant-flag t) nil [1516 1523])
+            ("SG_SIZE_BIG" variable (:constant-flag t) nil [1538 1549])
+            ("UPPER_DEVICE_QUEUE_LIMIT" variable (:constant-flag t) nil [1601 1625])
+            ("TYPE_DISK_QUEUE" variable (:constant-flag t) nil [1789 1804])
+            ("TYPE_TAPE_QUEUE" variable (:constant-flag t) nil [1817 1832])
+            ("TYPE_ROM_QUEUE" variable (:constant-flag t) nil [1844 1858])
+            ("TYPE_OTHER_QUEUE" variable (:constant-flag t) nil [1871 1887])
+            ("FREE" variable (:constant-flag t) nil [1899 1903])
+            ("OK" variable (:constant-flag t) nil [1923 1925])
+            ("NO_TIMEOUT" variable (:constant-flag t) nil [1945 1955])
+            ("USED" variable (:constant-flag t) nil [1972 1976])
+            ("TIMEOUT" variable (:constant-flag t) nil [1996 2003])
+            ("RESET" variable (:constant-flag t) nil [2023 2028])
+            ("LOCKED" variable (:constant-flag t) nil [2048 2054])
+            ("ABORTED" variable (:constant-flag t) nil [2074 2081])
+            ("READ" variable (:constant-flag t) nil [2103 2107])
+            ("WRITE" variable (:constant-flag t) nil [2130 2135])
+            ("OTHER" variable (:constant-flag t) nil [2157 2162])
+            ("HD" variable (:constant-flag t) nil [2185 2187])
+            ("CD" variable (:constant-flag t) nil [2247 2249])
+            ("SD" variable (:constant-flag t) nil [2306 2308])
+            ("PCI_REG_DPTconfig" variable (:constant-flag t) nil [2504 2521])
+            ("PCI_REG_PumpModeAddress" variable (:constant-flag t) nil [2538 2561])
+            ("PCI_REG_PumpModeData" variable (:constant-flag t) nil [2578 2598])
+            ("PCI_REG_ConfigParam1" variable (:constant-flag t) nil [2615 2635])
+            ("PCI_REG_ConfigParam2" variable (:constant-flag t) nil [2652 2672])
+            ("EATA_CMD_PIO_SETUPTEST" variable (:constant-flag t) nil [2691 2713])
+            ("EATA_CMD_PIO_READ_CONFIG" variable (:constant-flag t) nil [2728 2752])
+            ("EATA_CMD_PIO_SET_CONFIG" variable (:constant-flag t) nil [2766 2789])
+            ("EATA_CMD_PIO_SEND_CP" variable (:constant-flag t) nil [2804 2824])
+            ("EATA_CMD_PIO_RECEIVE_SP" variable (:constant-flag t) nil [2839 2862])
+            ("EATA_CMD_PIO_TRUNC" variable (:constant-flag t) nil [2877 2895])
+            ("EATA_CMD_RESET" variable (:constant-flag t) nil [2911 2925])
+            ("EATA_CMD_IMMEDIATE" variable (:constant-flag t) nil [2941 2959])
+            ("EATA_CMD_DMA_READ_CONFIG" variable (:constant-flag t) nil [2975 2999])
+            ("EATA_CMD_DMA_SET_CONFIG" variable (:constant-flag t) nil [3013 3036])
+            ("EATA_CMD_DMA_SEND_CP" variable (:constant-flag t) nil [3051 3071])
+            ("ECS_EMULATE_SENSE" variable (:constant-flag t) nil [3087 3104])
+            ("EATA_GENERIC_ABORT" variable (:constant-flag t) nil [3120 3138])
+            ("EATA_SPECIFIC_RESET" variable (:constant-flag t) nil [3159 3178])
+            ("EATA_BUS_RESET" variable (:constant-flag t) nil [3197 3211])
+            ("EATA_SPECIFIC_ABORT" variable (:constant-flag t) nil [3235 3254])
+            ("EATA_QUIET_INTR" variable (:constant-flag t) nil [3273 3288])
+            ("EATA_COLD_BOOT_HBA" variable (:constant-flag t) nil [3311 3329])
+            ("EATA_FORCE_IO" variable (:constant-flag t) nil [3380 3393])
+            ("HA_CTRLREG" variable (:constant-flag t) nil [3419 3429])
+            ("HA_CTRL_DISINT" variable (:constant-flag t) nil [3488 3502])
+            ("HA_CTRL_RESCPU" variable (:constant-flag t) nil [3557 3571])
+            ("HA_CTRL_8HEADS" variable (:constant-flag t) nil [3626 3640])
+            ("HA_WCOMMAND" variable (:constant-flag t) nil [3743 3754])
+            ("HA_WIFC" variable (:constant-flag t) nil [3804 3811])
+            ("HA_WCODE" variable (:constant-flag t) nil [3867 3875])
+            ("HA_WCODE2" variable (:constant-flag t) nil [3896 3905])
+            ("HA_WDMAADDR" variable (:constant-flag t) nil [3925 3936])
+            ("HA_RAUXSTAT" variable (:constant-flag t) nil [3987 3998])
+            ("HA_RSTATUS" variable (:constant-flag t) nil [4050 4060])
+            ("HA_RDATA" variable (:constant-flag t) nil [4110 4118])
+            ("HA_WDATA" variable (:constant-flag t) nil [4169 4177])
+            ("HA_ABUSY" variable (:constant-flag t) nil [4229 4237])
+            ("HA_AIRQ" variable (:constant-flag t) nil [4280 4287])
+            ("HA_SERROR" variable (:constant-flag t) nil [4337 4346])
+            ("HA_SMORE" variable (:constant-flag t) nil [4400 4408])
+            ("HA_SCORR" variable (:constant-flag t) nil [4460 4468])
+            ("HA_SDRQ" variable (:constant-flag t) nil [4513 4520])
+            ("HA_SSC" variable (:constant-flag t) nil [4570 4576])
+            ("HA_SFAULT" variable (:constant-flag t) nil [4621 4630])
+            ("HA_SREADY" variable (:constant-flag t) nil [4671 4680])
+            ("HA_SBUSY" variable (:constant-flag t) nil [4721 4729])
+            ("HA_SDRDY" variable (:constant-flag t) nil [4770 4778])
+            ("HA_NO_ERROR" variable (:constant-flag t) nil [4951 4962])
+            ("HA_ERR_SEL_TO" variable (:constant-flag t) nil [4995 5008])
+            ("HA_ERR_CMD_TO" variable (:constant-flag t) nil [5049 5062])
+            ("HA_BUS_RESET" variable (:constant-flag t) nil [5101 5113])
+            ("HA_INIT_POWERUP" variable (:constant-flag t) nil [5159 5174])
+            ("HA_UNX_BUSPHASE" variable (:constant-flag t) nil [5224 5239])
+            ("HA_UNX_BUS_FREE" variable (:constant-flag t) nil [5283 5298])
+            ("HA_BUS_PARITY" variable (:constant-flag t) nil [5341 5354])
+            ("HA_SCSI_HUNG" variable (:constant-flag t) nil [5394 5406])
+            ("HA_UNX_MSGRJCT" variable (:constant-flag t) nil [5440 5454])
+            ("HA_RESET_STUCK" variable (:constant-flag t) nil [5504 5518])
+            ("HA_RSENSE_FAIL" variable (:constant-flag t) nil [5562 5576])
+            ("HA_PARITY_ERR" variable (:constant-flag t) nil [5624 5637])
+            ("HA_CP_ABORT_NA" variable (:constant-flag t) nil [5687 5701])
+            ("HA_CP_ABORTED" variable (:constant-flag t) nil [5759 5772])
+            ("HA_CP_RESET_NA" variable (:constant-flag t) nil [5826 5840])
+            ("HA_CP_RESET" variable (:constant-flag t) nil [5898 5909])
+            ("HA_ECC_ERR" variable (:constant-flag t) nil [5963 5973])
+            ("HA_PCI_PARITY" variable (:constant-flag t) nil [6020 6033])
+            ("HA_PCI_MABORT" variable (:constant-flag t) nil [6073 6086])
+            ("HA_PCI_TABORT" variable (:constant-flag t) nil [6126 6139])
+            ("HA_PCI_STABORT" variable (:constant-flag t) nil [6179 6193])
+            ("reg_bit" type
+               (:members 
+                  ( ("error" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6442 6455])
+                    ("more" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6511 6523])
+                    ("corr" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6584 6596])
+                    ("drq" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6657 6668])
+                    ("sc" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6711 6721])
+                    ("fault" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6758 6771])
+                    ("ready" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6804 6817])
+                    ("busy" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6850 6862]))                  
+                :type "struct")
+                nil [6365 6897])
+            ("reg_abit" type
+               (:members 
+                  ( ("abusy" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6970 6983])
+                    ("irq" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7016 7027])
+                    ("dummy" variable
+                       (:suffix ":6"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7081 7094]))                  
+                :type "struct")
+                nil [6899 7097])
+            ("eata_register" type
+               (:members 
+                  ( ("data_reg" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7154 7171])
+                    ("cp_addr" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7219 7235])
+                    ("ovr" variable (:type ("" type
+                         (:members 
+                            ( ("command" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7285 7298])
+                              ("status" variable (:type ("reg_bit" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [7351 7373])
+                              ("statusbyte" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7404 7420]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [7275 7431])
+                    ("aux_stat" variable (:type ("reg_abit" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [7439 7464]))                  
+                :type "struct")
+                nil [7099 7496])
+            ("get_conf" type
+               (:members 
+                  ( ("len" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7558 7569])
+                    ("signature" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7618 7634])
+                    ("version" variable
+                       (:suffix ":4"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7677 7713])
+                    ("version2" variable
+                       (:suffix ":4"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7677 7713])
+                    ("HAA_valid" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7751 8259])
+                    ("ATA" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7751 8259])
+                    ("DMA_valid" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7751 8259])
+                    ("DMA_support" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7751 8259])
+                    ("MORE_support" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7751 8259])
+                    ("TRNXFR" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7751 8259])
+                    ("TAR_support" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7751 8259])
+                    ("OCS_enabled" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7751 8259])
+                    ("cppadlen" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8307 8322])
+                    ("scsi_id" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8422 8438])
+                    ("cplen" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8533 8546])
+                    ("splen" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8599 8612])
+                    ("queuesiz" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8697 8712])
+                    ("dummy" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8758 8770])
+                    ("SGsiz" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8775 8787])
+                    ("DMA_channel" variable
+                       (:suffix ":2"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8836 9010])
+                    ("SECOND" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8836 9010])
+                    ("IRQ_TR" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8836 9010])
+                    ("IRQ" variable
+                       (:suffix ":4"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8836 9010])
+                    ("sync" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9059 9069])
+                    ("MAX_CHAN" variable
+                       (:suffix ":3"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9324 9395])
+                    ("MAX_ID" variable
+                       (:suffix ":5"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9324 9395])
+                    ("MAX_LUN" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9442 9455])
+                    ("is_EISA" variable
+                       (:suffix ":1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [9493 9632])
+                    ("is_PCI" variable
+                       (:suffix ":1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [9493 9632])
+                    ("ID_qest" variable
+                       (:suffix ":1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [9493 9632])
+                    ("M1_inst" variable
+                       (:suffix ":1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [9493 9632])
+                    ("AUTOTRM" variable
+                       (:suffix ":1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [9493 9632])
+                    ("__u8" variable
+                       (:suffix ":3"
+                        :type "int")
+                        (reparse-symbol classsubparts) [9493 9632])
+                    ("RAIDNUM" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9664 9677])
+                    ("unused" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9739 9756]))                  
+                :type "struct")
+                nil [7498 9760])
+            ("eata_sg_list" type
+               (:members 
+                  ( ("data" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9788 9799])
+                    ("len" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9804 9814]))                  
+                :type "struct")
+                nil [9762 9817])
+            ("eata_ccb" type
+               (:members 
+                  ( ("DataIn" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9889 10312])
+                    ("DataOut" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9889 10312])
+                    ("Interpret" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9889 10312])
+                    ("Resrvd" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9889 10312])
+                    ("scatter" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9889 10312])
+                    ("Auto_Req_Sen" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9889 10312])
+                    ("HBA_Init" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9889 10312])
+                    ("SCSI_Reset" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9889 10312])
+                    ("reqlen" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10357 10369])
+                    ("unused" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10449 10464])
+                    ("unused2" variable
+                       (:suffix ":7"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10469 10541])
+                    ("FWNEST" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10469 10541])
+                    ("unused3" variable
+                       (:suffix ":5"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10546 10719])
+                    ("I_HBA_C" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10546 10719])
+                    ("I_AT" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10546 10719])
+                    ("Phsunit" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10546 10719])
+                    ("cp_channel" variable
+                       (:suffix ":3"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10725 10796])
+                    ("cp_id" variable
+                       (:suffix ":5"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10725 10796])
+                    ("cp_identify" variable
+                       (:suffix ":1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [10865 10992])
+                    ("cp_dispri" variable
+                       (:suffix ":1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [10865 10992])
+                    ("cp_luntar" variable
+                       (:suffix ":1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [10865 10992])
+                    ("cp_msg1" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11024 11037])
+                    ("cp_msg2" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11074 11087])
+                    ("cp_msg3" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11092 11105])
+                    ("cp_cdb" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11110 11126])
+                    ("cp_datalen" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11169 11186])
+                    ("cp_viraddr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [11272 11289])
+                    ("cp_dataDMA" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11328 11345])
+                    ("cp_statDMA" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11431 11448])
+                    ("cp_reqDMA" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11493 11509])
+                    ("timestamp" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11641 11657])
+                    ("timeout" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11708 11722])
+                    ("sizeindex" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11727 11742])
+                    ("rw_latency" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11747 11763])
+                    ("retries" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11768 11781])
+                    ("status" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11786 11798])
+                    ("cmd" variable
+                       (:pointer 1
+                        :type ("scsi_cmnd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [11841 11863])
+                    ("sg_list" variable
+                       (:pointer 1
+                        :type ("eata_sg_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [11895 11924]))                  
+                :type "struct")
+                nil [9819 11927])
+            ("eata_sp" type
+               (:members 
+                  ( ("EOC" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11951 12007])
+                    ("hba_stat" variable
+                       (:suffix ":7"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11951 12007])
+                    ("scsi_stat" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12050 12065])
+                    ("reserved" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12103 12120])
+                    ("residue_len" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12125 12144])
+                    ("ccb" variable
+                       (:pointer 1
+                        :type ("eata_ccb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [12193 12214])
+                    ("msg" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12260 12273]))                  
+                :type "struct")
+                nil [11930 12276])
+            ("hostdata" type
+               (:typedef ("hstd" type (:type "struct") nil nil)
+                :superclasses "hstd"
+                :type "typedef")
+                nil [12278 13762])
+            ("hstd" type
+               (:members 
+                  ( ("vendor" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12304 12321])
+                    ("name" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12326 12342])
+                    ("revision" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12347 12366])
+                    ("EATA_revision" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12371 12392])
+                    ("firmware_revision" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12397 12422])
+                    ("HBA_number" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12427 12445])
+                    ("bustype" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12450 12465])
+                    ("channel" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12500 12515])
+                    ("state" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12555 12568])
+                    ("primary" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12601 12616])
+                    ("broken_INQUIRY" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12652 12811])
+                    ("immediate_support" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12652 12811])
+                    ("more_support" variable
+                       (:suffix ":1"
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12652 12811])
+                    ("do_latency" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12882 12900])
+                    ("reads" variable
+                       (:dereference 1
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12940 12957])
+                    ("writes" variable
+                       (:dereference 1
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12962 12980])
+                    ("reads_lat" variable
+                       (:dereference 2
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12985 13009])
+                    ("writes_lat" variable
+                       (:dereference 2
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13014 13039])
+                    ("all_lat" variable
+                       (:dereference 1
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13044 13062])
+                    ("resetlevel" variable
+                       (:dereference 1
+                        :type ("__u8" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13067 13097])
+                    ("last_ccb" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13103 13119])
+                    ("cplen" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13153 13166])
+                    ("cppadlen" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13206 13222])
+                    ("queuesize" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13262 13279])
+                    ("sgsize" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13284 13298])
+                    ("devflags" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13350 13366])
+                    ("hostid" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13409 13423])
+                    ("moresupport" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13458 13477])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("Scsi_Host" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [13517 13540])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("Scsi_Host" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [13550 13573])
+                    ("pdev" variable
+                       (:pointer 1
+                        :type ("pci_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [13578 13599])
+                    ("sp" variable (:type ("eata_sp" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [13641 13659])
+                    ("ccb" variable
+                       (:dereference 1
+                        :type ("eata_ccb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [13694 13717]))                  
+                :type "struct")
+                nil [12278 13762])
+            ("drive_geom_emul" type
+               (:members 
+                  ( ("trans" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13836 13848])
+                    ("channel" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13887 13901])
+                    ("HBA" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13940 13950])
+                    ("id" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13990 13999])
+                    ("lun" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14029 14039])
+                    ("heads" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14070 14082])
+                    ("sectors" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14117 14131])
+                    ("cylinder" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14168 14183]))                  
+                :type "struct")
+                nil [13807 14220])
+            ("geom_emul" type
+               (:members 
+                  ( ("bios_drives" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14245 14262])
+                    ("drv" variable
+                       (:dereference 1
+                        :type ("drive_geom_emul" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [14301 14331]))                  
+                :type "struct")
+                nil [14222 14363]))          
+    :file "eata_generic.h"
+    :pointmax 14944
+    :fsize 14943
+    :lastmodtime '(22436 15414 78041 658000)
+    :unmatched-syntax '((punctuation 10861 . 10862) (number 10860 . 10861) (punctuation 10859 . 10860) (punctuation 10853 . 10854) (number 10852 . 10853) (punctuation 10851 . 10852) (symbol 10845 . 10851) (symbol 10837 . 10841) (punctuation 9318 . 9319) (number 9317 . 9318) (punctuation 9316 . 9317) (punctuation 9312 . 9313) (number 9311 . 9312) (punctuation 9310 . 9311) (symbol 9304 . 9310) (punctuation 9299 . 9300) (number 9298 . 9299) (punctuation 9297 . 9298) (symbol 9291 . 9297) (punctuation 9245 . 9246) (number 9244 . 9245) (punctuation 9243 . 9244) (symbol 9236 . 9243) (punctuation 9188 . 9189) (number 9187 . 9188) (punctuation 9186 . 9187) (symbol 9181 . 9186) (symbol 9174 . 9178))
+    :lexical-table 
+        '(("MAXCHANNEL" . ((number "3" 813 . 814)))
+          ("IS_EISA" . ((string "'E'" 857 . 860)))
+          ("ATT_ID3" . ((number "0x0" 1185 . 1188)))
+          ("MAX_PCI_BUS" . ((number "16" 1462 . 1464)))
+          ("OK" . ((number "0" 1935 . 1936)))
+          ("EATA_CMD_IMMEDIATE" . ((number "0xfa" 2961 . 2965)))
+          ("EATA_CMD_DMA_SET_CONFIG" . ((number "0xfe" 3038 . 3042)))
+          ("HA_WIFC" . ((number "0x06" 3819 . 3823)))
+          ("MAXTARGET" . ((number "16" 791 . 793)))
+          ("MAX_PCI_DEVICES" . ((number "32" 1331 . 1333)))
+          ("RESET" . ((number "4" 2038 . 2039)))
+          ("LOCKED" . ((number "8" 2064 . 2065)))
+          ("HA_WDMAADDR" . ((number "0x02" 3940 . 3944)))
+          ("HA_WDATA" . ((number "0x00" 4184 . 4188)))
+          ("HA_SDRQ" . ((number "0x08" 4528 . 4532)))
+          ("HA_SDRDY" . 
+              ((symbol "HA_SSC" 4785 . 4791) (punctuation "+" 4791 . 4792) (symbol "HA_SREADY" 4792 . 4801) (punctuation "+" 4801 . 4802) (symbol "HA_SDRQ" 4802 . 4809)))
+          ("HA_UNX_BUS_FREE" . ((number "0x06" 5300 . 5304)))
+          ("HA_UNX_MSGRJCT" . ((number "0x09" 5456 . 5460)))
+          ("USED" . ((number "1" 1986 . 1987)))
+          ("EATA_CMD_PIO_SET_CONFIG" . ((number "0xf1" 2791 . 2795)))
+          ("HA_AIRQ" . ((number "0x02" 4295 . 4299)))
+          ("HA_SERROR" . ((number "0x01" 4352 . 4356)))
+          ("HA_INIT_POWERUP" . ((number "0x04" 5176 . 5180)))
+          ("HA_PARITY_ERR" . ((number "0x0c" 5639 . 5643)))
+          ("HA_PCI_STABORT" . ((number "0x15" 6195 . 6199)))
+          ("MAXEISA" . ((number "16" 727 . 729)))
+          ("HA_CTRL_DISINT" . ((number "0x02" 3503 . 3507)))
+          ("HA_WCOMMAND" . ((number "0x07" 3758 . 3762)))
+          ("HA_ERR_SEL_TO" . ((number "0x01" 5010 . 5014)))
+          ("HA_UNX_BUSPHASE" . ((number "0x05" 5241 . 5245)))
+          ("PIO" . ((number "0xfe" 963 . 967)))
+          ("DPT_ID1" . ((number "0x12" 1068 . 1072)))
+          ("TYPE_OTHER_QUEUE" . ((number "2" 1888 . 1889)))
+          ("READ" . ((number "0" 2120 . 2121)))
+          ("PCI_REG_DPTconfig" . ((number "0x40" 2523 . 2527)))
+          ("HA_WCODE" . ((number "0x05" 3882 . 3886)))
+          ("HA_ABUSY" . ((number "0x01" 4244 . 4248)))
+          ("HA_BUS_PARITY" . ((number "0x07" 5356 . 5360)))
+          ("_EATA_GENERIC_H")
+          ("DPT_ID2" . ((number "0x14" 1097 . 1101)))
+          ("FREE" . ((number "0" 1913 . 1914)))
+          ("SD" (spp-arg-list ("host") 2308 . 2314) . ((semantic-list "((hostdata *)&(host->hostdata))" 2315 . 2346)))
+          ("EATA_CMD_DMA_READ_CONFIG" . ((number "0xfd" 3000 . 3004)))
+          ("HA_CTRL_RESCPU" . ((number "0x04" 3572 . 3576)))
+          ("HA_SMORE" . ((number "0x02" 4415 . 4419)))
+          ("HA_SREADY" . ((number "0x40" 4686 . 4690)))
+          ("HA_ERR_CMD_TO" . ((number "0x02" 5064 . 5068)))
+          ("IS_PCI" . ((string "'P'" 879 . 882)))
+          ("SG_SIZE" . ((number "64" 1526 . 1528)))
+          ("TYPE_TAPE_QUEUE" . ((number "4" 1834 . 1835)))
+          ("TYPE_ROM_QUEUE" . ((number "4" 1861 . 1862)))
+          ("NO_TIMEOUT" . ((number "0" 1962 . 1963)))
+          ("PCI_REG_PumpModeData" . ((number "0x48" 2600 . 2604)))
+          ("HA_RAUXSTAT" . ((number "0x08" 4002 . 4006)))
+          ("HA_SBUSY" . ((number "0x80" 4736 . 4740)))
+          ("HA_CP_ABORTED" . ((number "0x0e" 5774 . 5778)))
+          ("HA_PCI_TABORT" . ((number "0x14" 6141 . 6145)))
+          ("MAXPCI" . ((number "16" 749 . 751)))
+          ("NEC_ID1" . ((number "0x38" 1214 . 1218)))
+          ("UPPER_DEVICE_QUEUE_LIMIT" . ((number "64" 1626 . 1628)))
+          ("ABORTED" . ((number "16" 2091 . 2093)))
+          ("PCI_REG_ConfigParam1" . ((number "0x50" 2637 . 2641)))
+          ("EATA_CMD_PIO_RECEIVE_SP" . ((number "0xf3" 2864 . 2868)))
+          ("EATA_CMD_DMA_SEND_CP" . ((number "0xff" 3073 . 3077)))
+          ("NEC_ID2" . ((number "0xa3" 1243 . 1247)))
+          ("EATA_CP_SIZE" . ((number "44" 1302 . 1304)))
+          ("MAX_METHOD_2" . ((number "16" 1399 . 1401)))
+          ("WRITE" . ((number "1" 2147 . 2148)))
+          ("PCI_REG_ConfigParam2" . ((number "0x54" 2674 . 2678)))
+          ("EATA_CMD_RESET" . ((number "0xf9" 2928 . 2932)))
+          ("HA_SCORR" . ((number "0x04" 4475 . 4479)))
+          ("HA_SFAULT" . ((number "0x20" 4636 . 4640)))
+          ("HA_RSENSE_FAIL" . ((number "0x0b" 5578 . 5582)))
+          ("HA_CP_RESET_NA" . ((number "0x0f" 5842 . 5846)))
+          ("HA_PCI_PARITY" . ((number "0x12" 6035 . 6039)))
+          ("HA_PCI_MABORT" . ((number "0x13" 6088 . 6092)))
+          ("IS_ISA" . ((string "'I'" 834 . 837)))
+          ("EATA_SIGNATURE" . ((number "0x45415441" 992 . 1002)))
+          ("NEC_ID3" . ((number "0x82" 1272 . 1276)))
+          ("SG_SIZE_BIG" . ((number "252" 1551 . 1554)))
+          ("CD" (spp-arg-list ("cmd") 2249 . 2254) . ((semantic-list "((struct eata_ccb *)(cmd->host_scribble))" 2256 . 2297)))
+          ("EATA_CMD_PIO_SETUPTEST" . ((number "0xc6" 2715 . 2719)))
+          ("EATA_CMD_PIO_SEND_CP" . ((number "0xf2" 2826 . 2830)))
+          ("ECS_EMULATE_SENSE" . ((number "0xd4" 3106 . 3110)))
+          ("EATA_COLD_BOOT_HBA" . ((number "0x06" 3336 . 3340)))
+          ("HA_CTRLREG" . ((number "0x206" 3434 . 3439)))
+          ("HA_CTRL_8HEADS" . ((number "0x08" 3641 . 3645)))
+          ("HA_BUS_RESET" . ((number "0x03" 5115 . 5119)))
+          ("HA_CP_ABORT_NA" . ((number "0x0d" 5703 . 5707)))
+          ("MAXISA" . ((number "4" 707 . 708)))
+          ("MAXIRQ" . ((number "16" 769 . 771)))
+          ("BUSMASTER" . ((number "0xff" 934 . 938)))
+          ("OTHER" . ((number "2" 2174 . 2175)))
+          ("PCI_REG_PumpModeAddress" . ((number "0x44" 2563 . 2567)))
+          ("EATA_CMD_PIO_TRUNC" . ((number "0xf4" 2897 . 2901)))
+          ("EATA_GENERIC_ABORT" . ((number "0x00" 3145 . 3149)))
+          ("EATA_QUIET_INTR" . ((number "0x04" 3298 . 3302)))
+          ("HA_WCODE2" . ((number "0x04" 3911 . 3915)))
+          ("HA_RSTATUS" . ((number "0x07" 4065 . 4069)))
+          ("HA_NO_ERROR" . ((number "0x00" 4964 . 4968)))
+          ("HA_SCSI_HUNG" . ((number "0x08" 5408 . 5412)))
+          ("R_LIMIT" . ((number "0x20000" 680 . 687)))
+          ("ATT_ID1" . ((number "0x06" 1127 . 1131)))
+          ("TIMEOUT" . ((number "2" 2013 . 2014)))
+          ("HD" (spp-arg-list ("cmd") 2187 . 2192) . ((semantic-list "((hostdata *)&(cmd->device->host->hostdata))" 2194 . 2238)))
+          ("EATA_CMD_PIO_READ_CONFIG" . ((number "0xf0" 2753 . 2757)))
+          ("EATA_SPECIFIC_RESET" . ((number "0x01" 3184 . 3188)))
+          ("HA_CP_RESET" . ((number "0x10" 5911 . 5915)))
+          ("BROKEN_INQUIRY" . ((number "1" 907 . 908)))
+          ("ATT_ID2" . ((number "0x94" 1156 . 1160)))
+          ("TYPE_DISK_QUEUE" . ((number "16" 1806 . 1808)))
+          ("EATA_BUS_RESET" . ((number "0x02" 3222 . 3226)))
+          ("EATA_SPECIFIC_ABORT" . ((number "0x03" 3260 . 3264)))
+          ("EATA_FORCE_IO" . ((number "0x07" 3405 . 3409)))
+          ("HA_RDATA" . ((number "0x00" 4125 . 4129)))
+          ("HA_SSC" . ((number "0x10" 4584 . 4588)))
+          ("HA_RESET_STUCK" . ((number "0x0a" 5520 . 5524)))
+          ("HA_ECC_ERR" . ((number "0x11" 5975 . 5979)))
+          )
+
+    )
+   (semanticdb-table "eata_pio.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_EATA_PIO_H" variable (:constant-flag t) nil [352 363])
+            ("VER_MAJOR" variable (:constant-flag t) nil [373 382])
+            ("VER_MINOR" variable (:constant-flag t) nil [393 402])
+            ("VER_SUB" variable (:constant-flag t) nil [413 420])
+            ("VERBOSE_SETUP" variable (:constant-flag t) nil [642 655])
+            ("ALLOW_DMA_BOARDS" variable (:constant-flag t) nil [699 715])
+            ("DEBUG_EATA" variable (:constant-flag t) nil [958 968])
+            ("DPT_DEBUG" variable (:constant-flag t) nil [1026 1035])
+            ("DBG_DELAY" variable (:constant-flag t) nil [1093 1102])
+            ("DBG_PROBE" variable (:constant-flag t) nil [1232 1241])
+            ("DBG_ISA" variable (:constant-flag t) nil [1299 1306])
+            ("DBG_EISA" variable (:constant-flag t) nil [1365 1373])
+            ("DBG_PCI" variable (:constant-flag t) nil [1431 1438])
+            ("DBG_PIO" variable (:constant-flag t) nil [1497 1504])
+            ("DBG_COM" variable (:constant-flag t) nil [1563 1570])
+            ("DBG_QUEUE" variable (:constant-flag t) nil [1629 1638])
+            ("DBG_INTR" variable (:constant-flag t) nil [1696 1704])
+            ("DBG_INTR2" variable (:constant-flag t) nil [1762 1771])
+            ("DBG_PROC" variable (:constant-flag t) nil [1829 1837])
+            ("DBG_PROC_WRITE" variable (:constant-flag t) nil [1895 1909])
+            ("DBG_REGISTER" variable (:constant-flag t) nil [1920 1932])
+            ("DBG_ABNORM" variable (:constant-flag t) nil [1949 1959])
+            ("DBG" variable (:constant-flag t) nil [2033 2036]))          
+    :file "eata_pio.h"
+    :pointmax 2119
+    :fsize 2118
+    :lastmodtime '(22421 37044 95765 242000)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DBG_DELAY" . ((number "0" 1103 . 1104)))
+          ("VER_MAJOR" . ((number "0" 383 . 384)))
+          ("DBG_PCI" . ((number "0" 1440 . 1441)))
+          ("DBG_COM" . ((number "0" 1572 . 1573)))
+          ("DBG_INTR" . ((number "0" 1705 . 1706)))
+          ("DBG_PROC" . ((number "0" 1838 . 1839)))
+          ("DBG_ISA" . ((number "0" 1308 . 1309)))
+          ("DBG_INTR2" . ((number "0" 1772 . 1773)))
+          ("ALLOW_DMA_BOARDS" . ((number "1" 716 . 717)))
+          ("DBG_ABNORM" . ((number "1" 1960 . 1961)))
+          ("VER_MINOR" . ((number "0" 403 . 404)))
+          ("DBG_QUEUE" . ((number "0" 1639 . 1640)))
+          ("DEBUG_EATA" . ((number "1" 969 . 970)))
+          ("DPT_DEBUG" . ((number "0" 1036 . 1037)))
+          ("DBG_PROBE" . ((number "0" 1242 . 1243)))
+          ("DBG_PROC_WRITE" . ((number "0" 1910 . 1911)))
+          ("DBG_REGISTER" . ((number "0" 1933 . 1934)))
+          ("_EATA_PIO_H")
+          ("VERBOSE_SETUP")
+          ("VER_SUB" . ((string "\"1b\"" 423 . 427)))
+          ("DBG" (spp-arg-list ("x" "y") 2036 . 2042) . 
+              ((IF "if" 2045 . 2047) (semantic-list "((x))" 2048 . 2053) (semantic-list "{y;}" 2054 . 2058)))
+          ("DBG_EISA" . ((number "0" 1374 . 1375)))
+          ("DBG_PIO" . ((number "0" 1506 . 1507)))
+          )
+
+    )
+   (semanticdb-table "scsi_module.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("linux/init.h" include (:system-flag t) nil [171 194])
+            ("linux/kernel.h" include (:system-flag t) nil [195 220])
+            ("linux/module.h" include (:system-flag t) nil [221 246])
+            ("scsi/scsi_host.h" include (:system-flag t) nil [248 275])
+            ("init_this_scsi_driver" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [318 323]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [289 1058])
+            ("exit_this_scsi_driver" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1101 1106]))                  
+                :type ("__exit" type (:type "class") nil nil))
+                nil [1072 1615])
+            ("module_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("init_this_scsi_driver" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1629 1651]))                  
+                :type "int")
+                nil [1617 1652])
+            ("module_exit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("exit_this_scsi_driver" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1665 1687]))                  
+                :type "int")
+                nil [1653 1688]))          
+    :file "scsi_module.c"
+    :pointmax 1689
+    :fsize 1688
+    :lastmodtime '(22421 37044 264765 309000)
+    :unmatched-syntax '((VOID 1067 . 1071) (STATIC 1060 . 1066) (INT 285 . 288) (STATIC 278 . 284))
+    )
+   (semanticdb-table "esp_scsi.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "esp_scsi.c"
+    :pointmax 68317
+    :fsize 68316
+    :lastmodtime '(22436 15414 94041 670000)
+    :unmatched-syntax 'nil
+    )
    )
   :file "!home!k1jin!linux-stable!drivers!scsi!semantic.cache"
   :semantic-tag-version "2.0"
